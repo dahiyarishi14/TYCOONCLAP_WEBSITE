@@ -1,0 +1,90 @@
+// Tycoon Clap — shared utility script
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.navlinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  }
+
+  // Animated counters
+  const counters = document.querySelectorAll('[data-count-target]');
+  if (counters.length) {
+    const animateCounter = (el) => {
+      const target = parseFloat(el.getAttribute('data-count-target'));
+      const suffix = el.getAttribute('data-count-suffix') || '';
+      const duration = 1400;
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(target * eased);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach((el) => counterObserver.observe(el));
+  }
+
+  // ============================================================
+  // FORM SUBMISSION — sends form answers to your Gmail
+  // ============================================================
+  // Setup (one-time, ~5 min):
+  // 1. Go to https://web3forms.com and enter your Gmail — it emails you
+  //    an Access Key instantly (no signup/login needed).
+  // 2. Replace YOUR_ACCESS_KEY_HERE below with that key.
+  // 3. Every form on the site (lead form, booking form, contact form,
+  //    quote-unlock form) will then land in your Gmail inbox.
+  const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
+  document.querySelectorAll('form[data-ajax-form]').forEach((form) => {
+    const statusEl = form.querySelector('.form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+        formData.append('subject', 'New enquiry — Tycoon Clap website');
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' }
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          statusEl.textContent = "Thanks — that's in. We'll get back to you soon.";
+          form.reset();
+          const dl = form.getAttribute('data-unlock-target');
+          if (dl) {
+            const target = document.querySelector(dl);
+            if (target) target.classList.add('unlocked');
+          }
+        } else {
+          statusEl.textContent = 'Something went wrong. Please try again or WhatsApp us directly.';
+        }
+      } catch (err) {
+        statusEl.textContent = "Couldn't send right now — please WhatsApp us directly.";
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  });
+});
