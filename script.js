@@ -39,11 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // FORM SUBMISSION — sends form answers to your Gmail
   // ============================================================
   // Setup (one-time, ~5 min):
-  // 1. Go to https://web3forms.com and enter your Gmail — it emails you
-  //    an Access Key instantly (no signup/login needed).
+  // 1. Go to https://web3forms.com and enter tycoonclap@gmail.com —
+  //    it emails an Access Key to that inbox instantly (no signup/login).
   // 2. Replace YOUR_ACCESS_KEY_HERE below with that key.
-  // 3. Every form on the site (lead form, booking form, contact form,
-  //    quote-unlock form) will then land in your Gmail inbox.
+  // 3. Every form on the site — the home page lead form, the 15-min
+  //    intro-call booking form on services.html, and the contact form —
+  //    will then land in tycoonclap@gmail.com automatically. One key
+  //    covers all of them; nothing else needs to change per form.
   const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
 
   document.querySelectorAll('form[data-ajax-form]').forEach((form) => {
@@ -59,7 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const formData = new FormData(form);
         formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-        formData.append('subject', 'New enquiry — Tycoon Clap website');
+        const formName = form.getAttribute('data-form-name') || 'Website enquiry';
+        formData.append('subject', `New ${formName} — Tycoon Clap website`);
 
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',

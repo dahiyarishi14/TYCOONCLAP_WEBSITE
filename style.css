@@ -250,10 +250,47 @@ footer .wrap{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; }
 }
 
 @media (max-width:900px){
-  .navlinks{ display:none; }
+  .navlinks{
+    display:flex; flex-direction:column; gap:0;
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--card); border-bottom:1px solid var(--line);
+    box-shadow:0 16px 30px -18px rgba(31,43,40,0.25);
+    max-height:0; overflow:hidden; opacity:0;
+    transition:max-height .35s ease, opacity .25s ease;
+    padding:0 40px; z-index:150;
+  }
+  .navlinks.open{ max-height:340px; opacity:1; padding:10px 40px 18px; }
+  .navlinks a{ padding:14px 0; border-bottom:1px solid var(--line); }
+  .navlinks a::after{ display:none; }
   .nav-toggle{ display:block; }
   .hero .wrap{ grid-template-columns:1fr; }
 }
 
 .reveal{ opacity:0; }
 .reveal-scale{ opacity:0; }
+
+/* ABOUT PAGE */
+.story-card{
+  background:var(--card); border:1px solid var(--line); border-radius:24px;
+  padding:44px; max-width:720px; margin:0 auto 60px;
+}
+.story-card p{ color:var(--ink-soft); font-size:1.05rem; }
+.founder-card{
+  display:grid; grid-template-columns:200px 1fr; gap:40px; align-items:center;
+  background:var(--card); border:1px solid var(--line); border-radius:24px;
+  padding:40px; max-width:720px; margin:0 auto;
+}
+.founder-photo{
+  width:200px; height:200px; border-radius:20px; overflow:hidden;
+  box-shadow:0 20px 40px -18px rgba(31,43,40,0.25);
+}
+.founder-photo img{ width:100%; height:100%; object-fit:cover; }
+.founder-info h3{ font-family:var(--display); font-weight:800; font-size:1.3rem; color:var(--ink); }
+.founder-info .role{ font-family:var(--display); font-weight:600; font-size:0.86rem; color:var(--teal-dark); margin:4px 0 12px; }
+.founder-info p{ color:var(--ink-soft); font-size:0.96rem; }
+.founder-info a{ display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-family:var(--display); font-weight:700; font-size:0.86rem; color:var(--navy); }
+.founder-info a:hover{ color:var(--teal-dark); }
+@media (max-width:640px){
+  .founder-card{ grid-template-columns:1fr; text-align:center; padding:32px; }
+  .founder-photo{ margin:0 auto; }
+}

@@ -65,6 +65,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Character idle motion — gentle head bob + body sway, staggered so
+    // the two never move in perfect lockstep (feels more alive)
+    const head = scene.querySelector('.char-head');
+    if (head) {
+      gsap.to(head, {
+        y: '+=5', duration: 1.7, ease: 'sine.inOut', yoyo: true, repeat: -1,
+        scrollTrigger: { trigger: scene, start: 'top 80%' }
+      });
+    }
+
+    const body = scene.querySelector('.char-body');
+    if (body) {
+      gsap.to(body, {
+        y: '+=3', duration: 2.1, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 0.25,
+        scrollTrigger: { trigger: scene, start: 'top 80%' }
+      });
+    }
+
     const pie = scene.querySelector('.pie-arc');
     if (pie) {
       gsap.to(pie, {
