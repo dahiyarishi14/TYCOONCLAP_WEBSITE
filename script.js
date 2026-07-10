@@ -36,62 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================================
-  // FORM SUBMISSION — sends form answers to your Gmail
+  // FORM SUBMISSION — sends every form on the site to your Gmail
+  // Works across ALL pages: home lead form, services booking form,
+  // and the contact page form — each identified by data-ajax-form,
+  // not by a single shared id, so all three work independently.
   // ============================================================
-  // Setup (one-time, ~5 min):
-  // 1. Go to https://web3forms.com and enter tycoonclap@gmail.com —
-  //    it emails an Access Key to that inbox instantly (no signup/login).
-  // 2. Replace YOUR_ACCESS_KEY_HERE below with that key.
-  // 3. Every form on the site — the home page lead form, the 15-min
-  //    intro-call booking form on services.html, and the contact form —
-  //    will then land in tycoonclap@gmail.com automatically. One key
-  //    covers all of them; nothing else needs to change per form.
   const WEB3FORMS_ACCESS_KEY = "7a29027e-dfab-4233-9f12-6483da861897";
-
-const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
-
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    formData.append("access_key", "7a29027e-dfab-4233-9f12-6483da861897");
-
-    const originalText = submitBtn.textContent;
-
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            alert("Success! Your message has been sent.");
-            form.reset();
-        } else {
-            alert("Error: " + data.message);
-        }
-
-    } catch (error) {
-        alert("Something went wrong. Please try again.");
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
-      
 
   document.querySelectorAll('form[data-ajax-form]').forEach((form) => {
     const statusEl = form.querySelector('.form-status');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
@@ -110,7 +67,7 @@ form.addEventListener('submit', async (e) => {
         const result = await response.json();
 
         if (result.success) {
-          statusEl.textContent = "Thanks — that's in. We'll get back to you soon.";
+          if (statusEl) statusEl.textContent = "Thanks — that's in. We'll get back to you soon.";
           form.reset();
           const dl = form.getAttribute('data-unlock-target');
           if (dl) {
@@ -118,10 +75,10 @@ form.addEventListener('submit', async (e) => {
             if (target) target.classList.add('unlocked');
           }
         } else {
-          statusEl.textContent = 'Something went wrong. Please try again or WhatsApp us directly.';
+          if (statusEl) statusEl.textContent = 'Something went wrong. Please try again or WhatsApp us directly.';
         }
       } catch (err) {
-        statusEl.textContent = "Couldn't send right now — please WhatsApp us directly.";
+        if (statusEl) statusEl.textContent = "Couldn't send right now — please WhatsApp us directly.";
       } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
