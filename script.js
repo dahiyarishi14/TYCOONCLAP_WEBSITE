@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //    intro-call booking form on services.html, and the contact form —
   //    will then land in tycoonclap@gmail.com automatically. One key
   //    covers all of them; nothing else needs to change per form.
-  const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+  const WEB3FORMS_ACCESS_KEY = "7a29027e-dfab-4233-9f12-6483da861897";
 
   document.querySelectorAll('form[data-ajax-form]').forEach((form) => {
     const statusEl = form.querySelector('.form-status');
