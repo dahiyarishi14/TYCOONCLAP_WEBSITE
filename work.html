@@ -14,6 +14,15 @@
   <meta name="description" content="See Tycoon Clap's project work across data engineering, growth marketing, and software development, including a national EV charging infrastructure analysis processing 89,000+ records">
 <title>Work — Tycoon Clap | Technology Growth Partner</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  .work-card{ display:grid; grid-template-columns:220px 1fr auto; gap:28px; align-items:center; }
+  .work-thumb{ width:220px; height:130px; border-radius:14px; overflow:hidden; flex-shrink:0; background:var(--bg-alt); }
+  .work-thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
+  @media (max-width:860px){
+    .work-card{ grid-template-columns:1fr; }
+    .work-thumb{ width:100%; height:180px; }
+  }
+</style>
 </head>
 <body>
 <div class="scroll-progress"></div>
@@ -66,40 +75,34 @@
         <div class="wmeta">89K+ records<br>Power BI · Python</div>
       </div>
 
-      <div class="work-card placeholder">
-        <div class="work-icon" style="background:#FCE4E1;">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2"><path d="M3 11l18-7-7 18-2-8-8-2z"/></svg>
-        </div>
+      <div class="work-card reveal">
+        <div class="work-thumb"><img src="images/work-8amfit.png" alt="8AM Fit e-commerce website"></div>
         <div>
           <span class="tag tag-marketing" style="margin-bottom:8px;">Growth Marketing &amp; Customer Acquisition</span>
-          <h3>[ Project name ]</h3>
-          <p class="wdesc">Swap this entry for a real campaign — results, channel, and a one-line outcome work well here.</p>
+          <h3>D2C launch for a health-food brand — 8AM Fit</h3>
+          <p class="wdesc">Built the online storefront and go-to-market for a trail mix &amp; nut mix D2C brand — product catalog, checkout flow, and launch campaigns to drive first sales.</p>
         </div>
-        <div class="wmeta">— entry pending —</div>
+        <div class="wmeta">D2C launch<br>Shopify · Ads</div>
       </div>
 
-      <div class="work-card placeholder">
-        <div class="work-icon" style="background:#FDEED0;">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B8842A" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <div>
-          <span class="tag tag-social" style="margin-bottom:8px;">Growth Marketing &amp; Customer Acquisition</span>
-          <h3>[ Project name ]</h3>
-          <p class="wdesc">Swap this entry for a real client's growth story — follower growth, engagement lift, or content strategy.</p>
-        </div>
-        <div class="wmeta">— entry pending —</div>
-      </div>
-
-      <div class="work-card placeholder">
-        <div class="work-icon" style="background:#DCEFE9;">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
-        </div>
+      <div class="work-card reveal">
+        <div class="work-thumb"><img src="images/work-cushion.png" alt="Cushion.ai fintech product"></div>
         <div>
           <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>[ Project name ]</h3>
-          <p class="wdesc">Swap this entry for an internal tool, automation, or app you've shipped for a client.</p>
+          <h3>AI-powered fintech tool — Cushion</h3>
+          <p class="wdesc">Contributed to product &amp; growth work for an AI-powered personal finance tool that helped users navigate billing, fees, and cash flow — later acquired by LendingClub.</p>
         </div>
-        <div class="wmeta">— entry pending —</div>
+        <div class="wmeta">Fintech · AI<br>Acquired 2025</div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-thumb"><img src="images/work-liam.png" alt="Liam Constructions real estate website"></div>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>Lead-generation website — Liam Constructions</h3>
+          <p class="wdesc">Designed and built a real estate lead-gen site for a Bengaluru property developer, with an inquiry form routed straight to their sales team and social channels linked for trust.</p>
+        </div>
+        <div class="wmeta">Real Estate<br>Web · Lead Gen</div>
       </div>
 
     </div>
