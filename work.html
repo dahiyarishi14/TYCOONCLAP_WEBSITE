@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,8 +16,11 @@
 <link rel="stylesheet" href="style.css">
 <style>
   .work-card{ display:grid; grid-template-columns:220px 1fr auto; gap:28px; align-items:center; }
-  .work-thumb{ width:220px; height:130px; border-radius:14px; overflow:hidden; flex-shrink:0; background:var(--bg-alt); }
-  .work-thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
+  .work-thumb{ width:220px; height:130px; border-radius:14px; overflow:hidden; flex-shrink:0; background:var(--bg-alt); display:block; position:relative; }
+  .work-thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; transition:transform .35s ease; }
+  .work-thumb:hover img{ transform:scale(1.06); }
+  .wurl{ display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; color:var(--accent, #4A5CFF); text-decoration:none; margin-top:6px; font-weight:600; }
+  .wurl:hover{ text-decoration:underline; }
   @media (max-width:860px){
     .work-card{ grid-template-columns:1fr; }
     .work-thumb{ width:100%; height:180px; }
@@ -104,6 +106,84 @@
           <p class="wdesc">Designed and built a real estate lead-gen site for a Bengaluru property developer, with an inquiry form routed straight to their sales team and social channels linked for trust.</p>
         </div>
         <div class="wmeta">Real Estate<br>Web · Lead Gen</div>
+      </div>
+
+      <div class="work-card reveal">
+        <a class="work-thumb" href="https://feathersnflowers.com" target="_blank" rel="noopener">
+          <img src="images/work-feathersnflowers.jpeg" alt="Feathers n Flowers ethnic fashion website">
+        </a>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>E-commerce storefront — Feathers n Flowers</h3>
+          <p class="wdesc">Built the online store for an ethnic fashion label selling lehengas, anarkali suits, and traditional wear, with category browsing and a mobile-first shopping experience.</p>
+          <a class="wurl" href="https://feathersnflowers.com" target="_blank" rel="noopener">feathersnflowers.com &#8599;</a>
+        </div>
+        <div class="wmeta">Fashion<br>Web · E-commerce</div>
+      </div>
+
+      <div class="work-card reveal">
+        <a class="work-thumb" href="https://ifesm-website.vercel.app" target="_blank" rel="noopener">
+          <img src="images/work-ifesm.jpeg" alt="IFESM fire and industrial safety website">
+        </a>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>Institutional website — IFESM</h3>
+          <p class="wdesc">Built the web presence for a fire and industrial safety training institute, established in 2002 and ISO 9001:2015 certified, serving 500+ industries and 55+ MNC and government partners.</p>
+          <a class="wurl" href="https://ifesm-website.vercel.app" target="_blank" rel="noopener">ifesm-website.vercel.app &#8599;</a>
+        </div>
+        <div class="wmeta">Industrial Safety<br>Web · Institutional</div>
+      </div>
+
+      <div class="work-card reveal">
+        <a class="work-thumb" href="https://malatamba-dental.vercel.app" target="_blank" rel="noopener">
+          <img src="images/work-malatamba-dental.jpeg" alt="Malatamba Dental Hospital website">
+        </a>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>Appointment-booking website — Malatamba Dental Hospital</h3>
+          <p class="wdesc">Built a booking-focused site for a NABH-accredited dental hospital in Visakhapatnam, offering painless RCT, implants, CAD/CAM crowns, and smile design, with a 4.9-star, 592-review track record.</p>
+          <a class="wurl" href="https://malatamba-dental.vercel.app" target="_blank" rel="noopener">malatamba-dental.vercel.app &#8599;</a>
+        </div>
+        <div class="wmeta">Healthcare<br>Web · Booking</div>
+      </div>
+
+      <div class="work-card reveal">
+        <a class="work-thumb" href="https://nifsindia.net" target="_blank" rel="noopener">
+          <img src="images/work-nifsindia.jpeg" alt="NIFS India fire and industrial safety website">
+        </a>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>Institutional website — NIFS India</h3>
+          <p class="wdesc">Built the site for India's leading fire and industrial safety training organization, with 25+ years of experience, 70+ centers, and 45,000+ alumni working across 24 states.</p>
+          <a class="wurl" href="https://nifsindia.net" target="_blank" rel="noopener">nifsindia.net &#8599;</a>
+        </div>
+        <div class="wmeta">Industrial Safety<br>Web · Institutional</div>
+      </div>
+
+      <div class="work-card reveal">
+        <a class="work-thumb" href="https://poolpal.in" target="_blank" rel="noopener">
+          <img src="images/work-poolpal.jpeg" alt="PoolPal carpooling app landing page">
+        </a>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>Carpooling app &amp; landing page — PoolPal</h3>
+          <p class="wdesc">Built the landing page and product presence for PoolPal, a ride-sharing app connecting drivers and passengers for affordable, eco-friendly carpooling, live on Android &amp; iOS.</p>
+          <a class="wurl" href="https://poolpal.in" target="_blank" rel="noopener">poolpal.in &#8599;</a>
+        </div>
+        <div class="wmeta">Mobility<br>App · Web</div>
+      </div>
+
+      <div class="work-card reveal">
+        <a class="work-thumb" href="https://yashodaorganics.com" target="_blank" rel="noopener">
+          <img src="images/work-yashodaorganics.jpeg" alt="Yashoda Organics website">
+        </a>
+        <div>
+          <span class="tag tag-marketing" style="margin-bottom:8px;">Growth Marketing &amp; Customer Acquisition</span>
+          <h3>D2C storefront — Yashoda Organics</h3>
+          <p class="wdesc">Built the online store for a USDA-certified organic pulses and grains brand, showcasing certifications and product range for a naturally grown, sustainably sourced food line.</p>
+          <a class="wurl" href="https://yashodaorganics.com" target="_blank" rel="noopener">yashodaorganics.com &#8599;</a>
+        </div>
+        <div class="wmeta">Organic Food<br>Web · E-commerce</div>
       </div>
 
     </div>
