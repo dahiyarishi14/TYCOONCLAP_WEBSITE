@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Development — Tycoon Clap</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --bg:#F5FAF7;
+  --bg-alt:#EAF3ED;
+  --card:#FFFFFF;
+  --ink:#1F2B28;
+  --ink-soft:#5C6B66;
+  --ink-dim:#8B9793;
+  --teal:#4C9C8B;
+  --teal-dark:#357566;
+  --coral:#E9584C;
+  --mustard:#F3B94D;
+  --navy:#2E3A55;
+  --line:rgba(31,43,40,0.1);
+  --line-strong:rgba(31,43,40,0.18);
+  --display:'Plus Jakarta Sans', sans-serif;
+  --sans:'Inter', sans-serif;
+}
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.65; overflow-x:hidden; }
+a{ color:inherit; text-decoration:none; }
+.wrap{ max-width:1180px; margin:0 auto; padding:0 40px; }
+img,svg{ max-width:100%; display:block; }
+::selection{ background:var(--mustard); color:var(--ink); }
+
+/* NAV (matches site) */
+.site-nav{ position:sticky; top:0; z-index:100; background:rgba(245,250,247,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.site-nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:84px; }
+.logo{ font-family:var(--display); font-weight:800; font-size:1.3rem; color:var(--ink); }
+.btn{ display:inline-flex; align-items:center; gap:8px; font-family:var(--display); font-weight:700; font-size:0.9rem; padding:14px 28px; border-radius:100px; border:2px solid transparent; transition:all .3s ease; cursor:pointer; }
+.btn-primary{ background:var(--ink); color:#fff; }
+.btn-primary:hover{ background:var(--teal-dark); transform:translateY(-2px); }
+.btn-outline{ background:transparent; color:var(--ink); border-color:var(--line-strong); }
+.btn-outline:hover{ border-color:var(--ink); }
+
+.eyebrow{ font-family:var(--display); font-weight:700; font-size:0.82rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--teal-dark); display:inline-flex; align-items:center; gap:8px; margin-bottom:16px; }
+.eyebrow::before{ content:''; width:20px; height:2px; background:var(--coral); border-radius:2px; }
+
+/* HERO */
+.hero{ position:relative; padding:100px 0 60px; overflow:hidden; }
+.hero .wrap{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; align-items:center; }
+.hero h1{ font-family:var(--display); font-weight:800; font-size:clamp(2.2rem,4.4vw,3.4rem); line-height:1.12; color:var(--ink); letter-spacing:-0.01em; }
+.hero h1 .accent{ color:var(--coral); }
+.hero .lede{ color:var(--ink-soft); font-size:1.08rem; max-width:480px; margin:22px 0 30px; }
+.hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+.stat-row{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+.stat-pill{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 20px; min-width:120px; }
+.stat-pill .num{ font-family:var(--display); font-weight:800; font-size:1.5rem; color:var(--teal-dark); }
+.stat-pill .lbl{ font-size:0.76rem; color:var(--ink-dim); margin-top:2px; }
+.blob{ position:absolute; border-radius:50%; opacity:0.45; z-index:-1; filter:blur(2px); }
+
+/* SECTIONS */
+.section{ padding:90px 0; position:relative; }
+.section.alt{ background:var(--bg-alt); }
+.section-head{ max-width:620px; margin-bottom:56px; }
+.section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+.section-head h2{ font-family:var(--display); font-weight:800; font-size:clamp(1.8rem,3.2vw,2.4rem); color:var(--ink); line-height:1.15; }
+.section-head p{ color:var(--ink-soft); margin-top:14px; font-size:1.02rem; }
+
+/* IMPACT GRID (psychological impact) */
+.impact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.impact-card{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:32px; }
+.impact-icon{ width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+.impact-card h3{ font-family:var(--display); font-weight:700; font-size:1.1rem; color:var(--ink); margin-bottom:8px; }
+.impact-card p{ color:var(--ink-soft); font-size:0.92rem; }
+.impact-card .stat{ font-family:var(--display); font-weight:800; font-size:1.9rem; color:var(--coral); margin-bottom:6px; }
+@media (max-width:860px){ .impact-grid{ grid-template-columns:1fr; } }
+
+/* COMPARISON */
+.compare-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start; }
+.browser-mock{ border-radius:18px; overflow:hidden; border:1px solid var(--line); box-shadow:0 20px 50px -24px rgba(31,43,40,0.25); background:var(--card); }
+.browser-bar{ display:flex; align-items:center; gap:6px; padding:12px 16px; border-bottom:1px solid var(--line); }
+.browser-bar span{ width:9px; height:9px; border-radius:50%; background:var(--line-strong); }
+.compare-label{ text-align:center; font-family:var(--display); font-weight:700; font-size:0.86rem; padding:14px; }
+.compare-label.before{ color:var(--coral); background:#FCE4E1; }
+.compare-label.after{ color:var(--teal-dark); background:#DCEFE9; }
+.mock-body{ padding:22px; min-height:260px; }
+.mock-body.before{ background:#fafafa; }
+.mock-body.before .m-title{ font-weight:800; font-size:1.3rem; color:#333; font-family:Georgia,serif; margin-bottom:10px; }
+.mock-body.before .m-nav{ display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+.mock-body.before .m-nav span{ font-size:0.72rem; color:#666; border:1px solid #ccc; padding:4px 8px; }
+.mock-body.before .m-block{ height:70px; background:repeating-linear-gradient(45deg,#eee,#eee 8px,#e2e2e2 8px,#e2e2e2 16px); margin-bottom:10px; border:1px solid #ddd; }
+.mock-body.before .m-text{ height:8px; background:#ddd; margin-bottom:6px; width:90%; }
+.mock-body.before .m-cta{ display:inline-block; margin-top:12px; background:#c9c9c9; color:#666; font-size:0.7rem; padding:6px 14px; }
+.mock-body.after{ background:linear-gradient(180deg,#fff,var(--bg-alt)); }
+.mock-body.after .m-title{ font-family:var(--display); font-weight:800; font-size:1.4rem; color:var(--ink); margin-bottom:6px; }
+.mock-body.after .m-sub{ font-size:0.78rem; color:var(--ink-soft); margin-bottom:16px; }
+.mock-body.after .m-hero{ height:90px; border-radius:12px; background:linear-gradient(135deg,var(--teal),var(--teal-dark)); margin-bottom:14px; position:relative; overflow:hidden; }
+.mock-body.after .m-hero::after{ content:''; position:absolute; right:-10px; bottom:-20px; width:70px; height:70px; border-radius:50%; background:rgba(255,255,255,0.15); }
+.mock-body.after .m-cta{ display:inline-block; margin-top:4px; background:var(--coral); color:#fff; font-family:var(--display); font-weight:700; font-size:0.78rem; padding:9px 18px; border-radius:100px; }
+.mock-body.after .m-cards{ display:flex; gap:8px; margin-top:14px; }
+.mock-body.after .m-cards div{ flex:1; height:36px; border-radius:8px; background:var(--card); border:1px solid var(--line); }
+
+.compare-stats{ display:flex; justify-content:center; gap:0; margin-top:36px; flex-wrap:wrap; background:var(--card); border:1px solid var(--line); border-radius:20px; overflow:hidden; }
+.compare-stats .cs{ flex:1; min-width:150px; text-align:center; padding:26px 16px; border-right:1px solid var(--line); }
+.compare-stats .cs:last-child{ border-right:none; }
+.compare-stats .cs .lbl{ font-size:0.78rem; color:var(--ink-dim); font-family:var(--display); font-weight:600; margin-bottom:10px; }
+.compare-stats .cs .figures{ display:flex; align-items:baseline; justify-content:center; gap:8px; }
+.compare-stats .cs .old-v{ font-size:0.95rem; color:var(--ink-dim); text-decoration:line-through; }
+.compare-stats .cs .new-v{ font-family:var(--display); font-weight:800; font-size:1.4rem; color:var(--teal-dark); }
+@media (max-width:760px){ .compare-wrap{ grid-template-columns:1fr; } }
+
+/* TESTIMONIAL BANNER */
+.testimonial-banner{ background:var(--ink); border-radius:28px; padding:52px; position:relative; overflow:hidden; }
+.testimonial-banner .concept-tag{ display:inline-block; background:rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); font-family:var(--display); font-weight:700; font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:22px; }
+.testimonial-banner blockquote{ font-family:var(--display); font-weight:700; font-size:clamp(1.3rem,2.4vw,1.7rem); color:#fff; line-height:1.4; max-width:760px; }
+.testimonial-banner .attrib{ margin-top:24px; display:flex; align-items:center; gap:14px; }
+.attrib-avatar{ width:46px; height:46px; border-radius:50%; background:linear-gradient(135deg,var(--coral),var(--mustard)); flex-shrink:0; }
+.attrib-name{ font-family:var(--display); font-weight:700; color:#fff; font-size:0.92rem; }
+.attrib-role{ font-size:0.8rem; color:rgba(255,255,255,0.55); }
+.testimonial-banner .tb-stats{ display:flex; gap:32px; margin-top:32px; flex-wrap:wrap; }
+.tb-stats div .num{ font-family:var(--display); font-weight:800; font-size:1.5rem; color:var(--mustard); }
+.tb-stats div .lbl{ font-size:0.76rem; color:rgba(255,255,255,0.55); margin-top:2px; }
+
+/* PRICING */
+.pricing-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.price-card{ background:var(--card); border:1px solid var(--line); border-radius:22px; padding:36px 30px; display:flex; flex-direction:column; }
+.price-card.featured{ border:2px solid var(--coral); position:relative; transform:translateY(-10px); box-shadow:0 24px 50px -22px rgba(233,88,76,0.3); }
+.price-card .pf-tag{ position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--coral); color:#fff; font-family:var(--display); font-weight:700; font-size:0.72rem; padding:6px 16px; border-radius:100px; white-space:nowrap; }
+.price-card .p-name{ font-family:var(--display); font-weight:700; font-size:1.05rem; color:var(--ink-soft); }
+.price-card .p-amount{ font-family:var(--display); font-weight:800; font-size:2.4rem; color:var(--ink); margin:10px 0 4px; }
+.price-card .p-amount span{ font-size:1rem; color:var(--ink-dim); font-weight:600; }
+.price-card .p-desc{ color:var(--ink-soft); font-size:0.88rem; margin-bottom:22px; }
+.price-card ul{ list-style:none; display:flex; flex-direction:column; gap:11px; margin-bottom:28px; flex-grow:1; }
+.price-card ul li{ font-size:0.88rem; color:var(--ink-soft); padding-left:22px; position:relative; }
+.price-card ul li::before{ content:'✓'; position:absolute; left:0; color:var(--teal); font-weight:700; }
+.price-card .btn{ width:100%; justify-content:center; }
+@media (max-width:900px){ .pricing-grid{ grid-template-columns:1fr; } .price-card.featured{ transform:none; } }
+
+/* FAQ */
+.faq-list{ display:flex; flex-direction:column; gap:14px; max-width:760px; }
+.faq-item{ background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+.faq-q{ display:flex; justify-content:space-between; align-items:center; padding:22px 26px; cursor:pointer; font-family:var(--display); font-weight:700; font-size:0.98rem; }
+.faq-q .plus{ font-size:1.3rem; color:var(--coral); transition:transform .3s; flex-shrink:0; margin-left:16px; }
+.faq-item.open .faq-q .plus{ transform:rotate(45deg); }
+.faq-a{ max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.faq-a p{ padding:0 26px 22px; color:var(--ink-soft); font-size:0.92rem; }
+
+/* FORM CARD */
+.form-card{ background:var(--card); border:1px solid var(--line); border-radius:24px; padding:44px; box-shadow:0 20px 50px -20px rgba(31,43,40,0.12); }
+.form-grid{ display:grid; gap:20px; }
+.form-grid.two-col{ grid-template-columns:1fr 1fr; }
+@media (max-width:640px){ .form-grid.two-col{ grid-template-columns:1fr; } }
+label{ display:block; font-family:var(--display); font-weight:600; font-size:0.82rem; color:var(--ink-soft); margin-bottom:8px; }
+input, textarea, select{ width:100%; background:var(--bg-alt); border:1.5px solid transparent; border-radius:12px; color:var(--ink); font-family:var(--sans); font-size:0.98rem; padding:13px 16px; transition:border-color .3s; }
+input:focus, textarea:focus, select:focus{ outline:none; border-color:var(--teal); background:#fff; }
+textarea{ min-height:100px; resize:vertical; }
+.form-note{ font-size:0.78rem; color:var(--ink-dim); margin-top:10px; text-align:center; }
+.booking-wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px; align-items:center; }
+@media (max-width:860px){ .booking-wrap{ grid-template-columns:1fr; } }
+
+/* CTA BAND */
+.cta-band{ background:var(--ink); border-radius:32px; padding:64px 50px; text-align:center; margin:0 auto; max-width:1100px; }
+.cta-band h2{ font-family:var(--display); font-weight:800; font-size:clamp(1.7rem,2.8vw,2.2rem); color:#fff; }
+.cta-band p{ color:rgba(255,255,255,0.7); margin:14px 0 28px; max-width:480px; margin-left:auto; margin-right:auto; }
+.cta-band .btn-primary{ background:#fff; color:var(--ink); }
+.cta-band .btn-outline{ color:#fff; border-color:rgba(255,255,255,0.3); }
+
+footer{ border-top:1px solid var(--line); padding:50px 0 30px; text-align:center; }
+footer p{ font-size:0.82rem; color:var(--ink-dim); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <div class="logo">Tycoon Clap</div>
+    <a href="#book" class="btn btn-primary">Book Free Audit Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob" style="width:260px;height:260px;background:var(--mustard);top:-60px;right:0;"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Website Redesign</div>
+      <h1>Your website is losing customers <span class="accent">before they even read a word.</span></h1>
+      <p class="lede">Visitors decide whether to trust your business in about 3 seconds. If your site looks dated, they leave — and go straight to a competitor. We rebuild it to convert.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-primary">Book Free Audit Call</a>
+        <a href="#pricing" style="align-self:center;font-family:var(--display);font-weight:600;font-size:0.9rem;color:var(--ink-soft);border-bottom:1px solid var(--line-strong);padding-bottom:2px;">See pricing ↓</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat-pill"><div class="num">3sec</div><div class="lbl">to lose a visitor</div></div>
+        <div class="stat-pill"><div class="num">75%</div><div class="lbl">judge credibility by design</div></div>
+        <div class="stat-pill"><div class="num">7 days</div><div class="lbl">avg. turnaround</div></div>
+      </div>
+    </div>
+    <div class="browser-mock" style="transform:rotate(1.5deg);">
+      <div class="browser-bar"><span></span><span></span><span></span></div>
+      <div class="mock-body after">
+        <div class="m-title">Your Business</div>
+        <div class="m-sub">A site that actually earns the click</div>
+        <div class="m-hero"></div>
+        <a class="m-cta">Get Started →</a>
+        <div class="m-cards"><div></div><div></div><div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PSYCHOLOGICAL IMPACT -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow" style="justify-content:center;">Why It Matters</div>
+      <h2>Design isn't decoration. It's trust, coded into pixels.</h2>
+      <p>Every visitor forms an opinion of your business before reading a single sentence — and that opinion decides whether they stay, call, or leave.</p>
+    </div>
+    <p style="max-width:640px;color:var(--ink-soft);font-style:italic;margin:-30px 0 44px;font-size:1rem;">Picture someone finding your business at 11pm, scrolling on their phone, comparing you against two other options in open tabs. They don't read your "About Us" page. They glance, judge, and decide — in less time than it took to read this sentence.</p>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="stat">50ms</div>
+        <h3>First impressions are instant</h3>
+        <p>Users form a judgment about your site's credibility in under 50 milliseconds — long before they process any content.</p>
+      </div>
+      <div class="impact-card">
+        <div class="stat">94%</div>
+        <h3>Design drives distrust</h3>
+        <p>Of all reasons people cite for not trusting a website, the vast majority come down to visual design, not content.</p>
+      </div>
+      <div class="impact-card">
+        <div class="stat">88%</div>
+        <h3>They don't come back</h3>
+        <p>Visitors who have a poor experience are unlikely to return — meaning a bad site doesn't just lose the sale, it loses the customer forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="section" id="showcase">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow" style="justify-content:center;">Case Study — Travel Industry</div>
+      <h2>Same business. Same offer. Completely different result.</h2>
+      <p>A independent travel agency came to us with a site built in 2014. Here's what changed after the rebuild.</p>
+    </div>
+
+    <div class="compare-wrap">
+      <div>
+        <div class="compare-label before">BEFORE — old site</div>
+        <div class="browser-mock">
+          <div class="browser-bar"><span></span><span></span><span></span></div>
+          <div class="mock-body before">
+            <div class="m-title">Welcome to Our Travel Co.</div>
+            <div class="m-nav"><span>HOME</span><span>PACKAGES</span><span>ABOUT US</span><span>CONTACT</span></div>
+            <div class="m-block"></div>
+            <div class="m-text"></div>
+            <div class="m-text" style="width:60%;"></div>
+            <a class="m-cta">Click Here</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="compare-label after">AFTER — rebuilt by Tycoon Clap <span style="opacity:0.7;">· 7-day turnaround</span></div>
+        <div class="browser-mock">
+          <div class="browser-bar"><span></span><span></span><span></span></div>
+          <div class="mock-body after">
+            <div class="m-title">Wander & Co.</div>
+            <div class="m-sub">Handpicked trips, booked in minutes</div>
+            <div class="m-hero"></div>
+            <a class="m-cta">Plan My Trip →</a>
+            <div class="m-cards"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-stats">
+      <div class="cs"><div class="lbl">Bounce Rate</div><div class="figures"><span class="old-v">68%</span><span class="new-v">24%</span></div></div>
+      <div class="cs"><div class="lbl">Inquiry Conversion</div><div class="figures"><span class="old-v">1.2%</span><span class="new-v">4.8%</span></div></div>
+      <div class="cs"><div class="lbl">Avg. Load Time</div><div class="figures"><span class="old-v">6.2s</span><span class="new-v">1.8s</span></div></div>
+      <div class="cs"><div class="lbl">Avg. Session</div><div class="figures"><span class="old-v">0:40</span><span class="new-v">3:10</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL BANNER -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="testimonial-banner">
+      <span class="concept-tag">Concept example — illustrative, not an actual client quote</span>
+      <blockquote>"We didn't change our prices or our packages. We changed our website — and started getting inquiries from people who'd never have called us before."</blockquote>
+      <div class="attrib">
+        <div class="attrib-avatar"></div>
+        <div>
+          <div class="attrib-name">Owner, Independent Travel Agency</div>
+          <div class="attrib-role">Rebuilt with Tycoon Clap — Standard package</div>
+        </div>
+      </div>
+      <div class="tb-stats">
+        <div><div class="num">+300%</div><div class="lbl">inquiry rate</div></div>
+        <div><div class="num">−65%</div><div class="lbl">bounce rate</div></div>
+        <div><div class="num">4.7×</div><div class="lbl">longer session time</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow" style="justify-content:center;">Investment</div>
+      <h2>Three ways to work with us</h2>
+      <p>Every package includes a mobile-responsive build, on your own domain, with a design that matches how your business actually operates.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="p-name">Premium</div>
+        <div class="p-amount">$1,999</div>
+        <div class="p-desc">For businesses ready to scale their online presence.</div>
+        <ul>
+          <li>Unlimited pages</li>
+          <li>Fully custom design + copywriting support</li>
+          <li>SEO setup + Google Analytics dashboard</li>
+          <li>Booking / payment integration</li>
+          <li>30 days of post-launch support</li>
+          <li>Unlimited revisions (launch window)</li>
+        </ul>
+        <a href="#book" class="btn btn-outline">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <div class="pf-tag">Most Popular</div>
+        <div class="p-name">Standard</div>
+        <div class="p-amount">$1,499</div>
+        <div class="p-desc">Fully custom design, built around your brand.</div>
+        <ul>
+          <li>Up to 8 pages</li>
+          <li>100% custom design (no templates)</li>
+          <li>Basic on-page SEO setup</li>
+          <li>Google Business Profile integration</li>
+          <li>7-day delivery</li>
+          <li>2 rounds of revisions</li>
+        </ul>
+        <a href="#book" class="btn btn-primary">Get Started</a>
+      </div>
+      <div class="price-card">
+        <div class="p-name">Basic</div>
+        <div class="p-amount">$1,199</div>
+        <div class="p-desc">For businesses that need a clean, credible site fast.</div>
+        <ul>
+          <li>Up to 5 pages</li>
+          <li>Mobile-responsive design</li>
+          <li>Contact form integration</li>
+          <li>Built on a proven template framework</li>
+          <li>7-day delivery</li>
+          <li>1 round of revisions</li>
+        </ul>
+        <a href="#book" class="btn btn-outline">Get Started</a>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--ink-soft);font-size:0.88rem;margin-top:28px;">Not happy with the direction mid-project? We revise until it's right — within the scope above, no extra charge.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Before You Ask</div>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <div class="faq-q">How fast can this actually be live? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Most projects go live within 7 days of kickoff, once we have your content and brand assets. Premium builds with custom copywriting can take slightly longer depending on scope.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What do you need from me to get started? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Just your logo (if you have one), a few photos, and a short brief on what you offer. We'll write draft copy for you to review if you don't have existing content.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you handle hosting and the domain too? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes — we can set up hosting and connect your existing domain, or help you register a new one. This is included in setup at no extra cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens after the site launches? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Basic and Standard include a short post-launch check-in. Premium includes 30 days of support for edits, fixes, and small changes as you settle into the new site.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why does a website cost this much? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Freelance custom builds typically run $1,500–$8,000, and agencies charge $3,000–$15,000+. Our pricing sits below both because we've streamlined the process — you're still getting a fully custom design, not a $200 template.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="book">
+  <div class="wrap">
+    <div class="booking-wrap">
+      <div>
+        <div class="eyebrow">Next Step</div>
+        <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3vw,2.3rem);line-height:1.2;">Get a free 15-minute audit of your current site</h2>
+        <p style="color:var(--ink-soft);margin-top:16px;max-width:400px;">No pitch deck, no pressure. We'll walk through what's working, what's costing you visitors, and whether a rebuild makes sense for your business.</p>
+        <div class="stat-row" style="margin-top:30px;">
+          <div class="stat-pill"><div class="num">15 min</div><div class="lbl">free call</div></div>
+          <div class="stat-pill"><div class="num">0</div><div class="lbl">obligation</div></div>
+        </div>
+      </div>
+      <div class="form-card">
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div>
+              <label for="name">Name & Business</label>
+              <input type="text" id="name" placeholder="e.g. Andrew, Wander & Co." required>
+            </div>
+            <div>
+              <label for="email">Email or Phone</label>
+              <input type="text" id="email" required>
+            </div>
+            <div>
+              <label for="msg">Anything to add? <span style="font-weight:400;color:var(--ink-dim);text-transform:none;">(optional)</span></label>
+              <textarea id="msg" placeholder="Current website link, what's not working, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Book My Free Audit Call</button>
+          </div>
+        </form>
+        <div class="form-note">We'll reply within 24 hours with a few available time slots.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Tycoon Clap. Technology Growth Partner.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const a=item.querySelector('.faq-a');
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!wasOpen){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
+  });
+});
+document.getElementById('bookingForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.querySelector('button').textContent='Request sent ✓';
+  this.querySelector('button').style.background='var(--teal-dark)';
+});
+</script>
+</body>
+</html>
