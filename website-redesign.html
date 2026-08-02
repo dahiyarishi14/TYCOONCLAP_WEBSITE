@@ -29,6 +29,7 @@ html{ scroll-behavior:smooth; }
 body{ background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.65; overflow-x:hidden; }
 a{ color:inherit; text-decoration:none; }
 .wrap{ max-width:1180px; margin:0 auto; padding:0 40px; }
+@media (max-width:600px){ .wrap{ padding:0 20px; } }
 img,svg{ max-width:100%; display:block; }
 ::selection{ background:var(--mustard); color:var(--ink); }
 
@@ -57,6 +58,11 @@ img,svg{ max-width:100%; display:block; }
 .stat-pill .num{ font-family:var(--display); font-weight:800; font-size:1.5rem; color:var(--teal-dark); }
 .stat-pill .lbl{ font-size:0.76rem; color:var(--ink-dim); margin-top:2px; }
 .blob{ position:absolute; border-radius:50%; opacity:0.45; z-index:-1; filter:blur(2px); }
+@media (max-width:860px){
+  .hero{ padding:60px 0 40px; }
+  .hero .wrap{ grid-template-columns:1fr; gap:36px; }
+  .hero .browser-mock{ transform:none !important; max-width:420px; margin:0 auto; }
+}
 
 /* SECTIONS */
 .section{ padding:90px 0; position:relative; }
@@ -114,7 +120,7 @@ img,svg{ max-width:100%; display:block; }
 .testimonial-banner .concept-tag{ display:inline-block; background:rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); font-family:var(--display); font-weight:700; font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:22px; }
 .testimonial-banner blockquote{ font-family:var(--display); font-weight:700; font-size:clamp(1.3rem,2.4vw,1.7rem); color:#fff; line-height:1.4; max-width:760px; }
 .testimonial-banner .attrib{ margin-top:24px; display:flex; align-items:center; gap:14px; }
-.attrib-avatar{ width:46px; height:46px; border-radius:50%; background:linear-gradient(135deg,var(--coral),var(--mustard)); flex-shrink:0; }
+.attrib-avatar{ width:46px; height:46px; border-radius:50%; flex-shrink:0; }
 .attrib-name{ font-family:var(--display); font-weight:700; color:#fff; font-size:0.92rem; }
 .attrib-role{ font-size:0.8rem; color:rgba(255,255,255,0.55); }
 .testimonial-banner .tb-stats{ display:flex; gap:32px; margin-top:32px; flex-wrap:wrap; }
@@ -158,13 +164,6 @@ textarea{ min-height:100px; resize:vertical; }
 .booking-wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px; align-items:center; }
 @media (max-width:860px){ .booking-wrap{ grid-template-columns:1fr; } }
 
-/* CTA BAND */
-.cta-band{ background:var(--ink); border-radius:32px; padding:64px 50px; text-align:center; margin:0 auto; max-width:1100px; }
-.cta-band h2{ font-family:var(--display); font-weight:800; font-size:clamp(1.7rem,2.8vw,2.2rem); color:#fff; }
-.cta-band p{ color:rgba(255,255,255,0.7); margin:14px 0 28px; max-width:480px; margin-left:auto; margin-right:auto; }
-.cta-band .btn-primary{ background:#fff; color:var(--ink); }
-.cta-band .btn-outline{ color:#fff; border-color:rgba(255,255,255,0.3); }
-
 footer{ border-top:1px solid var(--line); padding:50px 0 30px; text-align:center; }
 footer p{ font-size:0.82rem; color:var(--ink-dim); }
 </style>
@@ -173,7 +172,7 @@ footer p{ font-size:0.82rem; color:var(--ink-dim); }
 
 <nav class="site-nav">
   <div class="wrap">
-    <div class="logo">Tycoon Clap</div>
+    <a href="https://tycoonclap.com/" class="logo">Tycoon Clap</a>
     <a href="#book" class="btn btn-primary">Book Free Audit Call</a>
   </div>
 </nav>
@@ -217,7 +216,7 @@ footer p{ font-size:0.82rem; color:var(--ink-dim); }
       <h2>Design isn't decoration. It's trust, coded into pixels.</h2>
       <p>Every visitor forms an opinion of your business before reading a single sentence — and that opinion decides whether they stay, call, or leave.</p>
     </div>
-    <p style="max-width:640px;color:var(--ink-soft);font-style:italic;margin:-30px 0 44px;font-size:1rem;">Picture someone finding your business at 11pm, scrolling on their phone, comparing you against two other options in open tabs. They don't read your "About Us" page. They glance, judge, and decide — in less time than it took to read this sentence.</p>
+    <p style="max-width:640px;color:var(--navy);font-style:italic;margin:-30px 0 44px;font-size:1.05rem;padding-left:20px;border-left:3px solid var(--mustard);">Picture someone finding your business at 11pm, scrolling on their phone, comparing you against two other options in open tabs. They don't read your "About Us" page. They glance, judge, and decide — in less time than it took to read this sentence.</p>
     <div class="impact-grid">
       <div class="impact-card">
         <div class="stat">50ms</div>
@@ -293,7 +292,11 @@ footer p{ font-size:0.82rem; color:var(--ink-dim); }
       <span class="concept-tag">Concept example — illustrative, not an actual client quote</span>
       <blockquote>"We didn't change our prices or our packages. We changed our website — and started getting inquiries from people who'd never have called us before."</blockquote>
       <div class="attrib">
-        <div class="attrib-avatar"></div>
+        <svg class="attrib-avatar" width="46" height="46" viewBox="0 0 46 46" fill="none">
+          <circle cx="23" cy="23" r="23" fill="#3A4A66"/>
+          <circle cx="23" cy="19" r="7" fill="var(--mustard)"/>
+          <path d="M8 40c0-8.3 6.7-13 15-13s15 4.7 15 13" fill="var(--coral)"/>
+        </svg>
         <div>
           <div class="attrib-name">Owner, Independent Travel Agency</div>
           <div class="attrib-role">Rebuilt with Tycoon Clap — Standard package</div>
@@ -411,21 +414,24 @@ footer p{ font-size:0.82rem; color:var(--ink-dim); }
         </div>
       </div>
       <div class="form-card">
-        <form id="bookingForm">
+        <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="7a29027e-dfab-4233-9f12-6483da861897">
+          <input type="hidden" name="subject" value="New Website Redesign Lead">
+          <input type="hidden" name="from_name" value="Website Redesign Landing Page">
           <div class="form-grid">
             <div>
-              <label for="name">Name & Business</label>
-              <input type="text" id="name" placeholder="e.g. Andrew, Wander & Co." required>
+              <label for="name">Name & Business <span style="color:var(--coral);">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Andrew, Wander & Co." required>
             </div>
             <div>
-              <label for="email">Email</label>
-              <input type="text" id="email" required>
+              <label for="email">Email <span style="color:var(--coral);">*</span></label>
+              <input type="text" id="email" name="email" required>
             </div>
             <div>
               <label for="msg">Anything to add? <span style="font-weight:400;color:var(--ink-dim);text-transform:none;">(optional)</span></label>
-              <textarea id="msg" placeholder="Current website link, what's not working, etc."></textarea>
+              <textarea id="msg" name="message" placeholder="Current website link, what's not working, etc."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Book My Free Audit Call</button>
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;opacity:0.5;cursor:not-allowed;" disabled>Book My Free Audit Call</button>
           </div>
         </form>
         <div class="form-note">We'll reply within 24 hours with a few available time slots.</div>
@@ -450,10 +456,47 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     if(!wasOpen){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
   });
 });
+
+const nameInput=document.getElementById('name');
+const emailInput=document.getElementById('email');
+const submitBtn=document.getElementById('submitBtn');
+function checkFormValid(){
+  const valid=nameInput.value.trim().length>0 && emailInput.value.trim().length>0;
+  submitBtn.disabled=!valid;
+  submitBtn.style.opacity=valid?'1':'0.5';
+  submitBtn.style.cursor=valid?'pointer':'not-allowed';
+}
+nameInput.addEventListener('input',checkFormValid);
+emailInput.addEventListener('input',checkFormValid);
+
 document.getElementById('bookingForm').addEventListener('submit',function(e){
   e.preventDefault();
-  this.querySelector('button').textContent='Request sent ✓';
-  this.querySelector('button').style.background='var(--teal-dark)';
+  const form=this;
+  const btn=document.getElementById('submitBtn');
+  const originalText=btn.textContent;
+  btn.textContent='Sending...';
+  fetch(form.action,{
+    method:'POST',
+    body:new FormData(form),
+    headers:{'Accept':'application/json'}
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    if(data.success){
+      btn.textContent='Request sent ✓';
+      btn.style.background='var(--teal-dark)';
+      form.reset();
+    }else{
+      btn.textContent='Something went wrong — try again';
+      btn.style.background='var(--coral)';
+      setTimeout(()=>{ btn.textContent=originalText; checkFormValid(); },3000);
+    }
+  })
+  .catch(()=>{
+    btn.textContent='Something went wrong — try again';
+    btn.style.background='var(--coral)';
+    setTimeout(()=>{ btn.textContent=originalText; checkFormValid(); },3000);
+  });
 });
 </script>
 </body>
