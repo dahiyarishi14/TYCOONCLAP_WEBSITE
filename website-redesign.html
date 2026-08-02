@@ -118,11 +118,7 @@ img,svg{ max-width:100%; display:block; }
 /* TESTIMONIAL BANNER */
 .testimonial-banner{ background:var(--ink); border-radius:28px; padding:52px; position:relative; overflow:hidden; }
 .testimonial-banner .concept-tag{ display:inline-block; background:rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); font-family:var(--display); font-weight:700; font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:22px; }
-.testimonial-banner blockquote{ font-family:var(--display); font-weight:700; font-size:clamp(1.3rem,2.4vw,1.7rem); color:#fff; line-height:1.4; max-width:760px; }
-.testimonial-banner .attrib{ margin-top:24px; display:flex; align-items:center; gap:14px; }
-.attrib-avatar{ width:46px; height:46px; border-radius:50%; flex-shrink:0; }
-.attrib-name{ font-family:var(--display); font-weight:700; color:#fff; font-size:0.92rem; }
-.attrib-role{ font-size:0.8rem; color:rgba(255,255,255,0.55); }
+.testimonial-banner .tb-img{ width:100%; max-width:760px; border-radius:16px; display:block; }
 .testimonial-banner .tb-stats{ display:flex; gap:32px; margin-top:32px; flex-wrap:wrap; }
 .tb-stats div .num{ font-family:var(--display); font-weight:800; font-size:1.5rem; color:var(--mustard); }
 .tb-stats div .lbl{ font-size:0.76rem; color:rgba(255,255,255,0.55); margin-top:2px; }
@@ -290,18 +286,7 @@ footer p{ font-size:0.82rem; color:var(--ink-dim); }
   <div class="wrap">
     <div class="testimonial-banner">
       <span class="concept-tag">Concept example — illustrative, not an actual client quote</span>
-      <blockquote>"We didn't change our prices or our packages. We changed our website — and started getting inquiries from people who'd never have called us before."</blockquote>
-      <div class="attrib">
-        <svg class="attrib-avatar" width="46" height="46" viewBox="0 0 46 46" fill="none">
-          <circle cx="23" cy="23" r="23" fill="#3A4A66"/>
-          <circle cx="23" cy="19" r="7" fill="var(--mustard)"/>
-          <path d="M8 40c0-8.3 6.7-13 15-13s15 4.7 15 13" fill="var(--coral)"/>
-        </svg>
-        <div>
-          <div class="attrib-name">Owner, Independent Travel Agency</div>
-          <div class="attrib-role">Rebuilt with Tycoon Clap — Standard package</div>
-        </div>
-      </div>
+      <img src="/images/client.png" alt="Testimonial: We didn't change our prices or our packages. We changed our website — and started getting inquiries from people who'd never have called us before." class="tb-img">
       <div class="tb-stats">
         <div><div class="num">+300%</div><div class="lbl">inquiry rate</div></div>
         <div><div class="num">−65%</div><div class="lbl">bounce rate</div></div>
