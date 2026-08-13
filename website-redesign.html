@@ -54,7 +54,8 @@ img,svg{ max-width:100%; display:block; }
 /* NAV (matches site) */
 .site-nav{ position:sticky; top:0; z-index:100; background:rgba(245,250,247,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
 .site-nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:84px; }
-.logo{ font-family:var(--display); font-weight:800; font-size:1.3rem; color:var(--ink); }
+.logo{ font-family:var(--display); font-weight:800; font-size:1.3rem; color:var(--ink); display:flex; align-items:center; gap:8px; }
+.logo svg{ width:32px; height:32px; color:var(--ink); flex-shrink:0; }
 .btn{ display:inline-flex; align-items:center; gap:8px; font-family:var(--display); font-weight:700; font-size:0.9rem; padding:14px 28px; border-radius:100px; border:2px solid transparent; transition:all .3s ease; cursor:pointer; }
 .btn-primary{ background:var(--ink); color:#fff; }
 .btn-primary:hover{ background:var(--teal-dark); transform:translateY(-2px); }
@@ -187,7 +188,14 @@ footer p{ font-size:0.82rem; color:var(--ink-dim); }
 
 <nav class="site-nav">
   <div class="wrap">
-    <a href="https://tycoonclap.com/" class="logo">Tycoon Clap</a>
+    <a href="https://tycoonclap.com/" class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 28h20c8 0 14 6 14 14v6H26v-6c0-8 6-14 14-14z" fill="currentColor"/>
+        <rect x="42" y="34" width="16" height="10" rx="2" fill="var(--bg)"/>
+        <rect x="14" y="42" width="72" height="48" rx="16" fill="currentColor"/>
+      </svg>
+      Tycoon Clap
+    </a>
     <a href="#book" class="btn btn-primary">Book Free Audit Call</a>
   </div>
 </nav>
