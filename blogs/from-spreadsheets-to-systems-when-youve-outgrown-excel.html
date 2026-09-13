@@ -76,9 +76,12 @@ html[data-theme="dark"] .cat-company{ background:rgba(243,185,77,.18); color:#F3
 .article-content p{ margin:0 0 1.4rem; }
 .article-content h2{ font-family:var(--display); font-weight:800; font-size:1.55rem; line-height:1.2; letter-spacing:-.01em; margin:2.8rem 0 1rem; color:var(--ink); scroll-margin-top:100px; }
 .article-content h2:first-of-type{ margin-top:0; }
-.article-content ul.decision-list{ list-style:none; margin:0 0 1.5rem; padding:0; display:flex; flex-direction:column; gap:12px; }
-.article-content ul.decision-list li{ position:relative; padding-left:30px; }
-.article-content ul.decision-list li::before{ content:''; position:absolute; left:0; top:9px; width:9px; height:9px; border-radius:3px; background:#4C9C8B; }
+.article-content ul.decision-list{ list-style:none; margin:0 0 1.5rem; padding:0; display:flex; flex-direction:column; gap:16px; }
+.article-content ul.decision-list li{ display:flex; align-items:flex-start; gap:14px; }
+.article-content ul.decision-list .li-icon{ flex-shrink:0; width:38px; height:38px; border-radius:11px; display:flex; align-items:center; justify-content:center; }
+.article-content ul.decision-list .li-icon svg{ width:20px; height:20px; }
+.article-content ul.decision-list .li-text{ padding-top:8px; }
+html[data-theme="dark"] .article-content ul.decision-list .li-icon{ filter:brightness(0.92) saturate(1.15); }
 .article-pull{ border-left:3px solid #E9584C; padding:4px 0 4px 22px; margin:2.2rem 0; font-family:var(--display); font-weight:700; font-size:1.22rem; line-height:1.45; color:var(--ink); }
 
 /* ===== FAQ ACCORDION ===== */
@@ -131,6 +134,7 @@ html[data-theme="dark"] .toc-list a:hover{ color:#7FCBB6; }
 <meta name="description" content="Broken formulas, version chaos, a spreadsheet nobody trusts anymore — here are the clear signs it's time to move from Excel to a real data system.">
 <meta property="og:title" content="From Spreadsheets to Systems: When You've Outgrown Excel">
 <meta property="og:description" content="Broken formulas, version chaos, a spreadsheet nobody trusts anymore — here are the clear signs it's time to move from Excel to a real data system.">
+<meta property="og:image" content="https://tycoonclap.com/logo-icon.png">
 <meta property="og:type" content="article">
 </head>
 <body>
@@ -207,11 +211,26 @@ html[data-theme="dark"] .toc-list a:hover{ color:#7FCBB6; }
 
         <h2 id="sec1">The Warning Signs You're Already Past the Line</h2>
         <ul class="decision-list">
-          <li>Multiple people edit the same file and "final_v3_ACTUAL.xlsx" has become a running joke, not an exception.</li>
-          <li>A single broken formula can silently corrupt numbers for weeks before anyone notices.</li>
-          <li>Reports take hours to compile manually because data lives in five disconnected tabs or files.</li>
-          <li>New employees can't trust the numbers because there's no documented source of truth — just tribal knowledge about "which tab is the real one."</li>
-          <li>You're duplicating the same data entry across a spreadsheet and another tool because nothing talks to anything else.</li>
+          <li>
+            <span class="li-icon" style="background:#FCE4E1;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="12" height="15" rx="2" fill="#F3B0A6"/><rect x="8" y="6" width="12" height="15" rx="2" fill="#E9584C"/><path d="M12 11h4M12 15h4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            <span class="li-text">Multiple people edit the same file and "final_v3_ACTUAL.xlsx" has become a running joke, not an exception.</span>
+          </li>
+          <li>
+            <span class="li-icon" style="background:#FDEED0;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l9 16H3l9-16z" fill="#F3B94D"/><path d="M12 10v4" stroke="#8B650E" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="#8B650E"/></svg></span>
+            <span class="li-text">A single broken formula can silently corrupt numbers for weeks before anyone notices.</span>
+          </li>
+          <li>
+            <span class="li-icon" style="background:#E4E8F2;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8.5" fill="#AEB9D4"/><path d="M12 7.5V12l3 2" stroke="#2E3A55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="li-text">Reports take hours to compile manually because data lives in five disconnected tabs or files.</span>
+          </li>
+          <li>
+            <span class="li-icon" style="background:#DCEFE9;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="3" width="14" height="18" rx="2" fill="#8FCFBE"/><path d="M9.3 9.2a2.7 2.7 0 1 1 3.9 2.4c-.8.4-1.2.9-1.2 1.7" stroke="#2A6E5F" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="16.3" r="1" fill="#2A6E5F"/></svg></span>
+            <span class="li-text">New employees can't trust the numbers because there's no documented source of truth — just tribal knowledge about "which tab is the real one."</span>
+          </li>
+          <li>
+            <span class="li-icon" style="background:#FCE4E1;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="8" height="10" rx="2" fill="#F3B0A6"/><rect x="13" y="7" width="8" height="10" rx="2" fill="#E9584C"/><path d="M11 12h2" stroke="#8F3329" stroke-width="1.8" stroke-linecap="round"/><path d="M12 10.5 13.5 12 12 13.5" stroke="#8F3329" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="li-text">You're duplicating the same data entry across a spreadsheet and another tool because nothing talks to anything else.</span>
+          </li>
         </ul>
 
         <h2 id="sec2">Why This Happens to Almost Every Growing Business</h2>
@@ -224,10 +243,22 @@ html[data-theme="dark"] .toc-list a:hover{ color:#7FCBB6; }
 
         <h2 id="sec4">How to Make the Transition Without Disrupting the Business</h2>
         <ul class="decision-list">
-          <li>Start with your single most error-prone spreadsheet, not your whole operation at once.</li>
-          <li>Migrate the data structure first, then automate the inputs that currently require manual copy-paste.</li>
-          <li>Keep the same reporting outputs people already trust — the goal is fixing what's underneath, not changing what leadership sees.</li>
-          <li>Document who owns the new system, so it doesn't quietly drift back into an unmanaged spreadsheet within a year.</li>
+          <li>
+            <span class="li-icon" style="background:#DCEFE9;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8.5" fill="#8FCFBE"/><circle cx="12" cy="12" r="5" fill="#fff"/><circle cx="12" cy="12" r="2" fill="#2A6E5F"/></svg></span>
+            <span class="li-text">Start with your single most error-prone spreadsheet, not your whole operation at once.</span>
+          </li>
+          <li>
+            <span class="li-icon" style="background:#E4E8F2;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="7" height="7" rx="1.5" fill="#AEB9D4"/><rect x="14" y="12" width="7" height="7" rx="1.5" fill="#2E3A55"/><path d="M10 8.5h5a2 2 0 0 1 2 2V13" stroke="#59647A" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 2.4"/></svg></span>
+            <span class="li-text">Migrate the data structure first, then automate the inputs that currently require manual copy-paste.</span>
+          </li>
+          <li>
+            <span class="li-icon" style="background:#FDEED0;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z" fill="#F6CE7E"/><circle cx="12" cy="12" r="3" fill="#8B650E"/></svg></span>
+            <span class="li-text">Keep the same reporting outputs people already trust — the goal is fixing what's underneath, not changing what leadership sees.</span>
+          </li>
+          <li>
+            <span class="li-icon" style="background:#FCE4E1;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="3" width="14" height="18" rx="2" fill="#F3B0A6"/><path d="M8.5 12.5l2.2 2.2L15.5 10" stroke="#8F3329" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="li-text">Document who owns the new system, so it doesn't quietly drift back into an unmanaged spreadsheet within a year.</span>
+          </li>
         </ul>
 
         <h2 id="sec5">The Cost of Waiting</h2>
@@ -265,9 +296,9 @@ html[data-theme="dark"] .toc-list a:hover{ color:#7FCBB6; }
         <div class="aside-card">
           <h4>Share</h4>
           <div class="share-row">
-            <a href="https://x.com/intent/tweet?url=" target="_blank" aria-label="Share on X">X</a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" aria-label="Share on LinkedIn">in</a>
-            <a href="mailto:?subject=Worth a read&body=" aria-label="Share by email">@</a>
+            <a href="#" class="share-x" target="_blank" aria-label="Share on X">X</a>
+            <a href="#" class="share-linkedin" target="_blank" aria-label="Share on LinkedIn">in</a>
+            <a href="#" class="share-email" aria-label="Share by email">@</a>
           </div>
         </div>
         <div class="aside-cta">
@@ -382,6 +413,22 @@ html[data-theme="dark"] .toc-list a:hover{ color:#7FCBB6; }
       note.textContent = 'Something went wrong — please try again.';
       setTimeout(function(){ btn.textContent = originalBtnText; note.textContent = originalNote; }, 3000);
     });
+  });
+})();
+
+// Populate share links with the real page URL
+(function(){
+  var pageUrl = encodeURIComponent(window.location.href);
+  var pageTitle = encodeURIComponent(document.title);
+
+  document.querySelectorAll('.share-x').forEach(function(el){
+    el.href = 'https://x.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle;
+  });
+  document.querySelectorAll('.share-linkedin').forEach(function(el){
+    el.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl;
+  });
+  document.querySelectorAll('.share-email').forEach(function(el){
+    el.href = 'mailto:?subject=' + pageTitle + '&body=' + pageUrl;
   });
 })();
 </script>
