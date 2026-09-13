@@ -48,8 +48,14 @@
   /* BLOG HERO */
   .blog-hero{ position:relative; padding:90px 0 50px; overflow:hidden; }
   .blog-hero-bg{ position:absolute; inset:0; z-index:-1; background-image:radial-gradient(circle at 1px 1px, var(--line-strong) 1px, transparent 0); background-size:26px 26px; opacity:0.5; mask-image:linear-gradient(to bottom, black, transparent 85%); }
-  .blog-hero h1{ font-family:var(--display); font-weight:800; font-size:clamp(2.1rem,4.6vw,3.3rem); line-height:1.1; color:var(--ink); max-width:680px; }
-  .blog-hero p{ color:var(--ink-soft); font-size:1.08rem; max-width:520px; margin-top:18px; }
+  .blog-hero .wrap{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:50px; align-items:center; }
+  .blog-hero h1{ font-family:var(--display); font-weight:800; font-size:clamp(2.1rem,4.2vw,3rem); line-height:1.12; color:var(--ink); }
+  .blog-hero p{ color:var(--ink-soft); font-size:1.06rem; max-width:460px; margin-top:16px; }
+  .blog-illustration{ width:100%; }
+  @media (max-width:960px){
+    .blog-hero .wrap{ grid-template-columns:1fr; gap:32px; }
+    .blog-illustration{ max-width:380px; margin:0 auto; order:-1; }
+  }
 
   /* CATEGORY FILTER PILLS */
   .cat-filters{ display:flex; gap:10px; flex-wrap:wrap; margin-top:34px; }
@@ -135,17 +141,76 @@
 <section class="blog-hero">
   <div class="blog-hero-bg"></div>
   <div class="wrap">
-    <span class="eyebrow">The Tycoon Clap Blog</span>
-    <h1>Ideas on growth, engineering, and the data behind good decisions</h1>
-    <p>Notes from the team building marketing systems, products, and dashboards for clients across India, the US, and Europe.</p>
+    <div>
+      <span class="eyebrow">The Tycoon Clap Blog</span>
+      <h1>Ideas on growth, engineering, and the data behind good decisions</h1>
+      <p>Notes from the team building marketing systems, products, and dashboards for clients across India, the US, and Europe.</p>
 
-    <div class="cat-filters" id="catFilters">
-      <button class="cat-pill active" data-cat="all">All posts</button>
-      <button class="cat-pill" data-cat="marketing">Growth Marketing</button>
-      <button class="cat-pill" data-cat="app">Software Engineering</button>
-      <button class="cat-pill" data-cat="data">Data &amp; AI</button>
-      <button class="cat-pill" data-cat="company">Company</button>
+      <div class="cat-filters" id="catFilters">
+        <button class="cat-pill active" data-cat="all">All posts</button>
+        <button class="cat-pill" data-cat="marketing">Growth Marketing</button>
+        <button class="cat-pill" data-cat="app">Software Engineering</button>
+        <button class="cat-pill" data-cat="data">Data &amp; AI</button>
+        <button class="cat-pill" data-cat="company">Company</button>
+      </div>
     </div>
+
+    <svg class="blog-illustration" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="240" cy="390" rx="175" ry="16" fill="#EAF3ED"/>
+
+      <!-- floating category icons -->
+      <!-- marketing: megaphone (coral) -->
+      <g>
+        <rect x="30" y="70" width="56" height="56" rx="16" fill="#FCE4E1"/>
+        <path d="M46 100 l14 -8 v22 l-14 -8 z" fill="#E9584C"/>
+        <rect x="42" y="96" width="6" height="10" fill="#E9584C"/>
+        <path d="M60 88 q10 8 0 24" fill="none" stroke="#E9584C" stroke-width="3" stroke-linecap="round"/>
+      </g>
+
+      <!-- engineering: code brackets (navy) -->
+      <g>
+        <rect x="390" y="50" width="56" height="56" rx="16" fill="#E4E8F2"/>
+        <text x="418" y="88" font-family="monospace" font-size="26" font-weight="700" fill="#2E3A55" text-anchor="middle">&lt;/&gt;</text>
+      </g>
+
+      <!-- data: bar chart (teal) -->
+      <g>
+        <rect x="400" y="230" width="52" height="52" rx="14" fill="#DCEFE9"/>
+        <rect x="412" y="256" width="7" height="16" fill="#4C9C8B"/>
+        <rect x="423" y="248" width="7" height="24" fill="#357566"/>
+        <rect x="434" y="240" width="7" height="32" fill="#4C9C8B"/>
+      </g>
+
+      <!-- idea: lightbulb (mustard) -->
+      <g>
+        <rect x="20" y="230" width="52" height="52" rx="14" fill="#FDEED0"/>
+        <circle cx="46" cy="250" r="11" fill="none" stroke="#F3B94D" stroke-width="3"/>
+        <path d="M46 261 v6 M41 269 h10" stroke="#F3B94D" stroke-width="3" stroke-linecap="round"/>
+      </g>
+
+      <!-- desk + laptop -->
+      <rect x="120" y="300" width="240" height="14" rx="4" fill="#2E3A55"/>
+      <rect x="140" y="280" width="16" height="24" fill="#2E3A55"/>
+      <rect x="324" y="280" width="16" height="24" fill="#2E3A55"/>
+      <rect x="165" y="250" width="150" height="56" rx="8" fill="#4C9C8B"/>
+      <rect x="175" y="260" width="130" height="38" rx="4" fill="#F5FAF7"/>
+      <rect x="185" y="268" width="70" height="6" rx="2" fill="#E9584C"/>
+      <rect x="185" y="280" width="90" height="5" rx="2" fill="#DCEFE9"/>
+      <rect x="185" y="289" width="60" height="5" rx="2" fill="#DCEFE9"/>
+
+      <!-- character -->
+      <path d="M195 250 Q195 212 232 212 L268 212 Q305 212 305 250 L305 260 L195 260 Z" fill="#F3B94D"/>
+      <circle cx="250" cy="178" r="32" fill="#F0B892"/>
+      <path d="M217 168 Q250 130 283 168 Q283 148 250 142 Q217 148 217 168Z" fill="#2E3A55"/>
+      <rect x="205" y="204" width="17" height="42" rx="8" fill="#F0B892" transform="rotate(26 205 204)"/>
+      <rect x="278" y="204" width="17" height="42" rx="8" fill="#F0B892" transform="rotate(-26 278 204)"/>
+
+      <!-- floating heart / like icon -->
+      <g>
+        <circle cx="360" cy="150" r="18" fill="#FCE4E1"/>
+        <path d="M360 158 c-6 -6 -10 -10 -10 -15 a6 6 0 0 1 10 -4 a6 6 0 0 1 10 4 c0 5 -4 9 -10 15z" fill="#E9584C"/>
+      </g>
+    </svg>
   </div>
 </section>
 
