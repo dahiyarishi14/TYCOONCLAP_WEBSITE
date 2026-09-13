@@ -96,10 +96,6 @@
   .blog-card:hover{ transform:translateY(-5px); box-shadow:0 20px 40px -22px rgba(31,43,40,0.28); }
   .blog-card.hidden{ display:none; }
 
-  .blog-thumb{ aspect-ratio:16/10; background:var(--bg-alt); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--ink-dim); position:relative; }
-  .blog-thumb svg{ width:30px; height:30px; opacity:0.5; }
-  .blog-thumb span{ font-size:0.76rem; font-family:var(--display); font-weight:600; opacity:0.6; }
-
   .blog-body{ padding:22px 22px 24px; display:flex; flex-direction:column; flex-grow:1; }
   .blog-cat{ display:inline-block; font-family:var(--display); font-weight:700; font-size:0.72rem; letter-spacing:0.02em; padding:5px 12px; border-radius:100px; margin-bottom:12px; width:fit-content; }
   .cat-marketing{ background:#FCE4E1; color:#C7402F; }
@@ -126,6 +122,18 @@
 
   .blog-empty{ text-align:center; padding:60px 20px; color:var(--ink-dim); font-family:var(--display); font-weight:600; display:none; }
   .blog-empty.show{ display:block; }
+
+  /* NEWSLETTER SUBSCRIBE */
+  .subscribe-band{ background:linear-gradient(135deg,#357566,#2E3A55); border-radius:28px; padding:52px 44px; text-align:center; margin-top:60px; }
+  .subscribe-band h2{ font-family:var(--display); font-weight:800; font-size:clamp(1.5rem,2.6vw,2rem); color:#fff; margin-bottom:10px; }
+  .subscribe-band p{ color:rgba(255,255,255,0.75); font-size:0.98rem; max-width:480px; margin:0 auto 26px; }
+  .subscribe-form{ display:flex; gap:12px; max-width:440px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+  .subscribe-form input[type="email"]{ flex:1; min-width:220px; padding:14px 18px; border-radius:100px; border:1.5px solid rgba(255,255,255,0.25); background:rgba(255,255,255,0.08); color:#fff; font-family:var(--sans); font-size:0.95rem; outline:none; }
+  .subscribe-form input[type="email"]::placeholder{ color:rgba(255,255,255,0.55); }
+  .subscribe-form input[type="email"]:focus{ border-color:#fff; background:rgba(255,255,255,0.14); }
+  .subscribe-form button{ font-family:var(--display); font-weight:700; font-size:0.9rem; padding:14px 26px; border-radius:100px; border:none; background:#fff; color:#2E3A55; cursor:pointer; transition:transform .2s ease, opacity .2s ease; white-space:nowrap; }
+  .subscribe-form button:hover{ transform:translateY(-2px); }
+  .subscribe-note{ font-size:0.78rem; color:rgba(255,255,255,0.55); margin-top:14px; }
 </style>
 </head>
 <body>
@@ -407,10 +415,10 @@
           <h3 class="blog-title"><a href="blogs/your-business-is-sitting-on-data-gold-heres-how-to-mine-it.html">Your Business Is Sitting on Data Gold — Here's How to Mine It</a></h3>
           <p class="blog-excerpt">The data you already have is usually more valuable than the next tool you're about to buy.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#F3B94D;">SK</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
-              <div class="blog-author">Sana Kapoor</div>
-              <div class="blog-role">Data Engineer, Tycoon Clap</div>
+              <div class="blog-author">Lindsay</div>
+              <div class="blog-role">Consultant, Tycoon Clap</div>
             </div>
             <div class="blog-readtime">7 min read</div>
           </div>
@@ -426,10 +434,10 @@
           <h3 class="blog-title"><a href="blogs/dashboards-are-not-strategy-why-data-without-decisions-is-useless.html">Dashboards Are Not Strategy: Why Data Without Decisions Is Useless</a></h3>
           <p class="blog-excerpt">A beautiful dashboard nobody acts on is just an expensive screensaver. Here's how to close that gap.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#F3B94D;">SK</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
-              <div class="blog-author">Sana Kapoor</div>
-              <div class="blog-role">Data Engineer, Tycoon Clap</div>
+              <div class="blog-author">Lindsay</div>
+              <div class="blog-role">Consultant, Tycoon Clap</div>
             </div>
             <div class="blog-readtime">6 min read</div>
           </div>
@@ -445,10 +453,10 @@
           <h3 class="blog-title"><a href="blogs/from-spreadsheets-to-systems-when-youve-outgrown-excel.html">From Spreadsheets to Systems: When You've Outgrown Excel</a></h3>
           <p class="blog-excerpt">The signs are usually obvious in hindsight — broken formulas, version chaos, and a spreadsheet nobody trusts anymore.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#F3B94D;">SK</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
-              <div class="blog-author">Sana Kapoor</div>
-              <div class="blog-role">Data Engineer, Tycoon Clap</div>
+              <div class="blog-author">Lindsay</div>
+              <div class="blog-role">Consultant, Tycoon Clap</div>
             </div>
             <div class="blog-readtime">5 min read</div>
           </div>
@@ -477,6 +485,21 @@
     </div>
 
     <p class="blog-empty" id="blogEmpty">No posts in this category yet — check back soon.</p>
+
+    <!-- ============ NEWSLETTER SUBSCRIBE ============ -->
+    <div class="subscribe-band">
+      <h2>Get new posts in your inbox</h2>
+      <p>One email whenever we publish something new on growth, engineering, or data. No spam, unsubscribe anytime.</p>
+      <form id="subscribeForm" class="subscribe-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="7a29027e-dfab-4233-9f12-6483da861897">
+        <input type="hidden" name="subject" value="New Blog Newsletter Signup">
+        <input type="hidden" name="from_name" value="Tycoon Clap Blog">
+        <input type="email" id="subscribeEmail" name="email" placeholder="you@company.com" required>
+        <button type="submit" id="subscribeBtn">Subscribe</button>
+      </form>
+      <div class="subscribe-note" id="subscribeNote">We'll only email you when there's something worth reading.</div>
+    </div>
+
   </div>
 </section>
 
@@ -567,6 +590,41 @@
           }
         });
         empty.classList.toggle('show', visibleCount === 0);
+      });
+    });
+  })();
+
+  // Newsletter subscribe
+  (function(){
+    var form = document.getElementById('subscribeForm');
+    var btn = document.getElementById('subscribeBtn');
+    var note = document.getElementById('subscribeNote');
+    var originalBtnText = btn.textContent;
+    var originalNote = note.textContent;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      btn.textContent = 'Subscribing...';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        if(data.success){
+          btn.textContent = 'Subscribed ✓';
+          note.textContent = "You're on the list — thanks for subscribing.";
+          form.reset();
+        } else {
+          btn.textContent = 'Try again';
+          note.textContent = 'Something went wrong — please try again.';
+          setTimeout(function(){ btn.textContent = originalBtnText; note.textContent = originalNote; }, 3000);
+        }
+      })
+      .catch(function(){
+        btn.textContent = 'Try again';
+        note.textContent = 'Something went wrong — please try again.';
+        setTimeout(function(){ btn.textContent = originalBtnText; note.textContent = originalNote; }, 3000);
       });
     });
   })();
