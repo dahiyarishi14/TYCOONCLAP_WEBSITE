@@ -8,6 +8,26 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="leads.css">
 <link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
+<style>
+  /* ===== Benefits section ===== */
+  .benefits-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .benefit-card{ background:var(--card,#fff); border:1px solid var(--line,rgba(31,43,40,0.1)); border-radius:18px; padding:26px 22px; }
+  .benefit-icon{ width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:14px; background:#DCEFE9; }
+  .benefit-card h3{ font-family:var(--display,'Plus Jakarta Sans',sans-serif); font-weight:700; font-size:1.02rem; color:var(--ink,#1F2B28); margin-bottom:8px; }
+  .benefit-card p{ color:var(--ink-soft,#5C6B66); font-size:0.9rem; }
+  @media (max-width:900px){ .benefits-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .benefits-grid{ grid-template-columns:1fr; } }
+
+  /* ===== Testimonials section ===== */
+  .testimonials-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:10px; }
+  .testimonial-card{ background:var(--card,#fff); border:1px solid var(--line,rgba(31,43,40,0.1)); border-radius:20px; padding:34px 26px 26px; text-align:center; position:relative; }
+  .testimonial-avatar{ width:64px; height:64px; border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-family:var(--display,'Plus Jakarta Sans',sans-serif); font-weight:800; font-size:1.1rem; color:#fff; }
+  .testimonial-quote{ color:var(--ink-soft,#5C6B66); font-size:0.92rem; line-height:1.6; margin-bottom:16px; }
+  .testimonial-quote::before{ content:'"'; font-family:Georgia,serif; font-size:1.8rem; color:var(--coral,#E9584C); line-height:0; display:block; margin-bottom:6px; }
+  .testimonial-name{ font-family:var(--display,'Plus Jakarta Sans',sans-serif); font-weight:800; font-size:0.95rem; color:var(--ink,#1F2B28); }
+  .testimonial-role{ font-size:0.8rem; color:var(--ink-dim,#8B9793); margin-top:2px; }
+  @media (max-width:900px){ .testimonials-grid{ grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 <div class="scroll-progress"></div>
@@ -37,6 +57,77 @@
     </div>
   </div>
 </header>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section" id="benefits">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why cold outreach with this list works</span>
+      <h2>A clean list is the fastest lever you have for more revenue</h2>
+      <p>Most outreach fails before it starts — bad emails, wrong contacts, wasted sends. A verified list fixes that from day one.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        </div>
+        <h3>More revenue, faster</h3>
+        <p>Every contact is a real, reachable decision-maker — so outreach converts to pipeline instead of bouncing into nowhere.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>Skip weeks of prospecting</h3>
+        <p>No manual research, no scraping, no guessing who to email. Download the list and start sending the same day.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>
+        </div>
+        <h3>Higher deliverability</h3>
+        <p>Every email is checked for deliverability within the last 30 days, so your sender reputation stays clean and inboxed.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 10h8M8 14h5"/></svg>
+        </div>
+        <h3>Full contact context</h3>
+        <p>Name, email, phone, title, company, and address — enough detail to personalize outreach, not just blast a list.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section alt" id="testimonials">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Results</span>
+      <h2>Businesses that turned this list into revenue</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-avatar" style="background:#4C9C8B;">JM</div>
+        <p class="testimonial-quote">We sent our first campaign the same day we downloaded the list. Booked 6 discovery calls in the first week — something our old scraped lists never did.</p>
+        <div class="testimonial-name">Jason Miller</div>
+        <div class="testimonial-role">Co-Founder, Wanderlux Travel Co. — Austin, TX</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-avatar" style="background:#E9584C;">SR</div>
+        <p class="testimonial-quote">Deliverability was the real win. Our bounce rate dropped to almost nothing, and two of those replies turned into paying clients within a month.</p>
+        <div class="testimonial-name">Sara Reynolds</div>
+        <div class="testimonial-role">Marketing Manager, TrailBlaze Tours — Denver, CO</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-avatar" style="background:#F3B94D;">DK</div>
+        <p class="testimonial-quote">$199 for a list that closed a $4,200 contract in three weeks isn't even a decision. We're buying the next region's list already.</p>
+        <div class="testimonial-name">David Kim</div>
+        <div class="testimonial-role">Founder / CEO, Pacific Route Travel — San Diego, CA</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ HERO ============ -->
 <section class="hero leads-hero">
