@@ -77,6 +77,16 @@
   .cat-pill.active{ background:var(--ink); color:#fff; border-color:var(--ink); }
   html[data-theme="dark"] .cat-pill.active{ background:#EAF2EF; color:#10161A; border-color:#EAF2EF; }
 
+
+  /* BLOG CARD ILLUSTRATIONS */
+  .blog-thumb{ aspect-ratio:16/10; background:var(--bg-alt); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:16px; }
+  .blog-thumb svg{ width:100%; height:100%; max-width:260px; max-height:170px; opacity:1; }
+  .blog-thumb span{ display:none; }
+  .blog-thumb svg text{ font-family:Arial, sans-serif; }
+  .blog-title a{ color:inherit; text-decoration:none; }
+  .blog-title a:hover{ color:#357566; }
+  html[data-theme="dark"] .blog-title a:hover{ color:#7FCBB6; }
+
   /* BLOG GRID */
   .blog-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
   @media (max-width:960px){ .blog-grid{ grid-template-columns:1fr 1fr; } }
@@ -85,10 +95,6 @@
   .blog-card{ background:var(--card,#fff); border:1px solid var(--line); border-radius:20px; overflow:hidden; display:flex; flex-direction:column; transition:transform .25s ease, box-shadow .25s ease; }
   .blog-card:hover{ transform:translateY(-5px); box-shadow:0 20px 40px -22px rgba(31,43,40,0.28); }
   .blog-card.hidden{ display:none; }
-
-  .blog-thumb{ aspect-ratio:16/10; background:var(--bg-alt); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--ink-dim); position:relative; }
-  .blog-thumb svg{ width:30px; height:30px; opacity:0.5; }
-  .blog-thumb span{ font-size:0.76rem; font-family:var(--display); font-weight:600; opacity:0.6; }
 
   .blog-body{ padding:22px 22px 24px; display:flex; flex-direction:column; flex-grow:1; }
   .blog-cat{ display:inline-block; font-family:var(--display); font-weight:700; font-size:0.72rem; letter-spacing:0.02em; padding:5px 12px; border-radius:100px; margin-bottom:12px; width:fit-content; }
@@ -116,6 +122,18 @@
 
   .blog-empty{ text-align:center; padding:60px 20px; color:var(--ink-dim); font-family:var(--display); font-weight:600; display:none; }
   .blog-empty.show{ display:block; }
+
+  /* NEWSLETTER SUBSCRIBE */
+  .subscribe-band{ background:linear-gradient(135deg,#357566,#2E3A55); border-radius:28px; padding:52px 44px; text-align:center; margin-top:60px; }
+  .subscribe-band h2{ font-family:var(--display); font-weight:800; font-size:clamp(1.5rem,2.6vw,2rem); color:#fff; margin-bottom:10px; }
+  .subscribe-band p{ color:rgba(255,255,255,0.75); font-size:0.98rem; max-width:480px; margin:0 auto 26px; }
+  .subscribe-form{ display:flex; gap:12px; max-width:440px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+  .subscribe-form input[type="email"]{ flex:1; min-width:220px; padding:14px 18px; border-radius:100px; border:1.5px solid rgba(255,255,255,0.25); background:rgba(255,255,255,0.08); color:#fff; font-family:var(--sans); font-size:0.95rem; outline:none; }
+  .subscribe-form input[type="email"]::placeholder{ color:rgba(255,255,255,0.55); }
+  .subscribe-form input[type="email"]:focus{ border-color:#fff; background:rgba(255,255,255,0.14); }
+  .subscribe-form button{ font-family:var(--display); font-weight:700; font-size:0.9rem; padding:14px 26px; border-radius:100px; border:none; background:#fff; color:#2E3A55; cursor:pointer; transition:transform .2s ease, opacity .2s ease; white-space:nowrap; }
+  .subscribe-form button:hover{ transform:translateY(-2px); }
+  .subscribe-note{ font-size:0.78rem; color:rgba(255,255,255,0.55); margin-top:14px; }
 </style>
 </head>
 <body>
@@ -295,15 +313,14 @@
 
       <article class="blog-card" data-category="marketing">
         <div class="blog-thumb" data-img-slot="spray-and-pray">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#FCE4E1"/><rect x="50" y="43" width="40" height="28" rx="5" fill="#E9584C"/><rect x="100" y="43" width="40" height="28" rx="5" fill="#F3B94D"/><rect x="150" y="43" width="40" height="28" rx="5" fill="#357566"/><circle cx="120" cy="91" r="12" fill="#2E3A55"/><path d="M120 91L70 117M120 91V122M120 91L170 117" stroke="#2E3A55" stroke-width="3" stroke-linecap="round"/><path d="M76 119l-9-2 3-8M164 119l9-2-3-8" stroke="#2E3A55" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-marketing">Growth Marketing</span>
-          <h3 class="blog-title">Why "Spray and Pray" Ads Are Killing Your ROI</h3>
+          <h3 class="blog-title"><a href="blogs/why-spray-and-pray-ads-are-killing-your-roi.html">Why "Spray and Pray" Ads Are Killing Your ROI</a></h3>
           <p class="blog-excerpt">Running ads on every platform at once feels like progress. Here's why it's usually the most expensive way to learn nothing.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#4C9C8B;">RD</div>
+            <div class="blog-avatar" style="background:#4C9C8B;">NK</div>
             <div class="blog-author-info">
               <div class="blog-author">Nathalie</div>
               <div class="blog-role">Consultant, Tycoon Clap</div>
@@ -315,15 +332,14 @@
 
       <article class="blog-card" data-category="marketing">
         <div class="blog-thumb" data-img-slot="funnel-tracking">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#EAF3ED"/><path d="M52 43H188L145 85V118H95V85L52 43Z" fill="#357566"/><path d="M68 43H172L151 64H89L68 43Z" fill="#4C9C8B"/><path d="M89 64H151L136 85H104L89 64Z" fill="#F3B94D"/><rect x="55" y="28" width="10" height="10" rx="5" fill="#E9584C"/><rect x="115" y="28" width="10" height="10" rx="5" fill="#F3B94D"/><rect x="175" y="28" width="10" height="10" rx="5" fill="#357566"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-marketing">Growth Marketing</span>
-          <h3 class="blog-title">The Real Cost of Not Tracking Your Marketing Funnel</h3>
+          <h3 class="blog-title"><a href="blogs/the-real-cost-of-not-tracking-your-marketing-funnel.html">The Real Cost of Not Tracking Your Marketing Funnel</a></h3>
           <p class="blog-excerpt">If you can't say what your cost per lead is right now, that's the first thing to fix — before spending another rupee on ads.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#E9584C;">PN</div>
+            <div class="blog-avatar" style="background:#E9584C;">MG</div>
             <div class="blog-author-info">
               <div class="blog-author">Megan</div>
               <div class="blog-role">Growth Lead, Tycoon Clap</div>
@@ -335,15 +351,14 @@
 
       <article class="blog-card" data-category="company">
         <div class="blog-thumb" data-img-slot="tech-partner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#FDEED0"/><rect x="48" y="62" width="58" height="36" rx="8" fill="#357566"/><rect x="134" y="62" width="58" height="36" rx="8" fill="#2E3A55"/><path d="M101 74l19-16 19 16-19 18-19-18Z" fill="#F3B94D"/><path d="M72 80h34m28 0h34" stroke="white" stroke-width="4" stroke-linecap="round"/><circle cx="70" cy="45" r="8" fill="#E9584C"/><circle cx="120" cy="35" r="8" fill="#357566"/><circle cx="170" cy="45" r="8" fill="#E9584C"/><path d="M70 45l50-10 50 10" stroke="#9FB6AE" stroke-width="2" stroke-dasharray="5 5"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-company">Company</span>
-          <h3 class="blog-title">5 Signs Your Business Needs a Tech Partner, Not Another Agency</h3>
+          <h3 class="blog-title"><a href="blogs/5-signs-your-business-needs-a-tech-partner-not-another-agency.html">5 Signs Your Business Needs a Tech Partner, Not Another Agency</a></h3>
           <p class="blog-excerpt">There's a real difference between hiring an agency and hiring a partner who owns your whole growth system.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#4C9C8B;">RD</div>
+            <div class="blog-avatar" style="background:#4C9C8B;">NK</div>
             <div class="blog-author-info">
               <div class="blog-author">Nathalie</div>
               <div class="blog-role">Consultant, Tycoon Clap</div>
@@ -355,15 +370,14 @@
 
       <article class="blog-card" data-category="app">
         <div class="blog-thumb" data-img-slot="android-vs-ios">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#E4E8F2"/><rect x="48" y="40" width="52" height="82" rx="9" fill="#4C9C8B"/><rect x="56" y="51" width="36" height="57" rx="3" fill="#EAF3ED"/><circle cx="74" cy="114" r="3" fill="white"/><rect x="140" y="40" width="52" height="82" rx="9" fill="#2E3A55"/><rect x="148" y="51" width="36" height="57" rx="3" fill="#DCEFE9"/><circle cx="166" cy="114" r="3" fill="white"/><circle cx="120" cy="81" r="15" fill="#F3B94D"/><text x="120" y="86" text-anchor="middle" font-size="11" font-weight="800" fill="#2E3A55">VS</text></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-app">Software Engineering</span>
-          <h3 class="blog-title">Android vs iOS First: What Should Your Startup Build?</h3>
+          <h3 class="blog-title"><a href="blogs/android-vs-ios-first-what-should-your-startup-build.html">Android vs iOS First: What Should Your Startup Build?</a></h3>
           <p class="blog-excerpt">The platform-first decision has less to do with preference and more to do with where your actual users already are.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#2E3A55;">AM</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
               <div class="blog-author">Lindsay</div>
               <div class="blog-role">Consultant, Tycoon Clap</div>
@@ -375,15 +389,14 @@
 
       <article class="blog-card" data-category="app">
         <div class="blog-thumb" data-img-slot="apps-fail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#FCE4E1"/><rect x="85" y="34" width="70" height="96" rx="12" fill="#2E3A55"/><rect x="94" y="47" width="52" height="66" rx="5" fill="#EAF3ED"/><path d="M101 55l15 20-10 13 20 12 15-20" stroke="#E9584C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="120" cy="121" r="7" fill="#F3B94D"/><path d="M120 117v5M120 125v1" stroke="#2E3A55" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-app">Software Engineering</span>
-          <h3 class="blog-title">Why Most Small Business Apps Fail — And How to Build One That Doesn't</h3>
+          <h3 class="blog-title"><a href="blogs/why-most-small-business-apps-fail-and-how-to-build-one-that-doesnt.html">Why Most Small Business Apps Fail — And How to Build One That Doesn't</a></h3>
           <p class="blog-excerpt">Most app failures trace back to a launch decision made months before the first line of code was written.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#2E3A55;">AM</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
               <div class="blog-author">Lindsay</div>
               <div class="blog-role">Consultant, Tycoon Clap</div>
@@ -395,18 +408,17 @@
 
       <article class="blog-card" data-category="data">
         <div class="blog-thumb" data-img-slot="data-gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#DCEFE9"/><ellipse cx="120" cy="45" rx="42" ry="15" fill="#4C9C8B"/><path d="M78 45v56c0 9 19 16 42 16s42-7 42-16V45" fill="#357566"/><ellipse cx="120" cy="101" rx="42" ry="15" fill="#4C9C8B"/><path d="M175 34l4 10 10 4-10 4-4 10-4-10-10-4 10-4 4-10Z" fill="#F3B94D"/><circle cx="59" cy="62" r="6" fill="#F3B94D"/><circle cx="181" cy="105" r="6" fill="#E9584C"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-data">Data &amp; AI</span>
-          <h3 class="blog-title">Your Business Is Sitting on Data Gold — Here's How to Mine It</h3>
+          <h3 class="blog-title"><a href="blogs/your-business-is-sitting-on-data-gold-heres-how-to-mine-it.html">Your Business Is Sitting on Data Gold — Here's How to Mine It</a></h3>
           <p class="blog-excerpt">The data you already have is usually more valuable than the next tool you're about to buy.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#F3B94D;">SK</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
-              <div class="blog-author">Sana Kapoor</div>
-              <div class="blog-role">Data Engineer, Tycoon Clap</div>
+              <div class="blog-author">Lindsay</div>
+              <div class="blog-role">Consultant, Tycoon Clap</div>
             </div>
             <div class="blog-readtime">7 min read</div>
           </div>
@@ -415,18 +427,17 @@
 
       <article class="blog-card" data-category="data">
         <div class="blog-thumb" data-img-slot="dashboards-strategy">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#EAF3ED"/><rect x="48" y="40" width="144" height="78" rx="8" fill="white" stroke="#9FB6AE"/><rect x="59" y="52" width="36" height="20" rx="4" fill="#DCEFE9"/><rect x="102" y="52" width="36" height="20" rx="4" fill="#FCE4E1"/><rect x="145" y="52" width="36" height="20" rx="4" fill="#E4E8F2"/><path d="M59 104l25-14 20 7 25-21 25 10 25-20" stroke="#357566" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 125v15m0 0-8-8m8 8 8-8" stroke="#E9584C" stroke-width="3" stroke-linecap="round"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-data">Data &amp; AI</span>
-          <h3 class="blog-title">Dashboards Are Not Strategy: Why Data Without Decisions Is Useless</h3>
+          <h3 class="blog-title"><a href="blogs/dashboards-are-not-strategy-why-data-without-decisions-is-useless.html">Dashboards Are Not Strategy: Why Data Without Decisions Is Useless</a></h3>
           <p class="blog-excerpt">A beautiful dashboard nobody acts on is just an expensive screensaver. Here's how to close that gap.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#F3B94D;">SK</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
-              <div class="blog-author">Sana Kapoor</div>
-              <div class="blog-role">Data Engineer, Tycoon Clap</div>
+              <div class="blog-author">Lindsay</div>
+              <div class="blog-role">Consultant, Tycoon Clap</div>
             </div>
             <div class="blog-readtime">6 min read</div>
           </div>
@@ -435,18 +446,17 @@
 
       <article class="blog-card" data-category="data">
         <div class="blog-thumb" data-img-slot="spreadsheets-systems">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#DCEFE9"/><rect x="44" y="44" width="68" height="72" rx="6" fill="white" stroke="#357566" stroke-width="2"/><path d="M44 65h68M44 85h68M44 101h68M67 44v72M89 44v72" stroke="#9FB6AE" stroke-width="1.5"/><path d="M120 80h28m-10-10 10 10-10 10" stroke="#F3B94D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="158" y="44" width="44" height="72" rx="8" fill="#2E3A55"/><rect x="166" y="55" width="28" height="8" rx="2" fill="#EAF3ED"/><rect x="166" y="71" width="28" height="8" rx="2" fill="#4C9C8B"/><rect x="166" y="87" width="28" height="8" rx="2" fill="#F3B94D"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-data">Data &amp; AI</span>
-          <h3 class="blog-title">From Spreadsheets to Systems: When You've Outgrown Excel</h3>
+          <h3 class="blog-title"><a href="blogs/from-spreadsheets-to-systems-when-youve-outgrown-excel.html">From Spreadsheets to Systems: When You've Outgrown Excel</a></h3>
           <p class="blog-excerpt">The signs are usually obvious in hindsight — broken formulas, version chaos, and a spreadsheet nobody trusts anymore.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#F3B94D;">SK</div>
+            <div class="blog-avatar" style="background:#2E3A55;">LI</div>
             <div class="blog-author-info">
-              <div class="blog-author">Sana Kapoor</div>
-              <div class="blog-role">Data Engineer, Tycoon Clap</div>
+              <div class="blog-author">Lindsay</div>
+              <div class="blog-role">Consultant, Tycoon Clap</div>
             </div>
             <div class="blog-readtime">5 min read</div>
           </div>
@@ -455,15 +465,14 @@
 
       <article class="blog-card" data-category="data">
         <div class="blog-thumb" data-img-slot="ev-charging">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Add featured image</span>
+          <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#E4E8F2"/><rect x="88" y="34" width="64" height="88" rx="8" fill="#2E3A55"/><rect x="98" y="46" width="44" height="32" rx="4" fill="#DCEFE9"/><path d="M123 49l-11 18h10l-6 13 17-20h-10l6-11Z" fill="#F3B94D"/><path d="M152 65c31 0 31 40 9 40h-9" stroke="#357566" stroke-width="5" stroke-linecap="round"/><circle cx="55" cy="57" r="8" fill="#E9584C"/><circle cx="186" cy="91" r="8" fill="#4C9C8B"/><path d="M55 57l33 15m64 10 34 9" stroke="#9FB6AE" stroke-width="2" stroke-dasharray="5 5"/></svg>
         </div>
         <div class="blog-body">
           <span class="blog-cat cat-data">Data &amp; AI</span>
-          <h3 class="blog-title">What We Learned Mapping 89,000+ EV Charging Records</h3>
+          <h3 class="blog-title"><a href="blogs/what-we-learned-mapping-89000-ev-charging-records.html">What We Learned Mapping 89,000+ EV Charging Records</a></h3>
           <p class="blog-excerpt">A behind-the-scenes look at building a national infrastructure-quality score from a messy public API.</p>
           <div class="blog-meta">
-            <div class="blog-avatar" style="background:#4C9C8B;">RD</div>
+            <div class="blog-avatar" style="background:#4C9C8B;">NK</div>
             <div class="blog-author-info">
               <div class="blog-author">Nathalie</div>
               <div class="blog-role">Consultant, Tycoon Clap</div>
@@ -476,6 +485,21 @@
     </div>
 
     <p class="blog-empty" id="blogEmpty">No posts in this category yet — check back soon.</p>
+
+    <!-- ============ NEWSLETTER SUBSCRIBE ============ -->
+    <div class="subscribe-band">
+      <h2>Get new posts in your inbox</h2>
+      <p>One email whenever we publish something new on growth, engineering, or data. No spam, unsubscribe anytime.</p>
+      <form id="subscribeForm" class="subscribe-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="7a29027e-dfab-4233-9f12-6483da861897">
+        <input type="hidden" name="subject" value="New Blog Newsletter Signup">
+        <input type="hidden" name="from_name" value="Tycoon Clap Blog">
+        <input type="email" id="subscribeEmail" name="email" placeholder="you@company.com" required>
+        <button type="submit" id="subscribeBtn">Subscribe</button>
+      </form>
+      <div class="subscribe-note" id="subscribeNote">We'll only email you when there's something worth reading.</div>
+    </div>
+
   </div>
 </section>
 
@@ -566,6 +590,41 @@
           }
         });
         empty.classList.toggle('show', visibleCount === 0);
+      });
+    });
+  })();
+
+  // Newsletter subscribe
+  (function(){
+    var form = document.getElementById('subscribeForm');
+    var btn = document.getElementById('subscribeBtn');
+    var note = document.getElementById('subscribeNote');
+    var originalBtnText = btn.textContent;
+    var originalNote = note.textContent;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      btn.textContent = 'Subscribing...';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        if(data.success){
+          btn.textContent = 'Subscribed ✓';
+          note.textContent = "You're on the list — thanks for subscribing.";
+          form.reset();
+        } else {
+          btn.textContent = 'Try again';
+          note.textContent = 'Something went wrong — please try again.';
+          setTimeout(function(){ btn.textContent = originalBtnText; note.textContent = originalNote; }, 3000);
+        }
+      })
+      .catch(function(){
+        btn.textContent = 'Try again';
+        note.textContent = 'Something went wrong — please try again.';
+        setTimeout(function(){ btn.textContent = originalBtnText; note.textContent = originalNote; }, 3000);
       });
     });
   })();
