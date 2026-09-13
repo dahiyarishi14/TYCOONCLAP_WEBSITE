@@ -38,6 +38,18 @@
   table.data-table{ width:100%; border-collapse:collapse; margin:14px 0 22px; font-size:0.9rem; }
   table.data-table th, table.data-table td{ border:1px solid var(--line); padding:10px 12px; text-align:left; color:var(--ink-soft); }
   table.data-table th{ background:var(--bg-alt); color:var(--ink); font-family:var(--display); font-weight:700; font-size:0.85rem; }
+
+  /* Privacy header illustration layout */
+  .privacy-header{ position:relative; padding:90px 0 60px; overflow:hidden; }
+  .privacy-header .wrap{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:50px; align-items:center; }
+  .privacy-header h1{ font-family:var(--display); font-weight:800; font-size:clamp(2rem,4vw,2.8rem); color:var(--ink); margin:10px 0 14px; }
+  .privacy-header p{ color:var(--ink-soft); font-size:1.02rem; max-width:440px; }
+  .privacy-illustration{ width:100%; }
+  @media (max-width:860px){
+    .privacy-header{ padding:60px 0 40px; }
+    .privacy-header .wrap{ grid-template-columns:1fr; gap:32px; }
+    .privacy-illustration{ max-width:340px; margin:0 auto; }
+  }
 </style>
 </head>
 <body>
@@ -68,11 +80,46 @@
   </div>
 </header>
 
-<section class="page-header">
+<section class="privacy-header">
+  <div class="blob" style="width:280px; height:280px; background:#DCEFE9; top:-80px; right:-40px;"></div>
+  <div class="blob" style="width:180px; height:180px; background:#FDEED0; bottom:-40px; left:-30px;"></div>
   <div class="wrap">
-    <span class="eyebrow">Legal</span>
-    <h1>Privacy Policy</h1>
-    <p>How Tycoon Clap collects, uses, and protects your information.</p>
+    <div>
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p>How Tycoon Clap collects, uses, and protects your information — in plain language, not just legal boilerplate.</p>
+    </div>
+    <svg class="privacy-illustration" viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="240" cy="370" rx="170" ry="16" fill="#EAF3ED"/>
+      <!-- floating shapes -->
+      <circle cx="60" cy="70" r="26" fill="#FDEED0"/>
+      <rect x="400" y="60" width="42" height="42" rx="12" fill="#FCE4E1"/>
+      <circle cx="430" cy="220" r="20" fill="#DCEFE9"/>
+      <!-- desk -->
+      <rect x="90" y="290" width="300" height="14" rx="4" fill="#2E3A55"/>
+      <rect x="110" y="270" width="16" height="30" fill="#2E3A55"/>
+      <rect x="354" y="270" width="16" height="30" fill="#2E3A55"/>
+      <!-- laptop -->
+      <rect x="150" y="240" width="120" height="50" rx="6" fill="#4C9C8B"/>
+      <rect x="158" y="248" width="104" height="34" rx="3" fill="#F5FAF7"/>
+      <rect x="168" y="256" width="60" height="6" rx="2" fill="#DCEFE9"/>
+      <rect x="168" y="268" width="40" height="6" rx="2" fill="#DCEFE9"/>
+      <!-- character seated -->
+      <path d="M175 240 Q175 205 210 205 L245 205 Q280 205 280 240 L280 250 L175 250 Z" fill="#2E3A55"/>
+      <circle cx="227" cy="172" r="30" fill="#F0B892"/>
+      <path d="M197 162 Q227 128 257 162 Q257 144 227 138 Q197 144 197 162Z" fill="#2E3A55"/>
+      <rect x="184" y="196" width="16" height="40" rx="8" fill="#F0B892" transform="rotate(24 184 196)"/>
+      <rect x="254" y="196" width="16" height="40" rx="8" fill="#F0B892" transform="rotate(-24 254 196)"/>
+      <!-- shield with lock, floating above -->
+      <path d="M340 110 L376 100 L376 145 C376 168 358 182 340 190 C322 182 304 168 304 145 L304 100 Z" fill="#E9584C"/>
+      <rect x="328" y="140" width="24" height="20" rx="4" fill="#F5FAF7"/>
+      <path d="M332 140 v-8 a8 8 0 0 1 16 0 v8" fill="none" stroke="#F5FAF7" stroke-width="4"/>
+      <!-- document with checkmark, floating -->
+      <rect x="120" y="90" width="56" height="70" rx="6" fill="#F3B94D"/>
+      <rect x="130" y="104" width="36" height="5" rx="2" fill="#FFFBF0"/>
+      <rect x="130" y="116" width="36" height="5" rx="2" fill="#FFFBF0"/>
+      <path d="M132 138 l8 8 16 -18" fill="none" stroke="#FFFBF0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 </section>
 
