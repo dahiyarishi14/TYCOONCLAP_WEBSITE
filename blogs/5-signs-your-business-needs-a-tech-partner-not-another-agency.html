@@ -3,36 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="logo-icon.png">
-<link rel="apple-touch-icon" href="logo-icon.png">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../logo-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../logo-icon.png">
+<link rel="apple-touch-icon" href="../logo-icon.png">
 <style>
 html[data-theme="dark"]{--bg:#10161A;--bg-alt:#161F23;--card:#1B2529;--ink:#EAF2EF;--ink-soft:#A9BAB5;--ink-dim:#748782;--line:rgba(234,242,239,.1);--line-strong:rgba(234,242,239,.18)}
 html[data-theme="dark"] body{background:var(--bg);color:var(--ink)}
 html[data-theme="dark"] .site-nav{background:rgba(16,22,26,.9)}
-.article-shell{padding:70px 0 90px}
-.article-wrap{max-width:860px;margin:0 auto}
-.article-kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:800;color:#357566;margin-bottom:18px}
-.article-kicker:before{content:"";width:34px;height:2px;background:#E9584C}
-.article-title{font-size:clamp(2.7rem,6vw,5.2rem);line-height:.98;letter-spacing:-.045em;margin:0 0 24px;max-width:920px}
-.article-dek{font-size:1.18rem;line-height:1.7;color:var(--ink-soft);max-width:760px;margin:0 0 30px}
-.article-byline{display:flex;align-items:center;gap:12px;padding:18px 0 34px;border-bottom:1px solid var(--line);margin-bottom:42px}
-.article-avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#357566;color:#fff;font-weight:800}
-.article-author{font-weight:800}
-.article-role{font-size:.88rem;color:var(--ink-soft)}
-.article-time{margin-left:auto;color:var(--ink-dim);font-size:.9rem}
-.article-content{font-size:1.05rem;line-height:1.82}
-.article-content p{margin:0 0 1.35rem}
-.article-content h2{font-size:1.8rem;line-height:1.15;letter-spacing:-.025em;margin:3.2rem 0 1rem}
-.article-content ol{padding-left:1.3rem;margin:0 0 1.5rem}
-.article-content li{margin:.6rem 0;padding-left:.35rem}
-.article-content .faq-q{font-weight:800;margin:1.35rem 0 .45rem}
-.article-content .faq-a{color:var(--ink-soft);margin-bottom:1.1rem}
-.article-cta{margin-top:60px;padding:34px;border:1px solid var(--line);border-radius:24px;background:var(--card);display:flex;justify-content:space-between;gap:25px;align-items:center}
-.article-cta h3{margin:0 0 7px;font-size:1.35rem}
-.article-cta p{margin:0;color:var(--ink-soft)}
-@media(max-width:700px){.article-shell{padding:45px 0 65px}.article-title{font-size:2.65rem}.article-byline{flex-wrap:wrap}.article-time{margin-left:56px}.article-cta{flex-direction:column;align-items:flex-start}}
+
+/* ===== READING PROGRESS ===== */
+.scroll-progress{ position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,#E9584C,#F3B94D,#357566); z-index:999; transition:width .1s ease; }
+
+/* ===== ARTICLE SHELL ===== */
+.article-shell{ padding:56px 0 100px; }
+.article-wrap{ max-width:1180px; margin:0 auto; }
+.article-grid{ display:grid; grid-template-columns:1fr 300px; gap:64px; align-items:start; }
+@media (max-width:960px){ .article-grid{ grid-template-columns:1fr; } .article-aside{ order:2; } }
+
+/* ===== BREADCRUMB ===== */
+.article-breadcrumb{ display:flex; align-items:center; gap:8px; font-size:.84rem; color:var(--ink-dim); margin-bottom:26px; }
+.article-breadcrumb a{ color:var(--ink-dim); text-decoration:none; }
+.article-breadcrumb a:hover{ color:#357566; }
+
+/* ===== KICKER / CATEGORY BADGE ===== */
+.article-kicker{ display:inline-block; font-family:var(--display); font-weight:700; font-size:.72rem; letter-spacing:.02em; padding:6px 14px; border-radius:100px; margin-bottom:20px; }
+.cat-marketing{ background:#FCE4E1; color:#C7402F; }
+.cat-app{ background:#E4E8F2; color:#2E3A55; }
+.cat-data{ background:#DCEFE9; color:#2A6E5F; }
+.cat-company{ background:#FDEED0; color:#966A0B; }
+html[data-theme="dark"] .cat-marketing{ background:rgba(233,88,76,.18); color:#F19488; }
+html[data-theme="dark"] .cat-app{ background:rgba(46,58,85,.4); color:#AAB6D9; }
+html[data-theme="dark"] .cat-data{ background:rgba(76,156,139,.18); color:#8FD6C4; }
+html[data-theme="dark"] .cat-company{ background:rgba(243,185,77,.18); color:#F3CE85; }
+
+/* ===== TITLE / DEK ===== */
+.article-title{ font-family:var(--display); font-weight:800; font-size:clamp(2.2rem,4.6vw,3.6rem); line-height:1.08; letter-spacing:-.02em; margin:0 0 20px; max-width:920px; color:var(--ink); }
+.article-dek{ font-size:1.14rem; line-height:1.65; color:var(--ink-soft); max-width:720px; margin:0 0 30px; }
+
+/* ===== BYLINE ===== */
+.article-byline{ display:flex; align-items:center; gap:14px; padding:20px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:36px; }
+.article-avatar{ width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--display); font-weight:800; font-size:.86rem; color:#fff; flex-shrink:0; }
+.article-author{ font-family:var(--display); font-weight:700; font-size:.94rem; color:var(--ink); }
+.article-role{ font-size:.82rem; color:var(--ink-soft); margin-top:1px; }
+.article-time{ margin-left:auto; color:var(--ink-dim); font-size:.86rem; white-space:nowrap; }
+
+/* ===== FEATURED ILLUSTRATION ===== */
+.article-hero-art{ background:var(--bg-alt); border:1px solid var(--line); border-radius:24px; padding:32px; display:flex; align-items:center; justify-content:center; margin-bottom:46px; }
+.article-hero-art svg{ width:100%; max-width:360px; height:auto; }
+
+/* ===== CONTENT TYPOGRAPHY ===== */
+.article-content{ font-size:1.05rem; line-height:1.85; color:var(--ink); }
+.article-content p{ margin:0 0 1.4rem; }
+.article-content h2{ font-family:var(--display); font-weight:800; font-size:1.55rem; line-height:1.2; letter-spacing:-.01em; margin:2.8rem 0 1rem; color:var(--ink); scroll-margin-top:100px; }
+.article-content h2:first-of-type{ margin-top:0; }
+.article-pull{ border-left:3px solid #E9584C; padding:4px 0 4px 22px; margin:2.2rem 0; font-family:var(--display); font-weight:700; font-size:1.22rem; line-height:1.45; color:var(--ink); }
+
+/* ===== FAQ ACCORDION ===== */
+.article-faq{ margin-top:8px; }
+.article-faq details{ background:var(--card,#fff); border:1px solid var(--line); border-radius:16px; padding:18px 22px; margin-bottom:12px; }
+.article-faq summary{ font-family:var(--display); font-weight:700; font-size:.98rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; color:var(--ink); }
+.article-faq summary::-webkit-details-marker{ display:none; }
+.article-faq summary::after{ content:'+'; font-size:1.3rem; color:#E9584C; flex-shrink:0; transition:transform .25s ease; }
+.article-faq details[open] summary::after{ transform:rotate(45deg); }
+.article-faq .faq-a{ color:var(--ink-soft); margin:12px 0 0; font-size:.95rem; line-height:1.7; }
+
+/* ===== ASIDE / SIDEBAR ===== */
+.article-aside{ position:sticky; top:24px; display:flex; flex-direction:column; gap:20px; }
+.aside-card{ background:var(--card,#fff); border:1px solid var(--line); border-radius:18px; padding:22px; }
+.aside-card h4{ font-family:var(--display); font-weight:800; font-size:.82rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-dim); margin:0 0 14px; }
+.toc-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+.toc-list a{ font-size:.88rem; color:var(--ink-soft); text-decoration:none; line-height:1.4; display:block; }
+.toc-list a:hover{ color:#357566; }
+html[data-theme="dark"] .toc-list a:hover{ color:#7FCBB6; }
+.aside-cta{ background:linear-gradient(135deg,#357566,#2E3A55); border-radius:18px; padding:24px; color:#fff; }
+.aside-cta h4{ color:#fff; opacity:.85; }
+.aside-cta p{ font-size:.88rem; color:rgba(255,255,255,.75); margin:0 0 16px; line-height:1.5; }
+.aside-cta a{ display:inline-block; background:#fff; color:#2E3A55; font-family:var(--display); font-weight:700; font-size:.84rem; padding:11px 18px; border-radius:100px; text-decoration:none; }
+.share-row{ display:flex; gap:10px; }
+.share-row a{ width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--bg-alt); color:var(--ink-soft); text-decoration:none; font-size:.8rem; font-weight:700; border:1px solid var(--line); }
+.share-row a:hover{ border-color:#357566; color:#357566; }
+
+/* ===== CTA BAND ===== */
+.article-cta-band{ margin-top:70px; background:var(--ink,#1F2B28); border-radius:28px; padding:48px; text-align:center; }
+.article-cta-band h3{ font-family:var(--display); font-weight:800; font-size:1.5rem; color:#fff; margin:0 0 10px; }
+.article-cta-band p{ color:rgba(255,255,255,.7); margin:0 0 24px; }
+.article-cta-band a{ display:inline-block; background:#fff; color:#1F2B28; font-family:var(--display); font-weight:700; font-size:.9rem; padding:14px 28px; border-radius:100px; text-decoration:none; }
+
+/* ===== RELATED POSTS ===== */
+.related-section{ margin-top:70px; }
+.related-section h3{ font-family:var(--display); font-weight:800; font-size:1.3rem; margin:0 0 24px; color:var(--ink); }
+.related-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+@media (max-width:700px){ .related-grid{ grid-template-columns:1fr; } }
+.related-card{ display:block; text-decoration:none; background:var(--card,#fff); border:1px solid var(--line); border-radius:18px; overflow:hidden; transition:transform .2s ease; }
+.related-card:hover{ transform:translateY(-4px); }
+.related-thumb{ aspect-ratio:16/10; background:var(--bg-alt); display:flex; align-items:center; justify-content:center; padding:14px; }
+.related-thumb svg{ width:100%; height:100%; max-width:150px; }
+.related-body{ padding:16px 18px 20px; }
+.related-cat{ font-family:var(--display); font-weight:700; font-size:.66rem; color:#357566; text-transform:uppercase; letter-spacing:.03em; }
+.related-title{ font-family:var(--display); font-weight:700; font-size:.94rem; line-height:1.35; color:var(--ink); margin-top:6px; }
+
+@media(max-width:700px){ .article-shell{ padding:40px 0 60px; } .article-hero-art{ padding:22px; } }
 </style>
 <title>Tech Partner vs Agency: 5 Signs You Need More Than an Agency — Tycoon Clap</title>
 <meta name="description" content="Hired three agencies and still stuck? Here are 5 signs your business needs a true tech partner — not another vendor billing by the project.">
@@ -41,65 +112,160 @@ html[data-theme="dark"] .site-nav{background:rgba(16,22,26,.9)}
 <meta property="og:type" content="article">
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <header class="site-nav">
   <div class="wrap nav-inner">
-    <a href="index.html" class="brand"><span class="brand-mark">▰</span> Tycoon Clap</a>
+    <a href="../index.html" class="brand"><span class="brand-mark">▰</span> Tycoon Clap</a>
     <nav class="nav-links">
-      <a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a><a href="../services.html">Services</a><a href="../work.html">Work</a><a href="../about.html">About</a><a href="../blog.html">Blog</a><a href="../contact.html">Contact</a>
     </nav>
-    <a href="contact.html" class="btn btn-primary nav-cta">Get in touch</a>
+    <a href="../contact.html" class="btn btn-primary nav-cta">Get in touch</a>
   </div>
 </header>
+
 <main class="article-shell">
   <div class="wrap article-wrap">
-    <div class="article-kicker">Company</div>
+
+    <div class="article-breadcrumb">
+      <a href="../blog.html">Blog</a> <span>/</span> <a href="../blog.html">Company</a> <span>/</span> <span>Tech Partner vs Agency</span>
+    </div>
+
+    <span class="article-kicker cat-company">Company</span>
     <h1 class="article-title">5 Signs Your Business Needs a Tech Partner, Not Another Agency</h1>
-    <p class="article-dek">Somewhere between &quot;we just need a website&quot; and &quot;why doesn&#x27;t anything we&#x27;ve built actually talk to each other&quot; is the moment most growing businesses realize they haven&#x27;t hired an agency problem — they have a systems problem. There&#x27;s a real difference between hiring an agency and hiring a partner who owns your whole growth system, and most businesses only discover which one they needed after the first one didn&#x27;t work.</p>
+    <p class="article-dek">Somewhere between "we just need a website" and "why doesn't anything we've built actually talk to each other" is the moment most growing businesses realize they haven't hired an agency problem — they have a systems problem.</p>
+
     <div class="article-byline">
-      <div class="article-avatar">N</div>
-      <div><div class="article-author">Nathalie</div><div class="article-role">Founder, Tycoon Clap</div></div>
-      <div class="article-time">4 min read</div>
+      <div class="article-avatar" style="background:#4C9C8B;">NK</div>
+      <div>
+        <div class="article-author">Nathalie</div>
+        <div class="article-role">Consultant, Tycoon Clap</div>
+      </div>
+      <div class="article-time">7 min read</div>
     </div>
-    <article class="article-content">
-      <p>Somewhere between &quot;we just need a website&quot; and &quot;why doesn&#x27;t anything we&#x27;ve built actually talk to each other&quot; is the moment most growing businesses realize they haven&#x27;t hired an agency problem — they have a systems problem. There&#x27;s a real difference between hiring an agency and hiring a partner who owns your whole growth system, and most businesses only discover which one they needed after the first one didn&#x27;t work.</p>
-<h2>1. You&#x27;ve Hired Multiple Vendors Who Don&#x27;t Talk to Each Other</h2>
-<p>One agency built your website. A different freelancer runs your ads. A cousin&#x27;s friend manages your CRM. Each piece might individually be fine, but nobody owns how they connect — so your lead form doesn&#x27;t feed your CRM, your ads don&#x27;t match your landing pages, and no single person can explain your full customer journey. An agency delivers a project. A tech partner owns the system the project lives inside.</p>
-<h2>2. Every Project Feels Like Starting From Zero</h2>
-<p>If each new agency relationship starts with re-explaining your business, re-auditing your existing tools, and re-building things that technically already exist, you&#x27;re paying the &quot;onboarding tax&quot; repeatedly. A tech partner accumulates institutional knowledge about your business over time — meaning month twelve of the relationship is faster and cheaper than month one, not the same.</p>
-<h2>3. You Can&#x27;t Get a Straight Answer on ROI</h2>
-<p>Agencies are often incentivized to report activity — impressions, posts published, ads launched. A tech partner is incentivized to report outcomes, because they&#x27;re accountable for the whole funnel, not just their slice of it. If your last three reports told you what happened but not whether it made you money, that&#x27;s the agency model showing its limits.</p>
-<h2>4. Your Tech Stack Has Outgrown Ad-Hoc Fixes</h2>
-<p>Small patches — a plugin here, a Zapier workflow there — work fine at a small scale. Past a certain size, those patches become the reason things break. A tech partner looks at the whole stack (website, CRM, analytics, ad platforms) as one connected system that needs to scale together, rather than a pile of tools that happen to coexist.</p>
-<h2>5. You&#x27;re Making Growth Decisions on Gut Feel, Not Data</h2>
-<p>If your last major spending decision was based on &quot;it felt like the right move&quot; rather than a number you trust, that&#x27;s usually a signal your reporting infrastructure was never built to support decisions — only to look presentable in a monthly slide deck.</p>
-<h2>What a Real Tech Partner Looks Like in Practice</h2>
-<p>One team accountable for the full funnel — site, ads, CRM, and reporting — not four vendors pointing at each other.</p>
-<p>Pricing and reporting tied to business outcomes, not just deliverables shipped.</p>
-<p>A relationship that gets cheaper and faster over time, because institutional knowledge compounds instead of resetting.</p>
-<h2>FAQ</h2>
-<p class="faq-q">What&#x27;s the difference between a marketing agency and a tech partner?</p>
-<p class="faq-a">An agency typically delivers a defined project or service — ads, a website, social posts. A tech partner takes ownership of the connected system behind your growth (website, CRM, analytics, and campaigns together) and is accountable for outcomes, not just deliverables.</p>
-<p class="faq-q">How do I know if my business has outgrown its current agency setup?</p>
-<p class="faq-a">Common signs include disconnected tools that don&#x27;t share data, repeated onboarding costs with every new vendor, and reporting that shows activity but not ROI.</p>
-<p class="faq-q">Is a tech partner more expensive than hiring multiple agencies?</p>
-<p class="faq-a">Not usually — most businesses are already paying for the coordination cost of multiple disconnected vendors without realizing it. A single accountable partner often reduces total spend by eliminating redundant tools and wasted onboarding.</p>
-    </article>
-    <div class="article-cta">
-      <div><h3>Have a business problem worth solving?</h3><p>Let's turn the right data, technology, and ideas into your next move.</p></div>
-      <a href="contact.html" class="btn btn-primary">Talk to Tycoon Clap</a>
+
+    <div class="article-hero-art">
+      <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#FDEED0"/><rect x="48" y="62" width="58" height="36" rx="8" fill="#357566"/><rect x="134" y="62" width="58" height="36" rx="8" fill="#2E3A55"/><path d="M101 74l19-16 19 16-19 18-19-18Z" fill="#F3B94D"/><path d="M72 80h34m28 0h34" stroke="white" stroke-width="4" stroke-linecap="round"/><circle cx="70" cy="45" r="8" fill="#E9584C"/><circle cx="120" cy="35" r="8" fill="#357566"/><circle cx="170" cy="45" r="8" fill="#E9584C"/><path d="M70 45l50-10 50 10" stroke="#9FB6AE" stroke-width="2" stroke-dasharray="5 5"/></svg>
     </div>
+
+    <div class="article-grid">
+      <article class="article-content" id="articleContent">
+        <p>Somewhere between "we just need a website" and "why doesn't anything we've built actually talk to each other" is the moment most growing businesses realize they haven't hired an agency problem — they have a systems problem. There's a real difference between hiring an agency and hiring a partner who owns your whole growth system, and most businesses only discover which one they needed after the first one didn't work.</p>
+
+        <h2 id="sec1">1. You've Hired Multiple Vendors Who Don't Talk to Each Other</h2>
+        <p>One agency built your website. A different freelancer runs your ads. A cousin's friend manages your CRM. Each piece might individually be fine, but nobody owns how they connect — so your lead form doesn't feed your CRM, your ads don't match your landing pages, and no single person can explain your full customer journey. An agency delivers a project. A tech partner owns the system the project lives inside.</p>
+
+        <h2 id="sec2">2. Every Project Feels Like Starting From Zero</h2>
+        <p>If each new agency relationship starts with re-explaining your business, re-auditing your existing tools, and re-building things that technically already exist, you're paying the "onboarding tax" repeatedly. A tech partner accumulates institutional knowledge about your business over time — meaning month twelve of the relationship is faster and cheaper than month one, not the same.</p>
+
+        <div class="article-pull">"An agency delivers a project. A tech partner owns the system the project lives inside."</div>
+
+        <h2 id="sec3">3. You Can't Get a Straight Answer on ROI</h2>
+        <p>Agencies are often incentivized to report activity — impressions, posts published, ads launched. A tech partner is incentivized to report outcomes, because they're accountable for the whole funnel, not just their slice of it. If your last three reports told you what happened but not whether it made you money, that's the agency model showing its limits.</p>
+
+        <h2 id="sec4">4. Your Tech Stack Has Outgrown Ad-Hoc Fixes</h2>
+        <p>Small patches — a plugin here, a Zapier workflow there — work fine at a small scale. Past a certain size, those patches become the reason things break. A tech partner looks at the whole stack (website, CRM, analytics, ad platforms) as one connected system that needs to scale together, rather than a pile of tools that happen to coexist.</p>
+
+        <h2 id="sec5">5. You're Making Growth Decisions on Gut Feel, Not Data</h2>
+        <p>If your last major spending decision was based on "it felt like the right move" rather than a number you trust, that's usually a signal your reporting infrastructure was never built to support decisions — only to look presentable in a monthly slide deck.</p>
+
+        <h2 id="sec6">What a Real Tech Partner Looks Like in Practice</h2>
+        <p>One team accountable for the full funnel — site, ads, CRM, and reporting — not four vendors pointing at each other.</p>
+        <p>Pricing and reporting tied to business outcomes, not just deliverables shipped.</p>
+        <p>A relationship that gets cheaper and faster over time, because institutional knowledge compounds instead of resetting.</p>
+
+        <h2 id="faq">FAQ</h2>
+        <div class="article-faq">
+          <details open>
+            <summary>What's the difference between a marketing agency and a tech partner?</summary>
+            <p class="faq-a">An agency typically delivers a defined project or service — ads, a website, social posts. A tech partner takes ownership of the connected system behind your growth (website, CRM, analytics, and campaigns together) and is accountable for outcomes, not just deliverables.</p>
+          </details>
+          <details>
+            <summary>How do I know if my business has outgrown its current agency setup?</summary>
+            <p class="faq-a">Common signs include disconnected tools that don't share data, repeated onboarding costs with every new vendor, and reporting that shows activity but not ROI.</p>
+          </details>
+          <details>
+            <summary>Is a tech partner more expensive than hiring multiple agencies?</summary>
+            <p class="faq-a">Not usually — most businesses are already paying for the coordination cost of multiple disconnected vendors without realizing it. A single accountable partner often reduces total spend by eliminating redundant tools and wasted onboarding.</p>
+          </details>
+        </div>
+      </article>
+
+      <aside class="article-aside">
+        <div class="aside-card">
+          <h4>On this page</h4>
+          <ul class="toc-list">
+            <li><a href="#sec1">Multiple vendors, no connection</a></li>
+            <li><a href="#sec2">Starting from zero every time</a></li>
+            <li><a href="#sec3">No straight answer on ROI</a></li>
+            <li><a href="#sec4">Outgrown ad-hoc fixes</a></li>
+            <li><a href="#sec5">Decisions on gut feel</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="aside-card">
+          <h4>Share</h4>
+          <div class="share-row">
+            <a href="https://x.com/intent/tweet?url=" target="_blank" aria-label="Share on X">X</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" aria-label="Share on LinkedIn">in</a>
+            <a href="mailto:?subject=Worth a read&body=" aria-label="Share by email">@</a>
+          </div>
+        </div>
+        <div class="aside-cta">
+          <h4>Free strategy call</h4>
+          <p>See what a connected growth system could look like for your business.</p>
+          <a href="../services.html#booking">Book a call</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="article-cta-band">
+      <h3>Have a business problem worth solving?</h3>
+      <p>Let's turn the right data, technology, and ideas into your next move.</p>
+      <a href="../contact.html">Talk to Tycoon Clap</a>
+    </div>
+
+    <div class="related-section">
+      <h3>More from the blog</h3>
+      <div class="related-grid">
+        <a class="related-card" href="why-spray-and-pray-ads-are-killing-your-roi.html">
+          <div class="related-thumb"><svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#FCE4E1"/><rect x="50" y="43" width="40" height="28" rx="5" fill="#E9584C"/><rect x="100" y="43" width="40" height="28" rx="5" fill="#F3B94D"/><rect x="150" y="43" width="40" height="28" rx="5" fill="#357566"/><circle cx="120" cy="91" r="12" fill="#2E3A55"/></svg></div>
+          <div class="related-body"><div class="related-cat">Growth Marketing</div><div class="related-title">Why "Spray and Pray" Ads Are Killing Your ROI</div></div>
+        </a>
+        <a class="related-card" href="android-vs-ios-first-what-should-your-startup-build.html">
+          <div class="related-thumb"><svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#E4E8F2"/><rect x="48" y="40" width="52" height="82" rx="9" fill="#4C9C8B"/><rect x="140" y="40" width="52" height="82" rx="9" fill="#2E3A55"/><circle cx="120" cy="81" r="15" fill="#F3B94D"/></svg></div>
+          <div class="related-body"><div class="related-cat">Software Engineering</div><div class="related-title">Android vs iOS First: What Should Your Startup Build?</div></div>
+        </a>
+        <a class="related-card" href="your-business-is-sitting-on-data-gold-heres-how-to-mine-it.html">
+          <div class="related-thumb"><svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="24" width="184" height="112" rx="14" fill="#DCEFE9"/><ellipse cx="120" cy="45" rx="42" ry="15" fill="#4C9C8B"/><path d="M78 45v56c0 9 19 16 42 16s42-7 42-16V45" fill="#357566"/><ellipse cx="120" cy="101" rx="42" ry="15" fill="#4C9C8B"/></svg></div>
+          <div class="related-body"><div class="related-cat">Data &amp; AI</div><div class="related-title">Your Business Is Sitting on Data Gold</div></div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </main>
+
 <footer><div class="wrap">
   <div><div class="flogo">Tycoon Clap</div><p style="max-width:260px;color:var(--ink-soft);font-size:.9rem">Technology Growth Partner</p></div>
-  <div class="fcol"><h4>Site</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="fcol"><h4>Site</h4><a href="../index.html">Home</a><a href="../services.html">Services</a><a href="../work.html">Work</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div>
   <div class="fcol"><h4>Contact</h4><a href="mailto:nathalie@tycoonclap.com">nathalie@tycoonclap.com</a><a href="https://www.instagram.com/tycoonclap/" target="_blank">Follow us</a></div>
-  <div class="fcol"><h4>Resources</h4><a href="blog.html">Blog</a><a href="privacy-policy.html">Privacy Policy</a></div>
+  <div class="fcol"><h4>Resources</h4><a href="../blog.html">Blog</a><a href="../privacy-policy.html">Privacy Policy</a></div>
 </div><div class="fbottom">&copy; 2026 Tycoon Clap. All rights reserved.</div></footer>
+
 <script>
 (function(){
   var root=document.documentElement, saved=localStorage.getItem('tc-theme');
   if(saved==='dark') root.setAttribute('data-theme','dark');
+})();
+// Reading progress bar
+(function(){
+  var bar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = scrolled + '%';
+  });
 })();
 </script>
 </body></html>
