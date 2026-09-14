@@ -47,13 +47,47 @@
 
   /* ===== Leads grid (catalog) ===== */
   .leads-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; }
-  .leads-grid .lead-card{ display:flex; flex-direction:column; height:100%; }
-  .leads-grid .lead-card-desc{ min-height:56px; }
-  .leads-grid .lead-card-features{ list-style:none; margin:0; padding:0; flex:1; }
-  .leads-grid .lead-card-features li{ display:flex; align-items:flex-start; gap:10px; padding:7px 0; }
-  .leads-grid .lead-card-features li svg{ flex:none; margin-top:1px; }
-  .leads-grid .lead-buy-btn{ margin-top:auto; }
-  .lead-card-industry{ display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:#357566; background:#DCEFE9; padding:3px 10px; border-radius:999px; margin-bottom:10px; }
+  .leads-grid .lead-card{
+    display:flex; flex-direction:column; height:100%;
+    background:var(--card,#fff); border:1px solid var(--line,rgba(31,43,40,0.1));
+    border-radius:18px; padding:26px 24px 24px; border-top:4px solid transparent;
+    transition:transform .25s ease, box-shadow .25s ease; position:relative;
+  }
+  .leads-grid .lead-card:hover{ transform:translateY(-4px); box-shadow:0 16px 34px -18px rgba(31,43,40,0.25); }
+  .lead-card.l-teal{ border-top-color:#4C9C8B; }
+  .lead-card.l-coral{ border-top-color:#E9584C; }
+  .lead-card.l-mustard{ border-top-color:#F3B94D; }
+  .lead-card.l-navy{ border-top-color:#2E3A55; }
+
+  .lead-card-badges{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; }
+  .lead-card-industry{ display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:.02em; padding:4px 12px; border-radius:999px; }
+  .lead-card.l-teal .lead-card-industry{ color:#357566; background:#DCEFE9; }
+  .lead-card.l-coral .lead-card-industry{ color:#C7402F; background:#FCE4E1; }
+  .lead-card.l-mustard .lead-card-industry{ color:#9A7112; background:#FDEED0; }
+  .lead-card.l-navy .lead-card-industry{ color:#2E3A55; background:#E4E8F2; }
+
+  .lead-card-title{ font-family:var(--display,'Plus Jakarta Sans',sans-serif); font-weight:700; font-size:1.06rem; line-height:1.3; margin-bottom:10px; color:var(--ink,#1F2B28); }
+  .leads-grid .lead-card-desc{ min-height:56px; color:var(--ink-soft,#5C6B66); font-size:0.9rem; line-height:1.55; margin-bottom:6px; }
+
+  .leads-grid .lead-card-features{ list-style:none; margin:14px 0 18px; padding:0; flex:1; }
+  .leads-grid .lead-card-features li{ display:flex; align-items:center; gap:12px; padding:8px 0; font-size:0.88rem; color:var(--ink-soft,#5C6B66); }
+  .lead-feature-icon{ flex:none; width:32px; height:32px; border-radius:9px; display:flex; align-items:center; justify-content:center; }
+  .lead-feature-icon.ic-teal{ background:#DCEFE9; }
+  .lead-feature-icon.ic-coral{ background:#FCE4E1; }
+  .lead-feature-icon.ic-mustard{ background:#FDEED0; }
+  .lead-feature-icon.ic-navy{ background:#E4E8F2; }
+
+  .lead-card-price-row{ display:flex; align-items:baseline; justify-content:space-between; padding-top:14px; margin-top:auto; border-top:1px solid var(--line,rgba(31,43,40,0.1)); }
+  .lead-card-price{ font-family:var(--display,'Plus Jakarta Sans',sans-serif); font-weight:800; font-size:1.5rem; }
+  .lead-card.l-teal .lead-card-price{ color:#357566; }
+  .lead-card.l-coral .lead-card-price{ color:#E9584C; }
+  .lead-card.l-mustard .lead-card-price{ color:#B8860F; }
+  .lead-card.l-navy .lead-card-price{ color:#2E3A55; }
+  .lead-card-price-note{ font-size:0.78rem; color:var(--ink-dim,#8B9793); }
+
+  .leads-grid .lead-buy-btn{ margin-top:14px; text-align:center; }
+  .lead-card-trust{ text-align:center; font-size:0.78rem; color:var(--ink-dim,#8B9793); margin-top:10px; }
+
   @media (max-width:980px){ .leads-grid{ grid-template-columns:1fr; } .leads-grid .lead-card-desc{ min-height:0; } }
 
   /* ===== Catalog toolbar ===== */
@@ -324,6 +358,9 @@
   var PAGE_SIZE = 24;
   var shown = PAGE_SIZE;
 
+  // Accent palette matching the rest of the site's card system (benefits/testimonials).
+  var ACCENTS = ['teal', 'coral', 'mustard', 'navy'];
+
   var grid = document.getElementById('leadsGrid');
   var empty = document.getElementById('leadsEmpty');
   var countEl = document.getElementById('leadCount');
@@ -332,18 +369,25 @@
   var loadMoreWrap = document.getElementById('loadMoreWrap');
   var loadMoreBtn = document.getElementById('loadMoreBtn');
 
-  function cardHtml(item) {
+  function cardHtml(item, idx) {
+    var accent = ACCENTS[idx % ACCENTS.length];
+    // NOTE: no "reveal"/"reveal-scale" class here — those classes are wired up once by the
+    // scroll-animation script on page load. Cards rendered later by search/filter/"show more"
+    // would inherit that class's default (invisible) CSS state but never get animated in,
+    // which is why the grid used to appear empty after filtering or loading more.
     return '' +
-      '<div class="lead-card reveal-scale">' +
-        '<span class="lead-card-industry">' + item.i + '</span>' +
-        '<span class="tag tag-marketing">Instant Download</span>' +
+      '<div class="lead-card l-' + accent + '">' +
+        '<div class="lead-card-badges">' +
+          '<span class="lead-card-industry">' + item.i + '</span>' +
+          '<span class="tag tag-marketing">Instant Download</span>' +
+        '</div>' +
         '<h2 class="lead-card-title">' + item.n + ' — Verified Email List</h2>' +
         '<p class="lead-card-desc">' + item.e + '+ verified business emails of ' + item.n.toLowerCase() + ' contacts across the USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>' +
         '<ul class="lead-card-features">' +
-          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>' + item.t + '+ Verified contacts</span></li>' +
-          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg><span>Name, Email, Phone Number, company, title, Address, etc</span></li>' +
-          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg><span>CSV format — opens in Excel, Sheets, or your CRM</span></li>' +
-          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg><span>Instant download after payment</span></li>' +
+          '<li><span class="lead-feature-icon ic-teal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span>' + item.t + '+ Verified contacts</span></li>' +
+          '<li><span class="lead-feature-icon ic-coral"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg></span><span>Name, email, phone, company, title, address, etc</span></li>' +
+          '<li><span class="lead-feature-icon ic-mustard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg></span><span>CSV format — opens in Excel, Sheets, or your CRM</span></li>' +
+          '<li><span class="lead-feature-icon ic-navy"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></span><span>Instant download after payment</span></li>' +
         '</ul>' +
         '<div class="lead-card-price-row">' +
           '<div class="lead-card-price">' + PRICE + '</div>' +
@@ -367,7 +411,7 @@
   function render() {
     var filtered = getFiltered();
     var visible = filtered.slice(0, shown);
-    grid.innerHTML = visible.map(cardHtml).join('');
+    grid.innerHTML = visible.map(function(item, idx) { return cardHtml(item, idx); }).join('');
     empty.style.display = filtered.length === 0 ? 'block' : 'none';
     grid.style.display = filtered.length === 0 ? 'none' : 'grid';
     countEl.textContent = filtered.length + ' of ' + LEADS.length + ' lists';
