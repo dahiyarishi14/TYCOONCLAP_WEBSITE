@@ -44,6 +44,16 @@
   .testimonial-name{ font-family:var(--display,'Plus Jakarta Sans',sans-serif); font-weight:800; font-size:0.95rem; color:var(--ink,#1F2B28); }
   .testimonial-role{ font-size:0.8rem; color:var(--ink-dim,#8B9793); margin-top:2px; }
   @media (max-width:900px){ .testimonials-grid{ grid-template-columns:1fr; } }
+
+  /* ===== Leads grid (3 lists in a row) ===== */
+  .leads-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; }
+  .leads-grid .lead-card{ display:flex; flex-direction:column; height:100%; }
+  .leads-grid .lead-card-desc{ min-height:74px; }
+  .leads-grid .lead-card-features{ list-style:none; margin:0; padding:0; flex:1; }
+  .leads-grid .lead-card-features li{ display:flex; align-items:flex-start; gap:10px; padding:7px 0; }
+  .leads-grid .lead-card-features li svg{ flex:none; margin-top:1px; }
+  .leads-grid .lead-buy-btn{ margin-top:auto; }
+  @media (max-width:980px){ .leads-grid{ grid-template-columns:1fr; } .leads-grid .lead-card-desc{ min-height:0; } }
 </style>
 </head>
 <body>
@@ -159,37 +169,128 @@
   </div>
 </section>
 
-<!-- ============ PRODUCT / PRICING CARD ============ -->
+<!-- ============ PRODUCT / PRICING CARDS ============ -->
 <section class="section" id="buy">
-  <div class="wrap" style="max-width:640px;">
-    <div class="lead-card reveal-scale">
-      <span class="tag tag-marketing">Instant Download</span>
-      <h2 class="lead-card-title">US Travel Agencies— Verified Email List</h2>
-      <p class="lead-card-desc">6k+ verified business emails of travel agencies across USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>
+  <div class="wrap" style="max-width:1120px;">
+    <div class="leads-grid">
 
-      <ul class="lead-card-features">
-        <li>64k+ Verified contacts</li>
-        <li>Name,Email,Phone-Number, company, title, Address,etc</li>
-        <li>CSV format — opens in Excel, Sheets, or your CRM</li>
-        <li>Instant download after payment</li>
-      </ul>
+      <!-- Card 1: US Travel Agencies -->
+      <div class="lead-card reveal-scale">
+        <span class="tag tag-marketing">Instant Download</span>
+        <h2 class="lead-card-title">US Travel Agencies— Verified Email List</h2>
+        <p class="lead-card-desc">6k+ verified business emails of travel agencies across USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>
 
-      <div class="lead-card-price-row">
-        <div class="lead-card-price">$199</div>
-        <div class="lead-card-price-note">one-time payment</div>
+        <ul class="lead-card-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>64k+ Verified contacts</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg>
+            <span>Name, Email, Phone Number, company, title, Address, etc</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg>
+            <span>CSV format — opens in Excel, Sheets, or your CRM</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+            <span>Instant download after payment</span>
+          </li>
+        </ul>
+
+        <div class="lead-card-price-row">
+          <div class="lead-card-price">$199</div>
+          <div class="lead-card-price-note">one-time payment</div>
+        </div>
+
+        <!-- PayPal Payment Link. Buyers can pay with PayPal balance OR
+             Visa/Mastercard/Amex as a guest — no PayPal account required
+             on their end. See README for how automatic CSV delivery
+             works with this link (it's set up via PayPal IPN, not a
+             redirect, since PayPal payment links don't support a
+             custom return URL the way Stripe does). -->
+        <a href="https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E"
+           class="btn btn-primary lead-buy-btn" id="buyBtn" target="_blank" rel="noopener">
+          Buy &amp; Download Now
+        </a>
+        <p class="lead-card-trust">🔒 Secure checkout via PayPal · Visa, Mastercard &amp; PayPal balance accepted</p>
       </div>
 
-      <!-- PayPal Payment Link. Buyers can pay with PayPal balance OR
-           Visa/Mastercard/Amex as a guest — no PayPal account required
-           on their end. See README for how automatic CSV delivery
-           works with this link (it's set up via PayPal IPN, not a
-           redirect, since PayPal payment links don't support a
-           custom return URL the way Stripe does). -->
-      <a href="https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E"
-         class="btn btn-primary lead-buy-btn" id="buyBtn" target="_blank" rel="noopener">
-        Buy &amp; Download Now
-      </a>
-      <p class="lead-card-trust">🔒 Secure checkout via PayPal · Visa, Mastercard &amp; PayPal balance accepted</p>
+      <!-- Card 2: US Restaurants -->
+      <div class="lead-card reveal-scale">
+        <span class="tag tag-marketing">Instant Download</span>
+        <h2 class="lead-card-title">US Restaurants — Verified Email List</h2>
+        <p class="lead-card-desc">38k+ verified business emails of restaurants across USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>
+
+        <ul class="lead-card-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>297k+ Verified contacts</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg>
+            <span>Name, Email, Phone Number, company, title, Address, etc</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg>
+            <span>CSV format — opens in Excel, Sheets, or your CRM</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+            <span>Instant download after payment</span>
+          </li>
+        </ul>
+
+        <div class="lead-card-price-row">
+          <div class="lead-card-price">$199</div>
+          <div class="lead-card-price-note">one-time payment</div>
+        </div>
+
+        <a href="https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E"
+           class="btn btn-primary lead-buy-btn" target="_blank" rel="noopener">
+          Buy &amp; Download Now
+        </a>
+        <p class="lead-card-trust">🔒 Secure checkout via PayPal · Visa, Mastercard &amp; PayPal balance accepted</p>
+      </div>
+
+      <!-- Card 3: US Real Estate Agencies -->
+      <div class="lead-card reveal-scale">
+        <span class="tag tag-marketing">Instant Download</span>
+        <h2 class="lead-card-title">US Real Estate Agencies — Verified Email List</h2>
+        <p class="lead-card-desc">36.9k+ verified business emails of real estate agencies across USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>
+
+        <ul class="lead-card-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>129k+ Verified contacts</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg>
+            <span>Name, Email, Phone Number, company, title, Address, etc</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg>
+            <span>CSV format — opens in Excel, Sheets, or your CRM</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+            <span>Instant download after payment</span>
+          </li>
+        </ul>
+
+        <div class="lead-card-price-row">
+          <div class="lead-card-price">$199</div>
+          <div class="lead-card-price-note">one-time payment</div>
+        </div>
+
+        <a href="https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E"
+           class="btn btn-primary lead-buy-btn" target="_blank" rel="noopener">
+          Buy &amp; Download Now
+        </a>
+        <p class="lead-card-trust">🔒 Secure checkout via PayPal · Visa, Mastercard &amp; PayPal balance accepted</p>
+      </div>
+
     </div>
   </div>
 </section>
