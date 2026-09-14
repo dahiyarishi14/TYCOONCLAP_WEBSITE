@@ -45,21 +45,33 @@
   .testimonial-role{ font-size:0.8rem; color:var(--ink-dim,#8B9793); margin-top:2px; }
   @media (max-width:900px){ .testimonials-grid{ grid-template-columns:1fr; } }
 
-  /* ===== Leads grid (3 lists in a row) ===== */
+  /* ===== Leads grid (catalog) ===== */
   .leads-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; }
   .leads-grid .lead-card{ display:flex; flex-direction:column; height:100%; }
-  .leads-grid .lead-card-desc{ min-height:74px; }
+  .leads-grid .lead-card-desc{ min-height:56px; }
   .leads-grid .lead-card-features{ list-style:none; margin:0; padding:0; flex:1; }
   .leads-grid .lead-card-features li{ display:flex; align-items:flex-start; gap:10px; padding:7px 0; }
   .leads-grid .lead-card-features li svg{ flex:none; margin-top:1px; }
   .leads-grid .lead-buy-btn{ margin-top:auto; }
+  .lead-card-industry{ display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:#357566; background:#DCEFE9; padding:3px 10px; border-radius:999px; margin-bottom:10px; }
   @media (max-width:980px){ .leads-grid{ grid-template-columns:1fr; } .leads-grid .lead-card-desc{ min-height:0; } }
+
+  /* ===== Catalog toolbar ===== */
+  .catalog-toolbar{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; margin-bottom:28px; padding:18px 20px; background:var(--card,#fff); border:1px solid var(--line,rgba(31,43,40,0.1)); border-radius:16px; }
+  .catalog-toolbar .search-wrap{ position:relative; flex:1 1 280px; min-width:220px; }
+  .catalog-toolbar input[type="search"]{ width:100%; padding:11px 14px 11px 38px; border-radius:10px; border:1px solid var(--line,rgba(31,43,40,0.15)); font-size:0.94rem; font-family:inherit; }
+  .catalog-toolbar .search-wrap svg{ position:absolute; left:12px; top:50%; transform:translateY(-50%); color:#8B9793; }
+  .catalog-toolbar select{ padding:11px 14px; border-radius:10px; border:1px solid var(--line,rgba(31,43,40,0.15)); font-size:0.9rem; font-family:inherit; background:#fff; min-width:200px; }
+  .catalog-count{ font-size:0.85rem; color:var(--ink-dim,#8B9793); white-space:nowrap; }
+  .catalog-empty{ text-align:center; padding:50px 20px; color:var(--ink-soft,#5C6B66); display:none; }
+  .load-more-wrap{ text-align:center; margin-top:32px; }
+  .load-more-wrap button{ padding:12px 28px; }
 </style>
 </head>
 <body>
 <div class="scroll-progress"></div>
 
-<!-- ============ HEADER (same as index.html) ============ -->
+<!-- ============ HEADER ============ -->
 <header class="site-nav">
   <div class="wrap">
     <a href="index.html" class="logo">
@@ -169,129 +181,43 @@
   </div>
 </section>
 
-<!-- ============ PRODUCT / PRICING CARDS ============ -->
+<!-- ============ PRODUCT / PRICING CATALOG ============ -->
 <section class="section" id="buy">
-  <div class="wrap" style="max-width:1120px;">
-    <div class="leads-grid">
+  <div class="wrap" style="max-width:1280px;">
 
-      <!-- Card 1: US Travel Agencies -->
-      <div class="lead-card reveal-scale">
-        <span class="tag tag-marketing">Instant Download</span>
-        <h2 class="lead-card-title">US Travel Agencies— Verified Email List</h2>
-        <p class="lead-card-desc">6k+ verified business emails of travel agencies across USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>
-
-        <ul class="lead-card-features">
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span>64k+ Verified contacts</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg>
-            <span>Name, Email, Phone Number, company, title, Address, etc</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg>
-            <span>CSV format — opens in Excel, Sheets, or your CRM</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-            <span>Instant download after payment</span>
-          </li>
-        </ul>
-
-        <div class="lead-card-price-row">
-          <div class="lead-card-price">$199</div>
-          <div class="lead-card-price-note">one-time payment</div>
-        </div>
-
-        <!-- PayPal Payment Link. Buyers can pay with PayPal balance OR
-             Visa/Mastercard/Amex as a guest — no PayPal account required
-             on their end. See README for how automatic CSV delivery
-             works with this link (it's set up via PayPal IPN, not a
-             redirect, since PayPal payment links don't support a
-             custom return URL the way Stripe does). -->
-        <a href="https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E"
-           class="btn btn-primary lead-buy-btn" id="buyBtn" target="_blank" rel="noopener">
-          Buy &amp; Download Now
-        </a>
-        <p class="lead-card-trust">🔒 Secure checkout via PayPal · Visa, Mastercard &amp; PayPal balance accepted</p>
+    <div class="catalog-toolbar">
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="leadSearch" placeholder="Search 447 lead lists (e.g. \"restaurants\", \"dentist\")">
       </div>
-
-      <!-- Card 2: US Restaurants -->
-      <div class="lead-card reveal-scale">
-        <span class="tag tag-marketing">Instant Download</span>
-        <h2 class="lead-card-title">US Restaurants — Verified Email List</h2>
-        <p class="lead-card-desc">38k+ verified business emails of restaurants across USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>
-
-        <ul class="lead-card-features">
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span>297k+ Verified contacts</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg>
-            <span>Name, Email, Phone Number, company, title, Address, etc</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg>
-            <span>CSV format — opens in Excel, Sheets, or your CRM</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-            <span>Instant download after payment</span>
-          </li>
-        </ul>
-
-        <div class="lead-card-price-row">
-          <div class="lead-card-price">$199</div>
-          <div class="lead-card-price-note">one-time payment</div>
-        </div>
-
-        <a href="https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E"
-           class="btn btn-primary lead-buy-btn" target="_blank" rel="noopener">
-          Buy &amp; Download Now
-        </a>
-        <p class="lead-card-trust">🔒 Secure checkout via PayPal · Visa, Mastercard &amp; PayPal balance accepted</p>
-      </div>
-
-      <!-- Card 3: US Real Estate Agencies -->
-      <div class="lead-card reveal-scale">
-        <span class="tag tag-marketing">Instant Download</span>
-        <h2 class="lead-card-title">US Real Estate Agencies — Verified Email List</h2>
-        <p class="lead-card-desc">36.9k+ verified business emails of real estate agencies across USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>
-
-        <ul class="lead-card-features">
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span>129k+ Verified contacts</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg>
-            <span>Name, Email, Phone Number, company, title, Address, etc</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg>
-            <span>CSV format — opens in Excel, Sheets, or your CRM</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-            <span>Instant download after payment</span>
-          </li>
-        </ul>
-
-        <div class="lead-card-price-row">
-          <div class="lead-card-price">$199</div>
-          <div class="lead-card-price-note">one-time payment</div>
-        </div>
-
-        <a href="https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E"
-           class="btn btn-primary lead-buy-btn" target="_blank" rel="noopener">
-          Buy &amp; Download Now
-        </a>
-        <p class="lead-card-trust">🔒 Secure checkout via PayPal · Visa, Mastercard &amp; PayPal balance accepted</p>
-      </div>
-
+      <select id="leadIndustry">
+        <option value="">All industries</option>
+          <option value="Automotive">Automotive</option>
+          <option value="Beauty & Wellness">Beauty & Wellness</option>
+          <option value="Construction & Trades">Construction & Trades</option>
+          <option value="Education & Childcare">Education & Childcare</option>
+          <option value="Events & Entertainment">Events & Entertainment</option>
+          <option value="Food & Beverage">Food & Beverage</option>
+          <option value="Healthcare & Medical">Healthcare & Medical</option>
+          <option value="Home Services">Home Services</option>
+          <option value="Logistics & Transport">Logistics & Transport</option>
+          <option value="Other">Other</option>
+          <option value="Pets & Animals">Pets & Animals</option>
+          <option value="Professional Services">Professional Services</option>
+          <option value="Real Estate & Property">Real Estate & Property</option>
+          <option value="Retail & Shopping">Retail & Shopping</option>
+          <option value="Travel & Hospitality">Travel & Hospitality</option>
+      </select>
+      <div class="catalog-count" id="leadCount"></div>
     </div>
+
+    <div class="leads-grid" id="leadsGrid"></div>
+    <div class="catalog-empty" id="leadsEmpty">No lists match that search. Try a different term or <a href="contact.html">request a custom list</a>.</div>
+
+    <div class="load-more-wrap" id="loadMoreWrap" style="display:none;">
+      <button class="btn btn-secondary" id="loadMoreBtn" type="button">Show more lists</button>
+    </div>
+
   </div>
 </section>
 
@@ -346,7 +272,7 @@
   </div>
 </section>
 
-<!-- ============ CTA BAND (same pattern as index.html) ============ -->
+<!-- ============ CTA BAND ============ -->
 <div class="wrap">
   <div class="cta-band">
     <h2>Need a custom list instead?</h2>
@@ -357,7 +283,7 @@
   </div>
 </div>
 
-<!-- ============ FOOTER (same as index.html) ============ -->
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div>
@@ -386,5 +312,74 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 <script src="gsap-animations.js"></script>
+
+<!-- ============ LEAD CATALOG DATA + RENDERING ============ -->
+<script>
+(function() {
+  // n = list name, i = industry, t = total contacts/leads, e = verified emails
+  var LEADS = [{"n":"3-d Printing & Prototyping Studios","i":"Other","t":"10K","e":"2.4K"},{"n":"Accountant","i":"Professional Services","t":"100.6K","e":"24.8K"},{"n":"Accounting Firm","i":"Professional Services","t":"92.5K","e":"23.7K"},{"n":"Accounting Software Company","i":"Professional Services","t":"50.6K","e":"17.1K"},{"n":"Acoustic Ceiling & Soundproofing","i":"Home Services","t":"17.4K","e":"5.7K"},{"n":"Acoustical Consultant","i":"Professional Services","t":"7.2K","e":"2.8K"},{"n":"Acrobatic Diving Pool","i":"Education & Childcare","t":"67.9K","e":"12.1K"},{"n":"Acrylic Store","i":"Retail & Shopping","t":"604.3K","e":"27.4K"},{"n":"Acupuncture Clinic","i":"Healthcare & Medical","t":"625.8K","e":"15K"},{"n":"Acupuncture School","i":"Healthcare & Medical","t":"57.6K","e":"14.8K"},{"n":"Acura Dealer","i":"Automotive","t":"1.5K","e":"84"},{"n":"Addiction Treatment Center","i":"Healthcare & Medical","t":"920.9K","e":"4.7K"},{"n":"Administrative Attorney","i":"Professional Services","t":"169.2K","e":"20.3K"},{"n":"Adoption Agency","i":"Education & Childcare","t":"288.9K","e":"7.6K"},{"n":"Adult Continuing-education Centers","i":"Education & Childcare","t":"49.7K","e":"11.6K"},{"n":"Adult Day Care Center","i":"Healthcare & Medical","t":"603.7K","e":"13K"},{"n":"Adult Dvd Store","i":"Retail & Shopping","t":"16K","e":"1.1K"},{"n":"Adult Education School","i":"Education & Childcare","t":"241.7K","e":"8.8K"},{"n":"Adult Entertainment Club","i":"Events & Entertainment","t":"244.2K","e":"10.7K"},{"n":"Adult Foster Care Service","i":"Healthcare & Medical","t":"74.7K","e":"13K"},{"n":"Adventure Lodges (diving, Surf, Rafting)","i":"Travel & Hospitality","t":"21K","e":"4.2K"},{"n":"Adventure Sports Center","i":"Events & Entertainment","t":"672K","e":"30.4K"},{"n":"Advertising","i":"Professional Services","t":"295.5K","e":"29.2K"},{"n":"Advertising Agency","i":"Professional Services","t":"1.1M","e":"53.7K"},{"n":"Advertising Photographer","i":"Professional Services","t":"1.1M","e":"26.9K"},{"n":"Aerated Drinks Supplier","i":"Food & Beverage","t":"716.3K","e":"14K"},{"n":"Aerial Installation Service","i":"Home Services","t":"778.4K","e":"23.7K"},{"n":"Aerial Photographer","i":"Professional Services","t":"837.8K","e":"11.4K"},{"n":"Aeroclub","i":"Education & Childcare","t":"5.6K","e":"1.3K"},{"n":"Aesthetic Clinics","i":"Healthcare & Medical","t":"117K","e":"19.4K"},{"n":"After-school Enrichment Programs","i":"Education & Childcare","t":"125.7K","e":"29.8K"},{"n":"Agritourism Farm Stays","i":"Travel & Hospitality","t":"23.2K","e":"4.8K"},{"n":"Airport Transit Hotels","i":"Travel & Hospitality","t":"32.1K","e":"3.4K"},{"n":"Allergists Immunologists","i":"Healthcare & Medical","t":"17.6K","e":"1.2K"},{"n":"Animal Hospital","i":"Pets & Animals","t":"438.1K","e":"19.8K"},{"n":"Architecture Firms","i":"Professional Services","t":"55.4K","e":"16.5K"},{"n":"Art-supply Shops","i":"Retail & Shopping","t":"76K","e":"9.9K"},{"n":"Assisted Living Facility","i":"Healthcare & Medical","t":"439K","e":"15.3K"},{"n":"Attic Ladder Installation","i":"Home Services","t":"43.9K","e":"11.5K"},{"n":"Attorney","i":"Professional Services","t":"510K","e":"39.2K"},{"n":"Auction Houses & Estate Sales","i":"Events & Entertainment","t":"14.4K","e":"6.1K"},{"n":"Auto Body Shops","i":"Automotive","t":"86.1K","e":"13.6K"},{"n":"Auto Detailing (mobile & Shop)","i":"Automotive","t":"45.4K","e":"12.1K"},{"n":"Auto Paint Shop","i":"Automotive","t":"1M","e":"19.5K"},{"n":"Auto Parts Stores","i":"Automotive","t":"68.5K","e":"7.2K"},{"n":"Auto Repair Shop","i":"Automotive","t":"407.1K","e":"32.2K"},{"n":"Baby & Maternity Boutiques","i":"Retail & Shopping","t":"30.5K","e":"2.6K"},{"n":"Babysitting & Nanny Placement Agencies","i":"Education & Childcare","t":"13.8K","e":"2.9K"},{"n":"Bail Bond Services","i":"Other","t":"9.6K","e":"1.2K"},{"n":"Bakeries","i":"Food & Beverage","t":"122.5K","e":"15.3K"},{"n":"Baking Supply Stores","i":"Food & Beverage","t":"89.4K","e":"11.9K"},{"n":"Bankruptcy Lawyer","i":"Professional Services","t":"566K","e":"13.3K"},{"n":"Barber Shops","i":"Beauty & Wellness","t":"87.5K","e":"6.8K"},{"n":"Barre Studios","i":"Beauty & Wellness","t":"12.6K","e":"3.9K"},{"n":"Bathroom Remodeling","i":"Construction & Trades","t":"115.4K","e":"30.2K"},{"n":"Beauty-supply Stores","i":"Retail & Shopping","t":"56.6K","e":"5.7K"},{"n":"Bicycle Shops","i":"Retail & Shopping","t":"20.9K","e":"4.8K"},{"n":"Boutique & Design Hotels","i":"Travel & Hospitality","t":"22.8K","e":"4.9K"},{"n":"Boxing & Mma Gyms","i":"Beauty & Wellness","t":"26K","e":"8.7K"},{"n":"Breathwork & Meditation Studio","i":"Beauty & Wellness","t":"24.2K","e":"6.3K"},{"n":"Breweries & Brewpubs","i":"Food & Beverage","t":"15.5K","e":"4.6K"},{"n":"Bulk Food Suppliers","i":"Food & Beverage","t":"96.5K","e":"8.1K"},{"n":"Business Incubators & Accelerators","i":"Other","t":"22.4K","e":"6K"},{"n":"Business Law Attorney","i":"Professional Services","t":"356.1K","e":"30.2K"},{"n":"Business Process Optimization Consultants","i":"Professional Services","t":"84.5K","e":"23.7K"},{"n":"Business Valuation Specialists","i":"Professional Services","t":"107.3K","e":"39.5K"},{"n":"Cafes Uk","i":"Food & Beverage","t":"38.3K","e":"7.6K"},{"n":"Car Auction Companies","i":"Automotive","t":"14.6K","e":"3.3K"},{"n":"Car Audioalarm Installers","i":"Automotive","t":"32K","e":"3.8K"},{"n":"Car Financing Brokers","i":"Automotive","t":"89.4K","e":"15.4K"},{"n":"Car Insurance Brokers","i":"Professional Services","t":"106.3K","e":"24.6K"},{"n":"Car Loan Providers","i":"Automotive","t":"69.5K","e":"11.8K"},{"n":"Car Shipping & Transport Services","i":"Automotive","t":"62.1K","e":"9.7K"},{"n":"Car Subscription Services","i":"Automotive","t":"157.3K","e":"24.2K"},{"n":"Car Wash","i":"Automotive","t":"68.6K","e":"7.2K"},{"n":"Car Wash. Overview","i":"Automotive","t":"68.6K","e":"8.2K"},{"n":"Car-sharing & Micro-mobility Services","i":"Logistics & Transport","t":"23.3K","e":"3.8K"},{"n":"Cardiology Clinics","i":"Healthcare & Medical","t":"68.5K","e":"3.6K"},{"n":"Catering Services","i":"Food & Beverage","t":"102.7K","e":"17.9K"},{"n":"Chiropractors","i":"Healthcare & Medical","t":"69.8K","e":"13.2K"},{"n":"Chocolate Retailers","i":"Food & Beverage","t":"80.4K","e":"8.9K"},{"n":"Cider Shops","i":"Food & Beverage","t":"50.5K","e":"10.8K"},{"n":"Civilstructural Engineering Firms","i":"Professional Services","t":"30.2K","e":"8.1K"},{"n":"Classic Car Restoration","i":"Home Services","t":"34K","e":"9.1K"},{"n":"Closet & Storage System Builders","i":"Home Services","t":"29.1K","e":"6.6K"},{"n":"Closet Organization & Decluttering","i":"Home Services","t":"77.2K","e":"2.9K"},{"n":"Coding Bootcamps & Stem Lab","i":"Education & Childcare","t":"9K","e":"2K"},{"n":"Coding Bootcamps & Stem Labs","i":"Education & Childcare","t":"9K","e":"2.3K"},{"n":"College Admissions Counseling","i":"Healthcare & Medical","t":"20K","e":"5.9K"},{"n":"Comic-book & Collectibles Stores","i":"Retail & Shopping","t":"11.9K","e":"2.2K"},{"n":"Commercial Tenant-improvement Specialists","i":"Construction & Trades","t":"54.1K","e":"16.2K"},{"n":"Commercial Vehicle Leasing Agencies","i":"Automotive","t":"125.1K","e":"25.9K"},{"n":"Community-relations Consultants","i":"Professional Services","t":"70.3K","e":"17.8K"},{"n":"Concierge & Errand-running Services","i":"Professional Services","t":"17.8K","e":"3.6K"},{"n":"Confectionery Stores","i":"Food & Beverage","t":"109.9K","e":"13.1K"},{"n":"Conference & Convention Centers","i":"Travel & Hospitality","t":"33.2K","e":"9.4K"},{"n":"Copywriting & Content Studios","i":"Professional Services","t":"11.8K","e":"4.6K"},{"n":"Corporate Event Planning & Production","i":"Events & Entertainment","t":"55.3K","e":"17.2K"},{"n":"Corporate Housing Extended-stay Suites","i":"Travel & Hospitality","t":"114.3K","e":"10.7K"},{"n":"Corporate Law Attorney","i":"Professional Services","t":"380.7K","e":"33.9K"},{"n":"Cosmetic Dentist","i":"Healthcare & Medical","t":"650K","e":"27.6K"},{"n":"Cosmetic Tattooing (microblading, Lip Blush)","i":"Beauty & Wellness","t":"18.9K","e":"4.3K"},{"n":"Courier & Same-day Delivery","i":"Food & Beverage","t":"123.5K","e":"6.4K"},{"n":"Coworking Spaces & Flexible Offices","i":"Beauty & Wellness","t":"22.4K","e":"6.9K"},{"n":"Craft Beverage Stores","i":"Food & Beverage","t":"35.9K","e":"5.5K"},{"n":"Craft Distilleries","i":"Food & Beverage","t":"13.6K","e":"3.9K"},{"n":"Credit-repair Firms","i":"Professional Services","t":"14.3K","e":"4.1K"},{"n":"Criminal Defense Lawyer","i":"Professional Services","t":"469K","e":"20.5K"},{"n":"Crossfit & Hiit Boxes","i":"Beauty & Wellness","t":"19.5K","e":"5.9K"},{"n":"Crowd-control & Event Security","i":"Events & Entertainment","t":"20.6K","e":"6.2K"},{"n":"Culinary Schools for Kids & Teens","i":"Food & Beverage","t":"32.6K","e":"8.1K"},{"n":"Custom Car Wrap & Vinyl Shops","i":"Automotive","t":"21.3K","e":"6.9K"},{"n":"Cycling & Spin Studios","i":"Beauty & Wellness","t":"12.8K","e":"4K"},{"n":"Dance Studios","i":"Education & Childcare","t":"26.5K","e":"8.7K"},{"n":"Data Recovery & Forensics","i":"Professional Services","t":"13.4K","e":"3.8K"},{"n":"Debt Collection Agencies","i":"Professional Services","t":"23.4K","e":"7.5K"},{"n":"Deck Builders","i":"Construction & Trades","t":"78.1K","e":"24.3K"},{"n":"Demolition Services","i":"Construction & Trades","t":"66.2K","e":"16.3K"},{"n":"Dental Implant Provider","i":"Healthcare & Medical","t":"630.5K","e":"16.8K"},{"n":"Denture Care Center","i":"Healthcare & Medical","t":"545.5K","e":"12.2K"},{"n":"Dermatologists","i":"Healthcare & Medical","t":"38.7K","e":"3.5K"},{"n":"Diagnostic Imaging Center","i":"Healthcare & Medical","t":"437.2K","e":"2.9K"},{"n":"Dialysis Centers","i":"Healthcare & Medical","t":"12.7K","e":"654"},{"n":"Disaster-cleanup & Biohazard Remediation","i":"Home Services","t":"13.5K","e":"2.4K"},{"n":"Distilled Spirits Retail Stores","i":"Food & Beverage","t":"87.4K","e":"5.4K"},{"n":"Divorce Lawyer","i":"Professional Services","t":"1.4M","e":"31.1K"},{"n":"Document Shredding & Secure Destruction","i":"Logistics & Transport","t":"12.5K","e":"739"},{"n":"Dog Grooming & Spa Services","i":"Beauty & Wellness","t":"39.4K","e":"7.6K"},{"n":"Domain Registration & Hosting Resellers","i":"Professional Services","t":"27.1K","e":"6.7K"},{"n":"Donut & Pastry Boutiques","i":"Food & Beverage","t":"75.2K","e":"9.5K"},{"n":"Drafting & Cad Services","i":"Construction & Trades","t":"5.3K","e":"2.1K"},{"n":"Driver Education for Seniors","i":"Education & Childcare","t":"37.3K","e":"10K"},{"n":"Driveway Paving & Sealing","i":"Home Services","t":"14.8K","e":"5K"},{"n":"Driving Schools","i":"Education & Childcare","t":"23.6K","e":"5.9K"},{"n":"Drone Photography & Mapping","i":"Events & Entertainment","t":"20.7K","e":"5.1K"},{"n":"Drywall & Plaster Contractors","i":"Construction & Trades","t":"23.3K","e":"6K"},{"n":"Early-intervention Therapy (speechotpt)","i":"Healthcare & Medical","t":"39.2K","e":"8.8K"},{"n":"Earthquakestorm Retrofitting","i":"Construction & Trades","t":"18.7K","e":"4.6K"},{"n":"Electric Vehicle Dealerships","i":"Home Services","t":"56.5K","e":"9.6K"},{"n":"Electric-vehicle Conversion & Repair","i":"Home Services","t":"56.4K","e":"9K"},{"n":"Electrician","i":"Home Services","t":"388K","e":"5.8K"},{"n":"Electricians","i":"Home Services","t":"76.6K","e":"10.1K"},{"n":"Electricians - Ontario","i":"Home Services","t":"5.5K","e":"5.5K"},{"n":"Elevator Installation & Service","i":"Construction & Trades","t":"33.6K","e":"8.9K"},{"n":"Emergency Dentist","i":"Healthcare & Medical","t":"613.9K","e":"25.8K"},{"n":"Emergency Plumber","i":"Home Services","t":"1.6M","e":"17.6K"},{"n":"Emergency Veterinarian","i":"Healthcare & Medical","t":"176.5K","e":"10.7K"},{"n":"Emissions Repair Specialists","i":"Automotive","t":"53.6K","e":"6.4K"},{"n":"Employment Lawyer","i":"Professional Services","t":"468.9K","e":"17.7K"},{"n":"Endodontist","i":"Healthcare & Medical","t":"636.9K","e":"10.2K"},{"n":"Endodontists (root-canal Specialists)","i":"Healthcare & Medical","t":"31.4K","e":"6.4K"},{"n":"Energy Drink Retailers","i":"Food & Beverage","t":"179.8K","e":"9.3K"},{"n":"Environmental & Sustainability Consultants","i":"Professional Services","t":"14.6K","e":"4.2K"},{"n":"Estate Planning Attorney","i":"Professional Services","t":"2.1M","e":"30.6K"},{"n":"Event Venues","i":"Events & Entertainment","t":"71.1K","e":"18.4K"},{"n":"Excavation & Grading Contractors","i":"Construction & Trades","t":"35.8K","e":"9.9K"},{"n":"Executive Coaching","i":"Professional Services","t":"81.4K","e":"23.9K"},{"n":"Exotic Car Dealerships","i":"Automotive","t":"56.1K","e":"9.6K"},{"n":"Eyelash & Brow Studios","i":"Beauty & Wellness","t":"32.1K","e":"6.4K"},{"n":"Family Medicine Practices","i":"Healthcare & Medical","t":"160K","e":"12.6K"},{"n":"Farm & Feed Stores","i":"Retail & Shopping","t":"17.6K","e":"4.2K"},{"n":"Farmers-market Vendors","i":"Food & Beverage","t":"11.5K","e":"2.6K"},{"n":"Fence Staining & Restoration","i":"Home Services","t":"37.2K","e":"9.5K"},{"n":"Fertility & Ivf Clinics","i":"Healthcare & Medical","t":"14.9K","e":"2.3K"},{"n":"Fire-sprinkler Installation","i":"Home Services","t":"74.6K","e":"5.4K"},{"n":"Fireworks Stands (seasonal)","i":"Retail & Shopping","t":"7.5K","e":"635"},{"n":"Fleet Maintenance Providers","i":"Automotive","t":"89.3K","e":"17.4K"},{"n":"Flooring Contractors","i":"Construction & Trades","t":"105.9K","e":"29.9K"},{"n":"Florist","i":"Retail & Shopping","t":"43.5K","e":"11.2K"},{"n":"Food Packaging Supply Stores","i":"Food & Beverage","t":"27.7K","e":"5.4K"},{"n":"Fractional Cfo Service","i":"Professional Services","t":"31.2K","e":"8.3K"},{"n":"Functional Beverage Shops","i":"Food & Beverage","t":"47.7K","e":"9.8K"},{"n":"Fundraising & Capital-raising Advisors","i":"Professional Services","t":"49.3K","e":"13.8K"},{"n":"Funeral Homes & Cremation Services","i":"Professional Services","t":"19.2K","e":"5.3K"},{"n":"Furniture Stores","i":"Retail & Shopping","t":"56.4K","e":"9.4K"},{"n":"Garage Organization & Epoxy Flooring","i":"Home Services","t":"18.8K","e":"3.3K"},{"n":"Gastroenterology Centers","i":"Healthcare & Medical","t":"33.3K","e":"1.3K"},{"n":"Gate & Automation Installers","i":"Home Services","t":"26.7K","e":"6.6K"},{"n":"Gelato & Sorbetto Shops","i":"Food & Beverage","t":"22.5K","e":"2.6K"},{"n":"Genealogy & Ancestry Research Services","i":"Professional Services","t":"6.9K","e":"1.7K"},{"n":"General Contractors","i":"Construction & Trades","t":"200K","e":"53.1K"},{"n":"Genetic Counseling Services","i":"Healthcare & Medical","t":"26K","e":"6.9K"},{"n":"Geriatric Care Clinics","i":"Healthcare & Medical","t":"111.7K","e":"17.1K"},{"n":"Glamping Resorts & Luxury Tents","i":"Travel & Hospitality","t":"17.9K","e":"9.7K"},{"n":"Glass & Glazing Contractors","i":"Construction & Trades","t":"78.2K","e":"22.6K"},{"n":"Gluten-free Bakeries","i":"Food & Beverage","t":"50.1K","e":"9.5K"},{"n":"Gourmet Cheese Shops","i":"Food & Beverage","t":"115K","e":"15.3K"},{"n":"Grant-writing Services","i":"Professional Services","t":"11.7K","e":"3.9K"},{"n":"Greenpassive-house Builders","i":"Construction & Trades","t":"8K","e":"4.2K"},{"n":"Grocery Stores","i":"Retail & Shopping","t":"85.4K","e":"4.3K"},{"n":"Gutter Cleaning & Guard Installation","i":"Home Services","t":"25.8K","e":"8.4K"},{"n":"Hair Restoration Clinic","i":"Home Services","t":"457K","e":"5.9K"},{"n":"Hair Salons","i":"Beauty & Wellness","t":"174.2K","e":"18.9K"},{"n":"Heritage & Historic Inns","i":"Travel & Hospitality","t":"14.6K","e":"3.6K"},{"n":"Hobby & Model Building Stores","i":"Retail & Shopping","t":"12.9K","e":"1.9K"},{"n":"Home Energy Audits & Efficiency Upgrades","i":"Home Services","t":"74.5K","e":"5.5K"},{"n":"Home Health\u2013care Agencies","i":"Healthcare & Medical","t":"81.6K","e":"15.6K"},{"n":"Home Inspectors & Logistics","i":"Home Services","t":"11.5K","e":"5.3K"},{"n":"Home Theater & Av Setup","i":"Home Services","t":"7.9K","e":"2.7K"},{"n":"Home-d\u00e9cor & Accent Boutiques","i":"Retail & Shopping","t":"17.9K","e":"3.1K"},{"n":"Homeschool Co-ops & Resource Centers","i":"Education & Childcare","t":"21.9K","e":"6.7K"},{"n":"Hospice & Palliative-care Providers","i":"Healthcare & Medical","t":"16.3K","e":"2.6K"},{"n":"Hostels & Backpacker Lodging","i":"Travel & Hospitality","t":"19.9K","e":"2.5K"},{"n":"Hot-tubsauna Installation & Service","i":"Home Services","t":"67.6K","e":"9.5K"},{"n":"House-sitting Services","i":"Professional Services","t":"125.7K","e":"24.4K"},{"n":"Houseboat & Yacht Charters","i":"Automotive","t":"86.3K","e":"8.9K"},{"n":"Hr Outsourcing (peo)","i":"Professional Services","t":"9.5K","e":"2.6K"},{"n":"Hybrid Car Dealerships","i":"Automotive","t":"56.4K","e":"6.2K"},{"n":"Hyperbaric Oxygen Therapy Centers","i":"Healthcare & Medical","t":"9.9K","e":"2.4K"},{"n":"Ice Cream & Gelato Shops","i":"Food & Beverage","t":"32.8K","e":"4.1K"},{"n":"Ice Cream Shops","i":"Food & Beverage","t":"57.4K","e":"6.5K"},{"n":"Imaging & Radiology Centers (mrict)","i":"Healthcare & Medical","t":"11.9K","e":"942"},{"n":"Insulation Contractors (spray-foam, Blown-in)","i":"Home Services","t":"12.8K","e":"2.6K"},{"n":"Insulation Installers","i":"Home Services","t":"135.4K","e":"12.3K"},{"n":"Interior Demolition & Strip-out","i":"Construction & Trades","t":"25.9K","e":"5.8K"},{"n":"Internal Medicine Clinics","i":"Healthcare & Medical","t":"175.2K","e":"10.3K"},{"n":"Inventory Liquidators","i":"Professional Services","t":"6.4K","e":"1.3K"},{"n":"It Managed-service Providers (msps)","i":"Professional Services","t":"69.7K","e":"6.3K"},{"n":"Jewelry Stores","i":"Retail & Shopping","t":"63.3K","e":"8.5K"},{"n":"Juice & Smoothie Bars","i":"Food & Beverage","t":"56.6K","e":"7.7K"},{"n":"Juice Shops (retail-focused)","i":"Food & Beverage","t":"52K","e":"4.8K"},{"n":"Junk & Hoarding Cleanup","i":"Home Services","t":"15.2K","e":"4K"},{"n":"Kitchen Remodeling","i":"Construction & Trades","t":"108.7K","e":"32.6K"},{"n":"Knife & Cutlery Shops","i":"Retail & Shopping","t":"15.8K","e":"1.9K"},{"n":"Kombucha Breweries","i":"Food & Beverage","t":"24.8K","e":"5.8K"},{"n":"Kombucha Retailers","i":"Food & Beverage","t":"52.3K","e":"7.7K"},{"n":"Landscape Construction & Design-build","i":"Home Services","t":"65.6K","e":"20.6K"},{"n":"Language Schools & Esl Centers","i":"Education & Childcare","t":"23.7K","e":"5.6K"},{"n":"Laser Hair Removal Service","i":"Healthcare & Medical","t":"586K","e":"17.2K"},{"n":"Lasik & Refractive Surgery Centers","i":"Healthcare & Medical","t":"16.2K","e":"1.9K"},{"n":"Lasikeye Surgeon","i":"Healthcare & Medical","t":"588.1K","e":"6K"},{"n":"Laundry Pickup & Delivery","i":"Food & Beverage","t":"66.5K","e":"10.2K"},{"n":"Lawyer","i":"Professional Services","t":"266.9K","e":"31.9K"},{"n":"Lawyers","i":"Professional Services","t":"145.8K","e":"31.7K"},{"n":"Leadasbestos Abatement Contractors","i":"Construction & Trades","t":"14.1K","e":"4.5K"},{"n":"Learning-disability Specialists","i":"Education & Childcare","t":"41.7K","e":"12.5K"},{"n":"Life & Executive Coaching","i":"Professional Services","t":"52.2K","e":"14.2K"},{"n":"Limo Companies","i":"Logistics & Transport","t":"19.2K","e":"5.6K"},{"n":"Locksmiths","i":"Home Services","t":"20.2K","e":"2.7K"},{"n":"Logistics","i":"Logistics & Transport","t":"212.1K","e":"25.3K"},{"n":"Luggage & Travel-gear Shops","i":"Retail & Shopping","t":"86.3K","e":"8.7K"},{"n":"Luxury Car Dealerships","i":"Automotive","t":"79.1K","e":"14.4K"},{"n":"Luxury Car Storage Facilities","i":"Automotive","t":"49.3K","e":"9.1K"},{"n":"Luxury Vehicle Chauffeur Services","i":"Logistics & Transport","t":"56.4K","e":"5.3K"},{"n":"Luxury Villa Rentals","i":"Travel & Hospitality","t":"83.2K","e":"18.9K"},{"n":"Management Consulting Firms","i":"Professional Services","t":"158.3K","e":"30.1K"},{"n":"Market-research Firms","i":"Professional Services","t":"23.9K","e":"9.3K"},{"n":"Martial-arts Academies","i":"Education & Childcare","t":"18.9K","e":"6.7K"},{"n":"Masonry & Stonework Specialists","i":"Construction & Trades","t":"15K","e":"4.2K"},{"n":"Massage Therapists","i":"Healthcare & Medical","t":"115.9K","e":"22.1K"},{"n":"Mattress & Bedding Stores","i":"Retail & Shopping","t":"14.5K","e":"1.4K"},{"n":"Mattress Cleaning & Sanitizing","i":"Home Services","t":"27.6K","e":"6.7K"},{"n":"Meal Kit Providers (retail)","i":"Food & Beverage","t":"110.7K","e":"17.9K"},{"n":"Meal-prep & Subscription Services","i":"Food & Beverage","t":"94.1K","e":"19.2K"},{"n":"Med-spa Injectables (botox, Fillers)","i":"Beauty & Wellness","t":"20.8K","e":"7.1K"},{"n":"Medical Billing & Coding Services","i":"Healthcare & Medical","t":"16K","e":"4.4K"},{"n":"Medical Spas","i":"Beauty & Wellness","t":"71.9K","e":"20.1K"},{"n":"Meditation & Arbitration Services","i":"Professional Services","t":"17.9K","e":"5.5K"},{"n":"Medspa","i":"Beauty & Wellness","t":"83.4K","e":"15.9K"},{"n":"Memory Care Facility","i":"Healthcare & Medical","t":"235.1K","e":"11.6K"},{"n":"Mental Health Counselors","i":"Healthcare & Medical","t":"139.7K","e":"35.4K"},{"n":"Metal Roofing Specialists","i":"Home Services","t":"56K","e":"16.7K"},{"n":"Micro-hotels Capsule Hotels","i":"Travel & Hospitality","t":"28K","e":"2.8K"},{"n":"Mobile App Testing & Qa Labs","i":"Professional Services","t":"19.1K","e":"4.1K"},{"n":"Mobile Beauty Services (on-site Hairmakeup)","i":"Beauty & Wellness","t":"137.6K","e":"4.4K"},{"n":"Mobile Car-detailing (personal Convenience)","i":"Automotive","t":"107.8K","e":"7.5K"},{"n":"Mobile Car-key Programming","i":"Automotive","t":"22.5K","e":"5.9K"},{"n":"Mobile Mechanics","i":"Automotive","t":"58.5K","e":"8.6K"},{"n":"Mobile Wood-fired Pizza Trailers","i":"Food & Beverage","t":"7.5K","e":"1.6K"},{"n":"Modular & Prefab Home Builders","i":"Construction & Trades","t":"16.4K","e":"7.5K"},{"n":"Motels","i":"Travel & Hospitality","t":"57.2K","e":"7.2K"},{"n":"Motorcycle & Atv Repair","i":"Automotive","t":"26.8K","e":"5.8K"},{"n":"Mountainski Lodges","i":"Travel & Hospitality","t":"14.3K","e":"3.8K"},{"n":"Moving Companies","i":"Logistics & Transport","t":"72.1K","e":"10.6K"},{"n":"Moving-in Move-out Cleaning","i":"Home Services","t":"80.8K","e":"20.2K"},{"n":"Music Production & Dj Schools","i":"Education & Childcare","t":"19.6K","e":"6.4K"},{"n":"Music Schools","i":"Education & Childcare","t":"46.2K","e":"10.8K"},{"n":"Musical-instrument Dealers","i":"Retail & Shopping","t":"19.3K","e":"5.9K"},{"n":"Musical-vinyl Record Stores","i":"Retail & Shopping","t":"67.3K","e":"4.8K"},{"n":"Nail Salons","i":"Beauty & Wellness","t":"98.7K","e":"8.6K"},{"n":"Naturopathic Physicians","i":"Healthcare & Medical","t":"49.7K","e":"11.3K"},{"n":"Neurology Groups","i":"Healthcare & Medical","t":"26.5K","e":"1.7K"},{"n":"Non-alcoholic Beverage Shops","i":"Retail & Shopping","t":"99K","e":"11.2K"},{"n":"Notary Services","i":"Professional Services","t":"71K","e":"12.9K"},{"n":"Nursing Home","i":"Healthcare & Medical","t":"270.3K","e":"19.7K"},{"n":"Nutritionists & Dietitians","i":"Beauty & Wellness","t":"41.8K","e":"6.8K"},{"n":"Obgyn-practices","i":"Healthcare & Medical","t":"53.1K","e":"1.8K"},{"n":"Occupational-therapy Practices","i":"Healthcare & Medical","t":"34.1K","e":"7K"},{"n":"Off-road 4\u00d74 Fabrication Shops","i":"Automotive","t":"58K","e":"14.1K"},{"n":"Office-supply Stores","i":"Retail & Shopping","t":"34.7K","e":"5.4K"},{"n":"Oncology Practices","i":"Healthcare & Medical","t":"39.8K","e":"2K"},{"n":"Online Course Providers & Platforms","i":"Education & Childcare","t":"38.9K","e":"9.6K"},{"n":"Optometrists","i":"Healthcare & Medical","t":"66.8K","e":"4.9K"},{"n":"Oral Surgeon","i":"Healthcare & Medical","t":"708.9K","e":"20.3K"},{"n":"Organic Food Stores","i":"Food & Beverage","t":"98.3K","e":"12.8K"},{"n":"Orthodontist","i":"Healthcare & Medical","t":"581.4K","e":"21K"},{"n":"Outdoor & Camping Gear Stores","i":"Retail & Shopping","t":"23.5K","e":"2.6K"},{"n":"Outdoor Kitchen & Hardscape Builders","i":"Construction & Trades","t":"51.4K","e":"14.7K"},{"n":"Outdoor Lighting Design & Install","i":"Home Services","t":"124.2K","e":"13.6K"},{"n":"Pain-management Clinics","i":"Healthcare & Medical","t":"59.5K","e":"8.7K"},{"n":"Painters","i":"Home Services","t":"98.8K","e":"19K"},{"n":"Painting Contractor","i":"Home Services","t":"504.9K","e":"23.1K"},{"n":"Paintless Dent Repair Service","i":"Home Services","t":"253K","e":"8.2K"},{"n":"Party & Event Rentals (tents, Tables)","i":"Events & Entertainment","t":"19.6K","e":"4.9K"},{"n":"Party-supply Stores","i":"Retail & Shopping","t":"67.2K","e":"9.9K"},{"n":"Passport & Visa Expedite Services","i":"Professional Services","t":"10.2K","e":"1K"},{"n":"Patent & Intellectual-property Agents","i":"Professional Services","t":"12.9K","e":"4.8K"},{"n":"Payroll Service Providers","i":"Professional Services","t":"29.6K","e":"11K"},{"n":"Pediatric Clinics","i":"Healthcare & Medical","t":"74K","e":"8.1K"},{"n":"Pediatric Dentist","i":"Healthcare & Medical","t":"666.8K","e":"21.3K"},{"n":"Performance Tuning & Dyno Shop","i":"Automotive","t":"20.9K","e":"4K"},{"n":"Pergola & Gazebo Installers","i":"Construction & Trades","t":"25K","e":"6.5K"},{"n":"Periodontist","i":"Healthcare & Medical","t":"627.5K","e":"13.2K"},{"n":"Personal Chefs & Meal-planning","i":"Beauty & Wellness","t":"135.3K","e":"6.8K"},{"n":"Personal Storage Pods","i":"Logistics & Transport","t":"44.4K","e":"7.6K"},{"n":"Personal Storage Pods & Portable Units","i":"Logistics & Transport","t":"44.4K","e":"8.1K"},{"n":"Personal Stylists & Image Consultants","i":"Professional Services","t":"127.7K","e":"4.6K"},{"n":"Personal Tech Support & Tutoring","i":"Education & Childcare","t":"82.4K","e":"7.2K"},{"n":"Personal Trainers & Fitness Coaching","i":"Beauty & Wellness","t":"150.2K","e":"15.6K"},{"n":"Personal Travel Planning & Luxury Concierge","i":"Professional Services","t":"19.2K","e":"6.2K"},{"n":"Pest Control","i":"Home Services","t":"34.6K","e":"7.7K"},{"n":"Pest Control Service","i":"Home Services","t":"525.1K","e":"10.1K"},{"n":"Pet Boarding & Daycare","i":"Education & Childcare","t":"32.3K","e":"9.7K"},{"n":"Pet Boutique & Specialty Foods","i":"Retail & Shopping","t":"57.4K","e":"10.6K"},{"n":"Pet Stores","i":"Retail & Shopping","t":"56.7K","e":"7.4K"},{"n":"Pet Training & Obedience Schools","i":"Pets & Animals","t":"120.3K","e":"6.9K"},{"n":"Pharmacies","i":"Healthcare & Medical","t":"72.3K","e":"5.2K"},{"n":"Physical Therapy Clinic","i":"Healthcare & Medical","t":"778.3K","e":"21K"},{"n":"Pilates Studios","i":"Beauty & Wellness","t":"19.7K","e":"5.6K"},{"n":"Pizzerias","i":"Food & Beverage","t":"76.9K","e":"10.4K"},{"n":"Plastic Surgeon","i":"Healthcare & Medical","t":"626.2K","e":"10.7K"},{"n":"Plastic Surgery","i":"Healthcare & Medical","t":"53.6K","e":"9K"},{"n":"Plumbers","i":"Home Services","t":"58.8K","e":"11.7K"},{"n":"Podiatrists","i":"Healthcare & Medical","t":"30.8K","e":"2.5K"},{"n":"Pool & Spa Supply Stores","i":"Beauty & Wellness","t":"16.1K","e":"4.3K"},{"n":"Pool Contractor","i":"Construction & Trades","t":"3.3K","e":"1.2K"},{"n":"Pool Services","i":"Home Services","t":"52.4K","e":"13.1K"},{"n":"Pop-up Seasonal Retail","i":"Retail & Shopping","t":"62.1K","e":"4.9K"},{"n":"Pre-purchase Car Inspection Services","i":"Automotive","t":"59.3K","e":"6K"},{"n":"Preschools","i":"Education & Childcare","t":"88.7K","e":"17.6K"},{"n":"Pressurepower Washing","i":"Home Services","t":"58.3K","e":"12.8K"},{"n":"Printing Services","i":"Professional Services","t":"84.4K","e":"11.7K"},{"n":"Property Management","i":"Real Estate & Property","t":"61K","e":"19.1K"},{"n":"Prosthetics & Orthotics Providers","i":"Healthcare & Medical","t":"11.4K","e":"1.8K"},{"n":"Prosthodontist","i":"Healthcare & Medical","t":"545.9K","e":"15.9K"},{"n":"Public Relations Agencies","i":"Professional Services","t":"113.7K","e":"37.9K"},{"n":"Ramen & Noodle Houses","i":"Food & Beverage","t":"40.6K","e":"2.7K"},{"n":"Real Estate","i":"Real Estate & Property","t":"129.4K","e":"36.9K"},{"n":"Recycling & E-waste Collection","i":"Logistics & Transport","t":"76.9K","e":"6.1K"},{"n":"Remodeler","i":"Construction & Trades","t":"540.3K","e":"70.6K"},{"n":"Residential Glass Repair","i":"Home Services","t":"69.6K","e":"15.8K"},{"n":"Restaurant","i":"Food & Beverage","t":"297.6K","e":"38.2K"},{"n":"Restaurant Vancouver","i":"Food & Beverage","t":"51K","e":"18.4K"},{"n":"Restaurants","i":"Food & Beverage","t":"235.3K","e":"34.4K"},{"n":"Retaining-wall Builders","i":"Construction & Trades","t":"68.5K","e":"19.3K"},{"n":"Robotics & Maker Camps","i":"Education & Childcare","t":"13K","e":"3K"},{"n":"Rv & Camper Dealerships","i":"Automotive","t":"17.5K","e":"4.6K"},{"n":"Rv Dealer","i":"Automotive","t":"1.1M","e":"20.6K"},{"n":"Salvage Yards & Auto Recyclers","i":"Automotive","t":"18.7K","e":"3.3K"},{"n":"Security Services","i":"Home Services","t":"47.8K","e":"14.7K"},{"n":"Senior Living Facility","i":"Healthcare & Medical","t":"1.2M","e":"22K"},{"n":"Seo & Sem Agencies","i":"Professional Services","t":"27.1K","e":"8.6K"},{"n":"Septic Tank Pumpingrepair","i":"Home Services","t":"42.8K","e":"3.2K"},{"n":"Shed & Tiny-structure Assembly","i":"Home Services","t":"10.9K","e":"3.6K"},{"n":"Siding Contractors","i":"Home Services","t":"113.6K","e":"18.3K"},{"n":"Siding Installation & Repair","i":"Home Services","t":"203.8K","e":"17.9K"},{"n":"Sleep-disorder Centers","i":"Healthcare & Medical","t":"20.2K","e":"4.2K"},{"n":"Smart-homeautomation Installers","i":"Home Services","t":"37.7K","e":"3.3K"},{"n":"Smog Check Stations","i":"Automotive","t":"22.6K","e":"2.9K"},{"n":"Snack Food Stores","i":"Food & Beverage","t":"150.3K","e":"9.6K"},{"n":"Snow & Ice Removal","i":"Home Services","t":"33.4K","e":"7K"},{"n":"Social-media Management Agencies","i":"Professional Services","t":"48K","e":"10.8K"},{"n":"Solar Energy Leasing Companies","i":"Home Services","t":"17.7K","e":"5.4K"},{"n":"Solar Roofing & Battery Storage Installers","i":"Home Services","t":"36K","e":"11.1K"},{"n":"Spas","i":"Beauty & Wellness","t":"124.9K","e":"22.3K"},{"n":"Specialty Chocolate & Confectioneries","i":"Food & Beverage","t":"80.5K","e":"12K"},{"n":"Specialty Spice & Herb Shops","i":"Food & Beverage","t":"66.3K","e":"8.4K"},{"n":"Speech-language Pathology Clinics","i":"Healthcare & Medical","t":"31.6K","e":"7.1K"},{"n":"Sporting Goods Shops","i":"Retail & Shopping","t":"39K","e":"5.1K"},{"n":"Spray-tan Studios","i":"Beauty & Wellness","t":"8K","e":"1.3K"},{"n":"Steel & Metal-building Erectors","i":"Construction & Trades","t":"13.8K","e":"6.4K"},{"n":"Storage Facilities","i":"Logistics & Transport","t":"55.3K","e":"9.2K"},{"n":"Structural & Foundation Repair","i":"Construction & Trades","t":"17.2K","e":"6.2K"},{"n":"Stucco & Eifs Installers","i":"Construction & Trades","t":"30.1K","e":"8K"},{"n":"Study-abroad Program Advisors","i":"Education & Childcare","t":"22.9K","e":"8.3K"},{"n":"Summer Camps (special-interest & Day)","i":"Education & Childcare","t":"49.9K","e":"14.6K"},{"n":"Surgeons","i":"Healthcare & Medical","t":"187.5K","e":"12.1K"},{"n":"Surgery Center","i":"Healthcare & Medical","t":"404.4K","e":"8.4K"},{"n":"Swimming & Lifesaving Lessons","i":"Education & Childcare","t":"54.1K","e":"3.8K"},{"n":"Swimming-pool Construction","i":"Education & Childcare","t":"15K","e":"3.8K"},{"n":"Tailoring & Alteration Shops","i":"Beauty & Wellness","t":"24.8K","e":"4.3K"},{"n":"Tattoo Removal Service","i":"Beauty & Wellness","t":"93.1K","e":"4.3K"},{"n":"Tax Attorney","i":"Professional Services","t":"1.3M","e":"33K"},{"n":"Tea Rooms & Bubble-tea Shops","i":"Food & Beverage","t":"62K","e":"9.5K"},{"n":"Technical Documentation & Sop Writers","i":"Professional Services","t":"19.6K","e":"4.2K"},{"n":"Telemedicine Providers","i":"Healthcare & Medical","t":"66.3K","e":"10.2K"},{"n":"Test-prep Centers","i":"Education & Childcare","t":"37.2K","e":"10.1K"},{"n":"Texas Fitness","i":"Beauty & Wellness","t":"8.7K","e":"2.4K"},{"n":"Thrift & Consignment Boutiques","i":"Retail & Shopping","t":"26.2K","e":"3.5K"},{"n":"Ticket Brokerage & Concierge","i":"Professional Services","t":"17.8K","e":"4.6K"},{"n":"Tint & Paint-protection Film Installers","i":"Home Services","t":"23.9K","e":"6.1K"},{"n":"Tiny-home Builders","i":"Construction & Trades","t":"46.8K","e":"18.4K"},{"n":"Tire Shops","i":"Automotive","t":"74.9K","e":"8K"},{"n":"Towing Services","i":"Automotive","t":"32.3K","e":"5.5K"},{"n":"Toy & Game Stores","i":"Retail & Shopping","t":"43.4K","e":"4.8K"},{"n":"Trailer Sales & Service","i":"Automotive","t":"40.3K","e":"9.1K"},{"n":"Transmission-specialist Shops","i":"Automotive","t":"65.7K","e":"9.4K"},{"n":"Travel Agencies","i":"Travel & Hospitality","t":"64.5K","e":"10.1K"},{"n":"Tree Services","i":"Home Services","t":"59.1K","e":"12.5K"},{"n":"Tutoring Services","i":"Education & Childcare","t":"44.7K","e":"10.2K"},{"n":"Uk Restaurants","i":"Food & Beverage","t":"65.1K","e":"14.6K"},{"n":"Urgent Care Centers (distinct From Urgent Care Clinics)","i":"Healthcare & Medical","t":"45.9K","e":"6.3K"},{"n":"Urgent Care Clinic","i":"Healthcare & Medical","t":"536.3K","e":"13.5K"},{"n":"Urgent Care Clinics","i":"Healthcare & Medical","t":"54K","e":"6.5K"},{"n":"Used Car Dealerships","i":"Automotive","t":"82.7K","e":"10.2K"},{"n":"Used Car Dealershipscsv","i":"Automotive","t":"82.7K","e":"11.9K"},{"n":"Vacation-rental Property Management","i":"Real Estate & Property","t":"23.3K","e":"12.1K"},{"n":"Vape & Smoke Shops","i":"Retail & Shopping","t":"33.3K","e":"1.6K"},{"n":"Vegan & Plant-based Caf\u00e9s","i":"Food & Beverage","t":"108K","e":"14.3K"},{"n":"Vehicle Inspection Centers","i":"Automotive","t":"59.6K","e":"7.2K"},{"n":"Vehicle Storage & Concierge Services","i":"Professional Services","t":"34.5K","e":"7.6K"},{"n":"Vehicle Wraps & Graphics Studios","i":"Professional Services","t":"18.4K","e":"6K"},{"n":"Veterinarians","i":"Pets & Animals","t":"39K","e":"10K"},{"n":"Veterinary Dentist","i":"Healthcare & Medical","t":"612.4K","e":"19.5K"},{"n":"Video Production Houses","i":"Professional Services","t":"57.5K","e":"17.1K"},{"n":"Virtual Assistant Firms","i":"Professional Services","t":"54K","e":"23.8K"},{"n":"Virtual Fitness & Wellness Coaching","i":"Beauty & Wellness","t":"82.7K","e":"8.2K"},{"n":"Virtual Mailbox & Business Address Providers","i":"Professional Services","t":"44.2K","e":"9.1K"},{"n":"Voice-over & Audio-post Studios","i":"Professional Services","t":"6.5K","e":"2.4K"},{"n":"Waste-management & Roll-off Dumpster Rentals","i":"Logistics & Transport","t":"133.7K","e":"5.1K"},{"n":"Water-damage Restoration","i":"Home Services","t":"48.4K","e":"13.5K"},{"n":"Waxing & Sugaring Salons","i":"Beauty & Wellness","t":"10.3K","e":"2.1K"},{"n":"Wedding Planners","i":"Events & Entertainment","t":"158.8K","e":"16.3K"},{"n":"Wedding Venues","i":"Events & Entertainment","t":"44K","e":"14.7K"},{"n":"Weight-loss Coaching Centers","i":"Healthcare & Medical","t":"63.6K","e":"15.3K"},{"n":"Wheel-alignment & Suspension Centers","i":"Automotive","t":"56.7K","e":"6.7K"},{"n":"Window Cleaning","i":"Home Services","t":"65.7K","e":"15.6K"},{"n":"Window Installation Service","i":"Construction & Trades","t":"519.8K","e":"31.9K"},{"n":"Window Repair Services","i":"Home Services","t":"74.8K","e":"15.2K"},{"n":"Window Replacement Companies","i":"Home Services","t":"93.8K","e":"28K"},{"n":"Window Tinting & Film Installation","i":"Home Services","t":"132.9K","e":"6.2K"},{"n":"Wine Bars & Tapas Lounges","i":"Food & Beverage","t":"46.2K","e":"7.5K"},{"n":"Winemaking Retail Shops","i":"Food & Beverage","t":"20.9K","e":"4.9K"},{"n":"Wineries & Tasting Rooms","i":"Events & Entertainment","t":"25.2K","e":"365"},{"n":"Wireless Wearable Medical Devices","i":"Healthcare & Medical","t":"54.6K","e":"5.1K"},{"n":"Yoga Studios","i":"Beauty & Wellness","t":"30.7K","e":"9K"},{"n":"Zero-waste Bulk Stores","i":"Retail & Shopping","t":"16.3K","e":"2.5K"}];
+
+  var PAYPAL_LINK = "https://www.paypal.com/ncp/payment/YJDMHMLDJJ78E";
+  var PRICE = "$199";
+  var PAGE_SIZE = 24;
+  var shown = PAGE_SIZE;
+
+  var grid = document.getElementById('leadsGrid');
+  var empty = document.getElementById('leadsEmpty');
+  var countEl = document.getElementById('leadCount');
+  var searchEl = document.getElementById('leadSearch');
+  var industryEl = document.getElementById('leadIndustry');
+  var loadMoreWrap = document.getElementById('loadMoreWrap');
+  var loadMoreBtn = document.getElementById('loadMoreBtn');
+
+  function cardHtml(item) {
+    return '' +
+      '<div class="lead-card reveal-scale">' +
+        '<span class="lead-card-industry">' + item.i + '</span>' +
+        '<span class="tag tag-marketing">Instant Download</span>' +
+        '<h2 class="lead-card-title">' + item.n + ' — Verified Email List</h2>' +
+        '<p class="lead-card-desc">' + item.e + '+ verified business emails of ' + item.n.toLowerCase() + ' contacts across the USA. Cleaned, deduplicated, and checked for deliverability within the last 30 days.</p>' +
+        '<ul class="lead-card-features">' +
+          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#357566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>' + item.t + '+ Verified contacts</span></li>' +
+          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9584C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 12h4M6 16h7"/></svg><span>Name, Email, Phone Number, company, title, Address, etc</span></li>' +
+          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8860F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M14 13h2M14 17h2"/></svg><span>CSV format — opens in Excel, Sheets, or your CRM</span></li>' +
+          '<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E3A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg><span>Instant download after payment</span></li>' +
+        '</ul>' +
+        '<div class="lead-card-price-row">' +
+          '<div class="lead-card-price">' + PRICE + '</div>' +
+          '<div class="lead-card-price-note">one-time payment</div>' +
+        '</div>' +
+        '<a href="' + PAYPAL_LINK + '" class="btn btn-primary lead-buy-btn" target="_blank" rel="noopener">Buy &amp; Download Now</a>' +
+        '<p class="lead-card-trust">\ud83d\udd12 Secure checkout via PayPal \u00b7 Visa, Mastercard &amp; PayPal balance accepted</p>' +
+      '</div>';
+  }
+
+  function getFiltered() {
+    var q = searchEl.value.trim().toLowerCase();
+    var ind = industryEl.value;
+    return LEADS.filter(function(item) {
+      var matchesQ = !q || item.n.toLowerCase().indexOf(q) !== -1;
+      var matchesInd = !ind || item.i === ind;
+      return matchesQ && matchesInd;
+    });
+  }
+
+  function render() {
+    var filtered = getFiltered();
+    var visible = filtered.slice(0, shown);
+    grid.innerHTML = visible.map(cardHtml).join('');
+    empty.style.display = filtered.length === 0 ? 'block' : 'none';
+    grid.style.display = filtered.length === 0 ? 'none' : 'grid';
+    countEl.textContent = filtered.length + ' of ' + LEADS.length + ' lists';
+    loadMoreWrap.style.display = filtered.length > shown ? 'block' : 'none';
+  }
+
+  searchEl.addEventListener('input', function() { shown = PAGE_SIZE; render(); });
+  industryEl.addEventListener('change', function() { shown = PAGE_SIZE; render(); });
+  loadMoreBtn.addEventListener('click', function() { shown += PAGE_SIZE; render(); });
+
+  render();
+})();
+</script>
 </body>
 </html>
