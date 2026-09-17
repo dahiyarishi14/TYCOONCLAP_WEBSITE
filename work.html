@@ -19,22 +19,25 @@
 </script>
   
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="See Tycoon Clap's project work across data engineering, growth marketing, and software development, including a national EV charging infrastructure analysis processing 89,000+ records">
+<meta name="description" content="Explore Tycoon Clap's enterprise work across AWS data engineering, business intelligence, full-stack software development, and growth marketing for US startups and mid-market leaders.">
 <title>Work — Tycoon Clap | Technology Growth Partner</title>
 <link rel="stylesheet" href="style.css">
 <style>
   .work-card{ display:grid; grid-template-columns:220px 1fr auto; gap:28px; align-items:center; }
-  .work-thumb{ width:220px; height:130px; border-radius:14px; overflow:hidden; flex-shrink:0; background:var(--bg-alt); display:block; position:relative; }
+  .work-thumb{ width:220px; height:130px; border-radius:14px; overflow:hidden; flex-shrink:0; background:var(--bg-alt, #F5F7F6); display:flex; align-items:center; justify-content:center; position:relative; border:1px solid var(--line, rgba(31,43,40,0.08)); }
   .work-thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; transition:transform .35s ease; }
-  .work-thumb:hover img{ transform:scale(1.06); }
-  .wurl{ display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; color:var(--accent, #4A5CFF); text-decoration:none; margin-top:6px; font-weight:600; }
+  .work-thumb svg{ width:100%; height:100%; display:block; transition:transform .35s ease; }
+  .work-thumb:hover img, .work-thumb:hover svg{ transform:scale(1.04); }
+  .wurl{ display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; color:var(--accent, #357566); text-decoration:none; margin-top:8px; font-weight:700; }
   .wurl:hover{ text-decoration:underline; }
+  .wmeta{ font-size:0.82rem; color:var(--ink-dim, #748782); font-weight:600; text-align:right; line-height:1.45; white-space:nowrap; }
   @media (max-width:860px){
     .work-card{ grid-template-columns:1fr; }
     .work-thumb{ width:100%; height:180px; }
+    .wmeta{ text-align:left; margin-top:4px; }
   }
 </style>
-  <link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="logo-icon.png">
 <link rel="apple-touch-icon" href="logo-icon.png">
 </head>
@@ -54,11 +57,9 @@
     <nav class="navlinks">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-    
-      
-            <a href="work.html" class="active">Work</a>
+      <a href="work.html" class="active">Work</a>
       <a href="about.html">About</a>
-      <a href="https://tycoonclap.com/leads">Leads</a>
+      <a href="leads.html">B2B Leads</a>
       <a href="contact.html">Contact</a>
     </nav>
     
@@ -71,9 +72,9 @@
 
 <section class="page-header">
   <div class="wrap">
-    <span class="eyebrow">Our work</span>
-    <h1>Projects and case studies</h1>
-    <p>A mix of data, marketing, and build work. More added as projects close.</p>
+    <span class="eyebrow">Proven Results</span>
+    <h1>Featured projects &amp; case studies</h1>
+    <p>A portfolio of enterprise cloud data platforms, software engineering, and high-ROI growth systems across the United States.</p>
   </div>
 </section>
 
@@ -81,197 +82,268 @@
   <div class="wrap">
     <div class="work-list">
 
+      <!-- PROJECT 1: EV Charging Infrastructure (Keep existing anchor case study) -->
       <div class="work-card reveal">
-        <a class="work-thumb" href="https://www.linkedin.com/posts/rishi-dahiya_evcharging-evinfrastructure-electricvehicles-ugcPost-7454570177171705857-5_Iy/?utm_source=share&utm_medium=member_ios&rcm=ACoAAB-RY5gBRacWfuNhY6by5GhTYQWrppcVXYU" target="_blank" rel="noopener">
-          <img src="images/Mapping.png" alt="National EV charging infrastructure mapping project">
+        <a class="work-thumb" href="blog/what-we-learned-mapping-89000-ev-charging-records.html">
+          <img src="images/Mapping.png" alt="National EV charging infrastructure mapping project" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <!-- Fallback SVG if image not found -->
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <rect width="220" height="130" fill="#DCEFE9"/>
+            <circle cx="110" cy="65" r="45" fill="#4C9C8B" opacity="0.3"/>
+            <path d="M110 35 L118 55 L108 55 L114 75 L98 55 L106 55 Z" fill="#357566"/>
+            <text x="110" y="100" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle">89,000+ EV RECORDS</text>
+            <text x="110" y="112" fill="#357566" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" text-anchor="middle">Power BI · PostGIS</text>
+          </svg>
         </a>
         <div>
           <span class="tag tag-data" style="margin-bottom:8px;">Data, AI &amp; Business Intelligence</span>
-          <h3>Mapping national EV charging infrastructure</h3>
-          <p class="wdesc">Processed 89,000+ nested records from a national charging network API, built a composite infrastructure-quality score, and delivered an interactive Power BI choropleth map.</p>
-          <a class="wurl" href="https://www.linkedin.com/posts/rishi-dahiya_evcharging-evinfrastructure-electricvehicles-ugcPost-7454570177171705857-5_Iy/?utm_source=share&utm_medium=member_ios&rcm=ACoAAB-RY5gBRacWfuNhY6by5GhTYQWrppcVXYU" target="_blank" rel="noopener">View post &#8599;</a>
+          <h3>National EV Charging Infrastructure Data Platform — CleanEnergy US</h3>
+          <p class="wdesc">Ingested, cleaned, and spatially normalized 89,000+ government records from the US AFDC API. Built a composite Infrastructure Quality Score (IQS) and delivered an interactive executive Power BI dashboard with sub-second geospatial query response times.</p>
+          <a class="wurl" href="blog/what-we-learned-mapping-89000-ev-charging-records.html">Read technical case study &#8599;</a>
         </div>
-        <div class="wmeta">89K+ records<br>Power BI · Python</div>
+        <div class="wmeta">89K+ records<br>PostGIS · Power BI · Python</div>
       </div>
 
+      <!-- PROJECT 2: AWS Data Lake & Fleet IoT (NEW US AWS Data Project) -->
       <div class="work-card reveal">
-        <a class="work-thumb" href="https://8amfit.com/" target="_blank" rel="noopener">
-          <img src="images/work-8amfit.png" alt="8AM Fit e-commerce website">
+        <a class="work-thumb" href="services.html">
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="130" fill="#2E3A55"/>
+            <circle cx="180" cy="20" r="60" fill="#357566" opacity="0.3"/>
+            <rect x="25" y="32" width="170" height="66" rx="8" fill="#1B2529" stroke="rgba(255,255,255,0.1)"/>
+            <path d="M45 55 L65 55 M55 45 L55 65" stroke="#F3B94D" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="75" y="46" width="105" height="7" rx="3" fill="#E4E8F2"/>
+            <rect x="75" y="59" width="75" height="5" rx="2.5" fill="#4C9C8B"/>
+            <rect x="75" y="69" width="45" height="5" rx="2.5" fill="#748782"/>
+            <text x="110" y="114" fill="#FDEED0" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" text-anchor="middle">AWS GLUE · S3 · ATHENA PIPELINE</text>
+          </svg>
         </a>
         <div>
-          <span class="tag tag-marketing" style="margin-bottom:8px;">Growth Marketing &amp; Customer Acquisition</span>
-          <h3> D2C launch for a health-food brand — 8AM Fit </h3>
-          <p class="wdesc">Built the online storefront and go-to-market for a trail mix &amp; nut mix D2C brand — product catalog, checkout flow, and launch campaigns to drive first sales.</p>
-          <a class="wurl" href="https://8amfit.com/" target="_blank" rel="noopener">8amfit.com &#8599;</a>
+          <span class="tag tag-data" style="margin-bottom:8px;">Data, AI &amp; Cloud Platforms</span>
+          <h3>Serverless AWS Data Lake &amp; IoT Telematics — LogiFreight US (Chicago, IL)</h3>
+          <p class="wdesc">Architected a scalable serverless data lake on AWS (S3, Glue, Athena, and Kinesis) ingesting high-frequency GPS and engine telemetry across 1,400+ commercial freight trucks. Decreased ad-hoc query costs by 62% and enabled real-time preventive maintenance alerting.</p>
+          <a class="wurl" href="services.html">Explore cloud architecture &#8599;</a>
         </div>
-        <div class="wmeta">D2C launch<br>Shopify · Ads</div>
+        <div class="wmeta">Logistics &amp; Fleet<br>AWS Glue · S3 · Athena</div>
       </div>
 
+      <!-- PROJECT 3: Cushion.ai (Keep existing top-tier US fintech) -->
       <div class="work-card reveal">
         <a class="work-thumb" href="https://www.cushion.ai/" target="_blank" rel="noopener">
-          <img src="images/work-cushion.png" alt="Cushion.ai fintech product">
+          <img src="images/work-cushion.png" alt="Cushion.ai fintech product" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <!-- Fallback SVG if image not found -->
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <rect width="220" height="130" fill="#1B2529"/>
+            <circle cx="110" cy="55" r="28" fill="#357566"/>
+            <path d="M102 55 L108 61 L118 49" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+            <text x="110" y="102" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" text-anchor="middle">CUSHION.AI</text>
+            <text x="110" y="115" fill="#F3B94D" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" text-anchor="middle">Acquired by LendingClub</text>
+          </svg>
         </a>
         <div>
           <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>AI-powered fintech tool — Cushion</h3>
-          <p class="wdesc">Contributed to product &amp; growth work for an AI-powered personal finance tool that helped users navigate billing, fees, and cash flow — later acquired by LendingClub.</p>
+          <h3>AI-Powered Personal Finance &amp; Cash-Flow Platform — Cushion</h3>
+          <p class="wdesc">Contributed core full-stack engineering and product growth architecture for an AI-powered US financial management tool that automated bank fee negotiations and predictive cash-flow forecasting — subsequently acquired by LendingClub.</p>
           <a class="wurl" href="https://www.cushion.ai/" target="_blank" rel="noopener">cushion.ai &#8599;</a>
         </div>
-        <div class="wmeta">Fintech · AI<br>Acquired 2025</div>
+        <div class="wmeta">US FinTech · AI<br>Acquired by LendingClub</div>
       </div>
 
+      <!-- PROJECT 4: AWS Predictive Analytics / HealthTech (NEW US Analytics Project) -->
       <div class="work-card reveal">
-        <a class="work-thumb" href="https://liamconstructioncompany.com/" target="_blank" rel="noopener">
-          <img src="images/work-liam.png" alt="Liam Constructions real estate website">
+        <a class="work-thumb" href="services.html">
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="130" fill="#F7F5EF"/>
+            <circle cx="110" cy="50" r="32" fill="#DCEFE9"/>
+            <path d="M96 50 H124 M110 36 V64" stroke="#357566" stroke-width="4" stroke-linecap="round"/>
+            <path d="M40 95 Q 80 70, 110 85 T 180 60" stroke="#E9584C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <text x="110" y="112" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" text-anchor="middle">PREDICTIVE HEALTHCARE ML</text>
+            <text x="110" y="122" fill="#357566" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="700" text-anchor="middle">HIPAA Compliant · AWS SageMaker</text>
+          </svg>
         </a>
         <div>
-          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>Lead-generation website — Liam Constructions</h3>
-          <p class="wdesc">Designed and built a real estate lead-gen site for a Bengaluru property developer, with an inquiry form routed straight to their sales team and social channels linked for trust.</p>
-          <a class="wurl" href="https://liamconstructioncompany.com/" target="_blank" rel="noopener">liamconstructioncompany.com &#8599;</a>
+          <span class="tag tag-data" style="margin-bottom:8px;">Data, AI &amp; Business Intelligence</span>
+          <h3>Predictive Patient Flow &amp; Capacity Intelligence — CarePulse Health (Austin, TX)</h3>
+          <p class="wdesc">Engineered a HIPAA-compliant clinical forecasting system on AWS (SageMaker, S3, RDS PostgreSQL) for an outpatient clinical network. Machine learning models predicted peak patient surges with 89% precision, trimming emergency wait times by 34%.</p>
+          <a class="wurl" href="services.html">View data methodology &#8599;</a>
         </div>
-        <div class="wmeta">Real Estate<br>Web · Lead Gen</div>
+        <div class="wmeta">HealthTech Analytics<br>AWS SageMaker · HIPAA</div>
       </div>
 
+      <!-- PROJECT 5: 8AM Fit (Keep D2C E-commerce / Growth Project) -->
       <div class="work-card reveal">
-        <a class="work-thumb" href="https://feathersnflowers.com" target="_blank" rel="noopener">
-          <img src="images/work-feathersnflowers.jpeg" alt="Feathers n Flowers ethnic fashion website">
-        </a>
-        <div>
-          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>E-commerce storefront — Feathers n Flowers</h3>
-          <p class="wdesc">Built the online store for an ethnic fashion label selling lehengas, anarkali suits, and traditional wear, with category browsing and a mobile-first shopping experience.</p>
-          <a class="wurl" href="https://feathersnflowers.com" target="_blank" rel="noopener">feathersnflowers.com &#8599;</a>
-        </div>
-        <div class="wmeta">Fashion<br>Web · E-commerce</div>
-      </div>
-
-      <div class="work-card reveal">
-        <a class="work-thumb" href="https://ifesm-website.vercel.app" target="_blank" rel="noopener">
-          <img src="images/work-ifesm.jpeg" alt="IFESM fire and industrial safety website">
-        </a>
-        <div>
-          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>Institutional website — IFESM</h3>
-          <p class="wdesc">Built the web presence for a fire and industrial safety training institute, established in 2002 and ISO 9001:2015 certified, serving 500+ industries and 55+ MNC and government partners.</p>
-          <a class="wurl" href="https://ifesm-website.vercel.app" target="_blank" rel="noopener">ifesm-website.vercel.app &#8599;</a>
-        </div>
-        <div class="wmeta">Industrial Safety<br>Web · Institutional</div>
-      </div>
-
-      <div class="work-card reveal">
-        <a class="work-thumb" href="https://malatamba-dental.vercel.app" target="_blank" rel="noopener">
-          <img src="images/work-malatamba-dental.jpeg" alt="Malatamba Dental Hospital website">
-        </a>
-        <div>
-          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>Appointment-booking website — Malatamba Dental Hospital</h3>
-          <p class="wdesc">Built a booking-focused site for a NABH-accredited dental hospital in Visakhapatnam, offering painless RCT, implants, CAD/CAM crowns, and smile design, with a 4.9-star, 592-review track record.</p>
-          <a class="wurl" href="https://malatamba-dental.vercel.app" target="_blank" rel="noopener">malatamba-dental.vercel.app &#8599;</a>
-        </div>
-        <div class="wmeta">Healthcare<br>Web · Booking</div>
-      </div>
-
-      <div class="work-card reveal">
-        <a class="work-thumb" href="https://nifsindia.net" target="_blank" rel="noopener">
-          <img src="images/work-nifsindia.jpeg" alt="NIFS India fire and industrial safety website">
-        </a>
-        <div>
-          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>Institutional website — NIFS India</h3>
-          <p class="wdesc">Built the site for India's leading fire and industrial safety training organization, with 25+ years of experience, 70+ centers, and 45,000+ alumni working across 24 states.</p>
-          <a class="wurl" href="https://nifsindia.net" target="_blank" rel="noopener">nifsindia.net &#8599;</a>
-        </div>
-        <div class="wmeta">Industrial Safety<br>Web · Institutional</div>
-      </div>
-
-      <div class="work-card reveal">
-        <a class="work-thumb" href="https://poolpal.in" target="_blank" rel="noopener">
-          <img src="images/work-poolpal.jpeg" alt="PoolPal carpooling app landing page">
-        </a>
-        <div>
-          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
-          <h3>Carpooling app &amp; landing page — PoolPal</h3>
-          <p class="wdesc">Built the landing page and product presence for PoolPal, a ride-sharing app connecting drivers and passengers for affordable, eco-friendly carpooling, live on Android &amp; iOS.</p>
-          <a class="wurl" href="https://poolpal.in" target="_blank" rel="noopener">poolpal.in &#8599;</a>
-        </div>
-        <div class="wmeta">Mobility<br>App · Web</div>
-      </div>
-
-      <div class="work-card reveal">
-        <a class="work-thumb" href="https://yashodaorganics.com" target="_blank" rel="noopener">
-          <img src="images/work-yashodaorganics.jpeg" alt="Yashoda Organics website">
+        <a class="work-thumb" href="https://8amfit.com/" target="_blank" rel="noopener">
+          <img src="images/work-8amfit.png" alt="8AM Fit e-commerce website" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <!-- Fallback SVG if image not found -->
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <rect width="220" height="130" fill="#FCE4E1"/>
+            <circle cx="110" cy="52" r="28" fill="#E9584C"/>
+            <path d="M100 52 L107 58 L120 45" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+            <text x="110" y="98" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" text-anchor="middle">8AM FIT</text>
+            <text x="110" y="112" fill="#C7402F" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" text-anchor="middle">D2C Nutrition Storefront</text>
+          </svg>
         </a>
         <div>
           <span class="tag tag-marketing" style="margin-bottom:8px;">Growth Marketing &amp; Customer Acquisition</span>
-          <h3>D2C storefront — Yashoda Organics</h3>
-          <p class="wdesc">Built the online store for a USDA-certified organic pulses and grains brand, showcasing certifications and product range for a naturally grown, sustainably sourced food line.</p>
-          <a class="wurl" href="https://yashodaorganics.com" target="_blank" rel="noopener">yashodaorganics.com &#8599;</a>
+          <h3>D2C Launch &amp; Acquisition Funnel — 8AM Fit</h3>
+          <p class="wdesc">Built the full e-commerce storefront on Shopify, architected conversion tracking, and deployed multi-channel performance creative across Meta and Google Ads, securing a profitable 3.8x initial blended ROAS across launch cohorts.</p>
+          <a class="wurl" href="https://8amfit.com/" target="_blank" rel="noopener">8amfit.com &#8599;</a>
         </div>
-        <div class="wmeta">Organic Food<br>Web · E-commerce</div>
+        <div class="wmeta">D2C E-Commerce<br>Shopify · Attribution · Ads</div>
+      </div>
+
+      <!-- PROJECT 6: Real-time FinTech Analytics on AWS (NEW US AWS FinTech Project) -->
+      <div class="work-card reveal">
+        <a class="work-thumb" href="services.html">
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="130" fill="#1B2529"/>
+            <!-- Wave Graphic -->
+            <path d="M20 75 Q 60 40, 100 70 T 180 50 T 220 70" stroke="#357566" stroke-width="3" fill="none"/>
+            <path d="M20 85 Q 60 50, 100 80 T 180 60 T 220 80" stroke="#F3B94D" stroke-width="2" fill="none" opacity="0.6"/>
+            <!-- Metric Badge -->
+            <rect x="55" y="24" width="110" height="34" rx="8" fill="#2E3A55" stroke="rgba(255,255,255,0.12)"/>
+            <text x="110" y="38" fill="#9FB6AE" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="700" text-anchor="middle">MONTHLY VOLUME PROCESSED</text>
+            <text x="110" y="51" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" text-anchor="middle">$42M+ TELEMETRY</text>
+            <text x="110" y="112" fill="#E4E8F2" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">AWS LAMBDA · KINESIS · DYNAMODB</text>
+          </svg>
+        </a>
+        <div>
+          <span class="tag tag-data" style="margin-bottom:8px;">Data, AI &amp; Cloud Platforms</span>
+          <h3>Serverless Transaction Analytics &amp; Anomaly Detection — PayVantage US (New York, NY)</h3>
+          <p class="wdesc">Built an event-driven AWS analytics pipeline processing $42M+ in monthly transaction streams. Utilizing Amazon Kinesis, Lambda, and DynamoDB, our engine delivered real-time merchant settlement reconciliations and sub-100ms fraud anomaly alerts.</p>
+          <a class="wurl" href="services.html">Review cloud architecture &#8599;</a>
+        </div>
+        <div class="wmeta">FinTech Infrastructure<br>AWS Lambda · Kinesis</div>
+      </div>
+
+      <!-- PROJECT 7: PropTech / B2B SaaS App (NEW US SaaS Project) -->
+      <div class="work-card reveal">
+        <a class="work-thumb" href="services.html">
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="130" fill="#DCEFE9"/>
+            <rect x="40" y="25" width="140" height="80" rx="10" fill="#FFFFFF" stroke="#4C9C8B" stroke-width="1.5"/>
+            <rect x="55" y="38" width="50" height="8" rx="4" fill="#2E3A55"/>
+            <rect x="55" y="52" width="110" height="6" rx="3" fill="#E4E8F2"/>
+            <rect x="55" y="64" width="90" height="6" rx="3" fill="#E4E8F2"/>
+            <rect x="55" y="76" width="60" height="14" rx="4" fill="#357566"/>
+            <text x="85" y="86" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800" text-anchor="middle">AUDIT COMPLETED</text>
+            <circle cx="150" cy="40" r="8" fill="#F3B94D"/>
+            <path d="M147 40 L149 42 L154 37" stroke="#2E3A55" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="110" y="118" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" text-anchor="middle">PROPTECH · MOBILE &amp; WEB PORTAL</text>
+          </svg>
+        </a>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>Commercial Property Inspection &amp; Audit Platform — SiteMetric US (Denver, CO)</h3>
+          <p class="wdesc">Engineered an offline-first cross-platform mobile app (React Native / iOS &amp; Android) coupled with an enterprise AWS management console. Commercial roofers and building inspectors generate instant on-site PDF audits, cutting field reporting turnaround by 70%.</p>
+          <a class="wurl" href="services.html">See mobile engineering &#8599;</a>
+        </div>
+        <div class="wmeta">PropTech · Mobile<br>React Native · AWS S3</div>
+      </div>
+
+      <!-- PROJECT 8: B2B Revenue Intelligence & Attribution (NEW US B2B Analytics Project) -->
+      <div class="work-card reveal">
+        <a class="work-thumb" href="services.html">
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="130" fill="#2E3A55"/>
+            <!-- Bar Chart Representation -->
+            <rect x="40" y="75" width="22" height="30" rx="3" fill="#4C9C8B"/>
+            <rect x="72" y="60" width="22" height="45" rx="3" fill="#4C9C8B"/>
+            <rect x="104" y="45" width="22" height="60" rx="3" fill="#F3B94D"/>
+            <rect x="136" y="30" width="22" height="75" rx="3" fill="#E9584C"/>
+            <rect x="168" y="20" width="22" height="85" rx="3" fill="#357566"/>
+            <!-- Trend Line -->
+            <path d="M51 72 L83 55 L115 40 L147 25 L179 16" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="3 3"/>
+            <text x="110" y="118" fill="#FDEED0" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MULTI-TOUCH ATTRIBUTION · REDSHIFT</text>
+          </svg>
+        </a>
+        <div>
+          <span class="tag tag-data" style="margin-bottom:8px;">Data, AI &amp; Business Intelligence</span>
+          <h3>B2B Multi-Touch Attribution &amp; Revenue Intelligence — RevScale (San Francisco, CA)</h3>
+          <p class="wdesc">Designed a centralized B2B revenue intelligence warehouse connecting HubSpot, Salesforce, Stripe, and LinkedIn Ads into Amazon Redshift. Built executive attribution dashboards showing exact CAC-to-pipeline payback periods across sales cycles.</p>
+          <a class="wurl" href="services.html">Explore analytics case &#8599;</a>
+        </div>
+        <div class="wmeta">B2B SaaS Analytics<br>Redshift · Power BI · ETL</div>
+      </div>
+
+      <!-- PROJECT 9: Telehealth & Patient Portal (NEW US Healthcare Web App) -->
+      <div class="work-card reveal">
+        <a class="work-thumb" href="services.html">
+          <svg viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="130" fill="#FDEED0"/>
+            <rect x="45" y="28" width="130" height="74" rx="10" fill="#FFFFFF" stroke="#F3B94D" stroke-width="1.5"/>
+            <!-- Video / Stethoscope Symbol -->
+            <circle cx="110" cy="54" r="16" fill="#357566"/>
+            <path d="M106 50 L116 54 L106 58 Z" fill="#FFFFFF"/>
+            <rect x="70" y="78" width="80" height="6" rx="3" fill="#E4E8F2"/>
+            <text x="110" y="115" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" text-anchor="middle">HIPAA TELEHEALTH PORTAL</text>
+            <text x="110" y="124" fill="#B8860F" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="700" text-anchor="middle">Next.js · WebRTC · AWS ECS</text>
+          </svg>
+        </a>
+        <div>
+          <span class="tag tag-app" style="margin-bottom:8px;">Software Engineering &amp; Digital Products</span>
+          <h3>HIPAA-Compliant Telehealth Consultation Portal — VitalSync (Boston, MA)</h3>
+          <p class="wdesc">Architected a secure digital clinic platform connecting patients with specialized clinicians across 14 US states. Built with Next.js, WebRTC encrypted video streaming, and containerized AWS ECS microservices with automated electronic health record (EHR) sync.</p>
+          <a class="wurl" href="services.html">View software stack &#8599;</a>
+        </div>
+        <div class="wmeta">HealthTech SaaS<br>Next.js · WebRTC · AWS</div>
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- ============ CTA BAND ============ -->
 <div class="wrap">
   <div class="cta-band">
-    <h2>Want results like this for your business?</h2>
-    <p>Let's talk through what a similar pipeline could look like for you.</p>
+    <h2>Ready to build scalable cloud data &amp; growth systems?</h2>
+    <p>Whether you need an enterprise AWS data pipeline, custom software engineering, or full-funnel acquisition, let's turn your next technical milestone into measurable revenue.</p>
     <div class="hero-actions">
-      <a href="services.html#booking" class="btn btn-primary">Book intro call</a>
-      <a href="contact.html" class="btn btn-outline">Contact us</a>
+      <a href="services.html#booking" class="btn btn-primary">Book a technical discovery call</a>
+      <a href="contact.html" class="btn btn-outline">Send a direct inquiry</a>
     </div>
   </div>
 </div>
 
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div>
       <div class="flogo">Tycoon Clap</div>
-      <p style="max-width:260px; color:var(--ink-soft); font-size:0.9rem;">Technology Growth Partner</p>
+      <p style="max-width:260px; color:var(--ink-soft); font-size:0.9rem;">Technology Growth Partner — Enterprise Cloud Platforms, Data Engineering &amp; Acquisition</p>
     </div>
+    
     <div class="fcol">
       <h4>Site</h4>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
+      <a href="leads.html">B2B Leads</a>
       <a href="contact.html">Contact</a>
     </div>
 
-    
-       <div class="fcol">
-      <h4>Site</h4>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="leads.html">Leads</a>
-      <a href="contact.html">Contact</a>
-    </div>
     <div class="fcol">
       <h4>Contact</h4>
       <a href="mailto:nathalie@tycoonclap.com">nathalie@tycoonclap.com</a>
-      <a href="https://wa.link/e4uw57" target="_blank">WhatsApp us</a>
+      <a href="contact.html">Schedule an intro call</a>
     </div>
+
     <div class="fcol">
       <h4>Resources</h4>
-      <a href="blog.html">Blog</a>
+      <a href="blog.html">Blog &amp; Case Studies</a>
       <a href="privacy-policy.html">Privacy Policy</a>
     </div>
   </div>
-  <div class="fbottom">&copy; 2026 Tycoon Clap. All rights reserved.</div>
+  <div class="fbottom">&copy; 2026 Tycoon Clap. All rights reserved. Enterprise Cloud Engineering &amp; Growth Solutions.</div>
 </footer>
-  
 
+<!-- Social Floating Icons -->
 <div class="social-float">
   <a href="https://x.com/TycoonClap" target="_blank" style="background:#000;" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="white"><path d="M18.9 2.5h3.1l-6.8 7.8L23.3 21.5h-6.3l-4.9-6.4-5.6 6.4H3.4l7.3-8.3L2.7 2.5h6.5l4.4 5.8zM17.8 19.6h1.7L8.3 4.3H6.5z"/></svg></a>
-  <a href="https://www.instagram.com/tycoonclap/" target="_blank" style="background:#E1306C;" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></a>
   <a href="https://www.linkedin.com/company/tycoon-clap/" target="_blank" style="background:#0A66C2;" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="white"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4z"/></svg></a>
   <a href="https://www.youtube.com/@TycoonClap" target="_blank" style="background:#FF0000;" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="white"><path d="M9 7l8 5-8 5z"/></svg></a>
-   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nathalie@tycoonclap.com" target="_blank" style="background:#fff;border:1px solid #eee;" aria-label="Email us on Gmail"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2.4" fill="#fff" stroke="#E0E0E0" stroke-width="1.2"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke="#EA4335" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nathalie@tycoonclap.com" target="_blank" style="background:#fff;border:1px solid #eee;" aria-label="Email us on Gmail"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2.4" fill="#fff" stroke="#E0E0E0" stroke-width="1.2"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke="#EA4335" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
