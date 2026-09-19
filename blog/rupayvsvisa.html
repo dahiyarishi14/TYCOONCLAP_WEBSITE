@@ -206,35 +206,32 @@ html[data-theme="dark"] .toc-list a:hover{ color:#7FCBB6; }
     <div class="article-hero-art">
       <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="350" cy="300" rx="260" ry="14" fill="#EAF3ED"/>
-        <circle cx="90" cy="90" r="10" fill="#F3B94D"/>
-        <circle cx="70" cy="150" r="8" fill="#E9584C"/>
-        <circle cx="120" cy="180" r="9" fill="#4C9C8B"/>
-        <circle cx="60" cy="220" r="7" fill="#2E3A55"/>
-        <circle cx="140" cy="120" r="6" fill="#E9584C"/>
-        <line x1="90" y1="90" x2="230" y2="180" stroke="#B9C4BE" stroke-width="1.5" stroke-dasharray="3 4"/>
-        <line x1="70" y1="150" x2="230" y2="185" stroke="#B9C4BE" stroke-width="1.5" stroke-dasharray="3 4"/>
-        <line x1="120" y1="180" x2="230" y2="190" stroke="#B9C4BE" stroke-width="1.5" stroke-dasharray="3 4"/>
-        <line x1="60" y1="220" x2="230" y2="200" stroke="#B9C4BE" stroke-width="1.5" stroke-dasharray="3 4"/>
-        <line x1="140" y1="120" x2="230" y2="182" stroke="#B9C4BE" stroke-width="1.5" stroke-dasharray="3 4"/>
-        <rect x="230" y="110" width="180" height="130" rx="12" fill="#2E3A55"/>
-        <rect x="242" y="120" width="156" height="98" rx="4" fill="#F5FAF7"/>
-        <rect x="255" y="175" width="16" height="30" fill="#F3B94D"/>
-        <rect x="277" y="160" width="16" height="45" fill="#E9584C"/>
-        <rect x="299" y="140" width="16" height="65" fill="#4C9C8B"/>
-        <rect x="321" y="120" width="16" height="85" fill="#357566"/>
-        <polyline points="255,190 277,175 299,155 321,130 340,118" fill="none" stroke="#2E3A55" stroke-width="2.5" stroke-linecap="round"/>
-        <rect x="265" y="260" width="60" height="10" rx="4" fill="#2E3A55"/>
-        <rect x="283" y="248" width="24" height="14" fill="#2E3A55"/>
-        <rect x="430" y="150" width="60" height="92" rx="20" fill="#4C9C8B"/>
-        <circle cx="460" cy="120" r="32" fill="#F0B892"/>
-        <path d="M428 110 Q460 74 492 110 Q492 92 460 86 Q428 92 428 110Z" fill="#2E3A55"/>
-        <rect x="405" y="155" width="16" height="45" rx="8" fill="#F0B892" transform="rotate(-25 405 155)"/>
-        <rect x="478" y="155" width="16" height="45" rx="8" fill="#F0B892" transform="rotate(25 478 155)"/>
-        <rect x="440" y="240" width="17" height="50" rx="8" fill="#2E3A55"/>
-        <rect x="463" y="240" width="17" height="50" rx="8" fill="#2E3A55"/>
-        <circle cx="560" cy="90" r="26" fill="#FDEED0"/>
-        <path d="M548 100 L560 80 L572 100" stroke="#B8860F" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <line x1="560" y1="80" x2="560" y2="108" stroke="#B8860F" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- RuPay-style card -->
+        <g transform="translate(60,70)">
+          <rect x="0" y="0" width="220" height="140" rx="16" fill="#2E3A55"/>
+          <rect x="18" y="24" width="30" height="22" rx="4" fill="#F3B94D"/>
+          <rect x="130" y="0" width="7" height="140" fill="#F3B94D"/>
+          <rect x="137" y="0" width="7" height="140" fill="#F5FAF7"/>
+          <rect x="144" y="0" width="7" height="140" fill="#4C9C8B"/>
+          <rect x="18" y="92" width="140" height="9" rx="4" fill="#F5FAF7" opacity="0.85"/>
+          <text x="18" y="128" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="22" fill="#fff">RuPay</text>
+        </g>
+
+        <!-- Visa-style card -->
+        <g transform="translate(420,70)">
+          <rect x="0" y="0" width="220" height="140" rx="16" fill="#1A3F8F"/>
+          <rect x="18" y="24" width="30" height="22" rx="4" fill="#F3B94D"/>
+          <rect x="18" y="92" width="140" height="9" rx="4" fill="#F5FAF7" opacity="0.85"/>
+          <text x="18" y="128" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-style="italic" font-size="24" fill="#fff">VISA</text>
+        </g>
+
+        <!-- VS badge -->
+        <circle cx="350" cy="140" r="34" fill="#E9584C"/>
+        <text x="350" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="26" fill="#fff" text-anchor="middle">VS</text>
+
+        <!-- background chart squiggle -->
+        <polyline points="60,250 130,232 200,245 270,212 340,226 410,192 480,206 550,176 620,190" fill="none" stroke="#8FB9AE" stroke-width="2.5" stroke-dasharray="4 5"/>
       </svg>
     </div>
 
