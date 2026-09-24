@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26EDJT1F3X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-26EDJT1F3X');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xy7mjqlpls");
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How much does Power BI consulting cost in 2026? Real hourly rates, project pricing, and retainer ranges — plus what actually drives Power BI consultant pricing up or down.">
+<title>Power BI Consulting Cost 2026: What You'll Actually Pay — Tycoon Clap</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../logo-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../logo-icon.png">
+<link rel="apple-touch-icon" href="../logo-icon.png">
+<style>
+  .article-wrap{ max-width:780px; }
+  .article-header{ position:relative; padding:80px 0 20px; overflow:hidden; }
+  .article-cat{ display:inline-block; font-family:var(--display); font-weight:700; font-size:0.76rem; padding:6px 14px; border-radius:100px; background:#DCEFE9; color:#2A6E5F; margin-bottom:16px; }
+  .article-header h1{ font-family:var(--display); font-weight:800; font-size:clamp(1.8rem,3.6vw,2.5rem); line-height:1.2; color:var(--ink); max-width:720px; }
+  .article-meta{ display:flex; align-items:center; gap:12px; margin-top:26px; }
+  .article-avatar{ width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--display); font-weight:800; font-size:0.85rem; color:#fff; background:#2E3A55; }
+  .article-author{ font-family:var(--display); font-weight:700; font-size:0.9rem; color:#357566; }
+  .article-role{ font-size:0.78rem; color:#C7402F; margin-top:1px; }
+  .article-readtime{ font-size:0.8rem; color:var(--ink-dim); margin-left:auto; }
+
+  .article-illustration{ width:100%; margin:36px 0 44px; }
+
+  .quick-answer{ background:#EAF3ED; border:1.5px solid #B9D8CC; border-radius:16px; padding:22px 26px; margin:0 0 34px; }
+  .quick-answer .qa-label{ font-family:var(--display); font-weight:800; font-size:0.78rem; letter-spacing:0.03em; text-transform:uppercase; color:#357566; margin-bottom:8px; display:block; }
+  .quick-answer p{ color:var(--ink); font-size:0.98rem; line-height:1.65; margin:0; }
+
+  .article-body h2{ font-family:var(--display); font-weight:800; font-size:1.32rem; color:var(--navy,#2E3A55); margin:38px 0 14px; }
+  .article-body h3{ font-family:var(--display); font-weight:700; font-size:1.08rem; color:var(--navy,#2E3A55); margin:26px 0 10px; }
+  .article-body p{ color:var(--ink-soft); font-size:1.02rem; line-height:1.75; margin-bottom:16px; }
+  .article-body ul{ margin:0 0 20px 22px; color:var(--ink-soft); font-size:1rem; line-height:1.7; }
+  .article-body li{ margin-bottom:8px; }
+  .article-body strong{ color:var(--ink); }
+
+  .cost-table{ width:100%; border-collapse:collapse; margin:20px 0 30px; font-size:0.92rem; }
+  .cost-table th, .cost-table td{ border:1px solid var(--line); padding:12px 14px; text-align:left; color:var(--ink-soft); vertical-align:top; }
+  .cost-table th{ background:var(--bg-alt); color:var(--ink); font-family:var(--display); font-weight:700; font-size:0.85rem; }
+  .cost-table td strong{ color:var(--ink); }
+
+  .faq-list{ display:flex; flex-direction:column; gap:12px; margin-top:10px; }
+  .faq-item{ background:var(--bg-alt); border-radius:14px; padding:18px 22px; }
+  .faq-item summary{ font-family:var(--display); font-weight:700; font-size:0.98rem; color:var(--ink); cursor:pointer; }
+  .faq-item p{ margin:12px 0 0; color:var(--ink-soft); font-size:0.94rem; }
+
+  .article-cta{ background:var(--ink); border-radius:24px; padding:40px; text-align:center; margin-top:50px; }
+  .article-cta h3{ font-family:var(--display); font-weight:800; font-size:1.4rem; color:#fff; margin-bottom:10px; }
+  .article-cta p{ color:rgba(255,255,255,0.7); margin-bottom:22px; }
+</style>
+</head>
+<body>
+<div class="scroll-progress"></div>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 28h20c8 0 14 6 14 14v6H26v-6c0-8 6-14 14-14z" fill="currentColor"/>
+        <rect x="42" y="34" width="16" height="10" rx="2" fill="var(--bg)"/>
+        <rect x="14" y="42" width="72" height="48" rx="16" fill="currentColor"/>
+      </svg>
+      Tycoon Clap
+    </a>
+    <nav class="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../leads.html">Leads</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="../contact.html" class="btn btn-primary">Get in touch</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="article-header">
+  <div class="blob" style="width:260px; height:260px; background:#DCEFE9; top:-80px; right:-40px;"></div>
+  <div class="wrap article-wrap">
+    <a href="../blog.html" style="font-size:0.85rem; color:var(--ink-dim); text-decoration:none; display:inline-block; margin-bottom:18px;">&larr; Back to Blog</a>
+    <span class="article-cat">Data &amp; AI</span>
+    <h1>Power BI Consulting Cost in 2026: What You'll Actually Pay</h1>
+    <div class="article-meta">
+      <div class="article-avatar">LI</div>
+      <div>
+        <div class="article-author">Lindsay</div>
+        <div class="article-role">Consultant, Tycoon Clap</div>
+      </div>
+      <div class="article-readtime">11 min read</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap article-wrap">
+
+    <svg class="article-illustration" viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="350" cy="280" rx="260" ry="14" fill="#EAF3ED"/>
+
+      <!-- invoice / cost breakdown card -->
+      <rect x="60" y="60" width="220" height="180" rx="14" fill="#2E3A55"/>
+      <rect x="76" y="76" width="188" height="148" rx="6" fill="#F5FAF7"/>
+      <rect x="90" y="92" width="120" height="10" rx="3" fill="#4C9C8B"/>
+      <rect x="90" y="112" width="90" height="14" rx="4" fill="#DCEFE9"/>
+      <rect x="90" y="132" width="90" height="14" rx="4" fill="#FCE4E1"/>
+      <rect x="90" y="152" width="90" height="14" rx="4" fill="#FDEED0"/>
+      <line x1="90" y1="180" x2="250" y2="180" stroke="#B9C4BE" stroke-width="1.5"/>
+      <rect x="90" y="192" width="60" height="12" rx="3" fill="#2E3A55"/>
+      <rect x="190" y="192" width="60" height="12" rx="3" fill="#357566"/>
+
+      <!-- comparison scale -->
+      <rect x="335" y="150" width="8" height="70" fill="#2E3A55"/>
+      <path d="M300 150 L378 150" stroke="#2E3A55" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="300" cy="165" r="24" fill="#4C9C8B"/>
+      <text x="300" y="171" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">$</text>
+      <circle cx="378" cy="180" r="18" fill="#E9584C"/>
+      <text x="378" y="185" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">$$$</text>
+
+      <!-- character reviewing budget -->
+      <rect x="430" y="140" width="60" height="92" rx="20" fill="#F3B94D"/>
+      <circle cx="460" cy="108" r="32" fill="#F0B892"/>
+      <path d="M428 98 Q460 62 492 98 Q492 80 460 74 Q428 80 428 98Z" fill="#2E3A55"/>
+      <rect x="405" y="145" width="16" height="45" rx="8" fill="#F0B892" transform="rotate(-25 405 145)"/>
+      <rect x="478" y="145" width="16" height="45" rx="8" fill="#F0B892" transform="rotate(25 478 145)"/>
+      <rect x="440" y="228" width="17" height="45" rx="8" fill="#2E3A55"/>
+      <rect x="463" y="228" width="17" height="45" rx="8" fill="#2E3A55"/>
+
+      <!-- checkmark / decision -->
+      <circle cx="580" cy="90" r="26" fill="#DCEFE9"/>
+      <path d="M568 90 L577 99 L594 78" stroke="#357566" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <div class="quick-answer">
+      <span class="qa-label">Quick answer</span>
+      <p>Power BI consulting cost in 2026 generally falls into three brackets: <strong>$80-$220/hour</strong> for hourly work, <strong>$4,000-$70,000</strong> for a fixed-fee dashboard project, or <strong>$1,800-$8,000/month</strong> on a retainer. The engagement model you pick changes the price far more than which consultant you hire — a fixed-fee build is the cheapest way to buy a defined deliverable, hourly billing runs 2-3x more for the same scope, and a retainer only makes sense once you have ongoing reporting needs to justify it.</p>
+    </div>
+
+    <div class="article-body">
+      <p>If you've searched "power bi consulting cost" or "how much does power bi consulting cost" and landed on five different answers ranging from $2,000 to $150,000, you're not imagining the inconsistency — it's real, and it's usually because nobody tells you which pricing model they're quoting. A $5,000 quote and a $50,000 quote can be for the exact same dashboards, priced under two different structures.</p>
+
+      <p>At Tycoon Clap, Power BI and business intelligence work sits inside our Data, AI &amp; Business Intelligence practice, and pricing questions come up on nearly every discovery call. So here's the version we actually tell clients: the four ways Power BI consultant pricing gets structured, what a fair 2026 range looks like for each, and — more importantly — what makes the exact same scope of work cost 3x more or less depending on who's quoting it.</p>
+
+      <h2>The four ways Power BI consulting gets priced</h2>
+      <p>Almost every Power BI consultant rate you'll see falls into one of four buckets. Compare quotes across buckets and you're not comparing apples to apples.</p>
+
+      <table class="cost-table">
+        <tr>
+          <th>Model</th>
+          <th>2026 range (USD)</th>
+          <th>What you're actually buying</th>
+        </tr>
+        <tr>
+          <td><strong>Hourly</strong></td>
+          <td>$80-$220/hr</td>
+          <td>Time only — you own the scope and the risk of it growing</td>
+        </tr>
+        <tr>
+          <td><strong>Fixed-fee project</strong></td>
+          <td>$4,000-$70,000</td>
+          <td>A defined deliverable by a set date — the consultant absorbs scope risk</td>
+        </tr>
+        <tr>
+          <td><strong>Managed retainer</strong></td>
+          <td>$1,800-$8,000/month</td>
+          <td>Ongoing capacity, monitoring, and change requests — a standing function, not a one-off</td>
+        </tr>
+        <tr>
+          <td><strong>Full-time hire (US-based)</strong></td>
+          <td>$115,000-$210,000/yr all-in</td>
+          <td>One dedicated person, fully embedded in your team</td>
+        </tr>
+      </table>
+
+      <h3>Power BI consultant hourly rate: $80-$220/hour</h3>
+      <p>Independent US-based specialists typically land at $110-$200/hour. Teams working out of India or Eastern Europe — including our own — quote noticeably lower for the same skill level, usually $50-$100/hour, without the quality gap people assume comes with the lower cost of Power BI consultant hourly rate outside the US.</p>
+      <p>Hourly makes sense for small, contained asks: fixing a broken DAX measure, cleaning up one report, a second pair of eyes on a data model before launch. It's the wrong model for anything over roughly 10-12 hours of work, because every hour of scope creep is now billed to you, not absorbed by the consultant.</p>
+
+      <h3>Power BI project cost: $4,000-$70,000</h3>
+      <p>A small, well-defined build — three to six dashboards on a data source you already trust — typically runs $4,000-$20,000. Mid-sized projects (8-15 dashboards, two or three integrated sources, some governance setup) land at $18,000-$45,000. Larger builds involving custom data modeling, row-level security, and capacity planning push into the $45,000-$100,000+ range.</p>
+      <p>Fixed-fee shifts scope risk onto the consultant, which is exactly why the good ones build in a change-order clause. If a quote doesn't mention what happens when the scope shifts mid-project, that's the question to ask before signing — not after the invoice grows.</p>
+
+      <h3>Power BI consulting fees on retainer: $1,800-$8,000/month</h3>
+      <p>A retainer isn't pricing a deliverable — it's pricing ongoing capacity: ongoing dashboard iteration, refresh monitoring, and a response time you can count on when something breaks the week before a board meeting.</p>
+      <p>Retainers in the US market commonly start around $7,000-$8,000/month for a single dedicated analyst. Our own <strong>Managed Data &amp; BI retainer</strong> starts lower — $1,800/month for roughly 40 hours of monthly capacity, or $3,500/month for 80 hours — with the same named-team structure, because our team composition lets us hold that price without cutting corners on the work itself.</p>
+
+      <h3>Power BI developer cost as a full-time hire: $115,000-$210,000/year</h3>
+      <p>A US-based Power BI developer typically costs $100,000-$150,000 in base salary, plus another 20-30% in benefits, taxes, and overhead — landing the true cost of power bi consultant-equivalent in-house talent at $115,000-$195,000 all-in. Senior BI leads with broader analytics ownership run higher, often $170,000-$220,000.</p>
+      <p>This model pays off only when there's enough ongoing BI work to keep one person fully occupied. A half-utilized full-time hire is, in practice, one of the most expensive ways to get Power BI dashboards built.</p>
+
+      <h2>What actually moves Power BI consultant pricing up or down</h2>
+      <p>Two quotes for what looks like "the same project" can land 3x apart, and it's rarely about the consultant being better or worse. It's almost always one of these five things.</p>
+
+      <h3>1. How complex the dashboards actually are</h3>
+      <p>A five-visual dashboard pulling from a clean SQL view is a completely different job than an eighteen-visual dashboard with dynamic filters, custom tooltips, and drill-through pages. As a rough benchmark: a single dashboard of moderate complexity, built on top of a data model that already exists, runs 8-14 hours of build time — roughly $1,000-$2,200 at a typical blended consulting rate. Quotes well under that usually mean the semantic model already exists; quotes well over it usually mean it doesn't.</p>
+
+      <h3>2. How messy the data sources are</h3>
+      <p>Dashboards built on a clean warehouse cost a fraction of dashboards built by stitching together five different tools through Power Query. We've seen this most often with e-commerce and D2C clients pulling from Shopify, a payment gateway, and a separate ad platform that all define "revenue" slightly differently — the dashboard is the easy part; reconciling three systems that disagree with each other is where the hours actually go.</p>
+
+      <h3>3. Whether a real semantic model already exists</h3>
+      <p>If a clean, well-designed data model already exists — proper dimension tables, sensible DAX measures — adding dashboards on top is fast and cheap. If it doesn't, the first "quick dashboard" quietly turns into a data-modeling project, and the timeline and budget both roughly double. Any consultant who doesn't ask about your current data model on the first call is a consultant who's about to surprise you later.</p>
+
+      <h3>4. How fast you need it</h3>
+      <p>Rush timelines carry a real premium — usually 25-40% on top of standard fixed-fee pricing for anything needed inside four weeks. Some independent consultants simply won't take rush work at all. Starting the conversation earlier is the only way around this; there's no version of "we need it by Friday" that doesn't cost more.</p>
+
+      <h3>5. Where the team is based</h3>
+      <p>US-onshore consultants cost more than nearshore, which costs more than offshore teams in India or the Philippines — sometimes a 3x spread for comparable output. The gap is real, but so is the variance in communication quality and domain understanding at the cheapest end. The cheapest hourly rate isn't automatically the cheapest total project once rework gets counted.</p>
+
+      <h2>The real cost of the cheapest quote</h2>
+      <p>The most expensive Power BI project is the one you end up rebuilding. It's a predictable pattern: a very low hourly rate produces dashboards that look fine in the demo, but underneath, there's no real dimension model — just calculated columns standing in for measures, and DirectQuery connections hammering a production database on every refresh.</p>
+      <p>It holds up for a few weeks. Then someone in finance asks for one new metric, and the answer is "we have to rebuild the model to add that," because there was never a real model to extend in the first place. We've inherited more than one project this year that started as a sub-$10,000 build from the cheapest available vendor and ended up costing another $25,000-$40,000 to fix the foundation — money that would have covered doing it properly the first time, with budget left over.</p>
+      <p>Cheap is genuinely fine for small, well-scoped fixes on an existing model. It's a real risk on foundational work — the data model, the source integrations, the governance layer — because that's the layer where a shortcut compounds for years instead of days.</p>
+
+      <h2>When each pricing model actually makes sense</h2>
+      <ul>
+        <li><strong>Hourly</strong> — a single well-defined task under about 10 hours, and someone internal who can manage the scope so it doesn't drift.</li>
+        <li><strong>Fixed-fee project</strong> — a genuinely defined deliverable (not "build us some dashboards, figure out the rest") where predictability matters more than flexibility.</li>
+        <li><strong>Managed retainer</strong> — dashboards that need to evolve monthly, and no appetite for a full-time hire, but real recurring reporting demand from finance, ops, or leadership.</li>
+        <li><strong>Full-time hire</strong> — enough ongoing BI scope to occupy one person completely, where institutional knowledge matters more than flexibility.</li>
+      </ul>
+      <p>As a rough break-even: a $1,800-$3,500/month retainer runs somewhere between a tenth and a quarter of a US full-time hire's all-in cost. Even the higher end of a typical US retainer, around $7,000-$8,000/month ($84,000-$96,000/year), still usually beats a full-time hire once benefits and overhead are counted. The retainer only stops making sense once there's genuinely enough work to occupy someone five days a week — and for most 20-150 person companies, there usually isn't quite that much.</p>
+
+      <h2>What Tycoon Clap charges, plainly</h2>
+      <p>Our Data, AI &amp; Business Intelligence work follows the same four models, priced to reflect a distributed team without cutting into the quality of the modeling work underneath:</p>
+      <ul>
+        <li><strong>Hourly:</strong> $60/hour for narrowly scoped fixes — well under the $110-$200/hour US independent-consultant range.</li>
+        <li><strong>Fixed-fee builds:</strong> typically $4,000-$45,000 depending on dashboard count, source complexity, and whether a data model needs to be built from scratch.</li>
+        <li><strong>Managed retainer:</strong> from $1,800/month (40 hours) or $3,500/month (80 hours), including a named analyst and a response-time commitment on change requests.</li>
+      </ul>
+      <p>We don't push everyone toward a retainer by default. If your actual need is a single, well-scoped dashboard project, that's a fixed-fee conversation — the retainer is for teams whose reporting needs keep shifting month over month.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What's a fair Power BI consultant hourly rate in 2026?</summary>
+          <p>US-based independent specialists typically charge $110-$200/hour. Teams based in India or Eastern Europe, including ours, generally run $50-$100/hour for comparable senior-level work. The gap is mostly geography and overhead, not consistently a quality difference.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How much does a single Power BI dashboard cost to build?</summary>
+          <p>On top of an existing, well-built data model, a moderate-complexity dashboard typically runs $1,000-$2,200 in build time. A first dashboard on a brand-new data source usually costs significantly more — often $4,000-$12,000 — because most of that cost is building the underlying data model, not the visuals themselves.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is a Power BI consultant cheaper than hiring a full-time developer?</summary>
+          <p>For most companies under roughly 150 people, yes, by a wide margin. A retainer at $1,800-$3,500/month ($21,600-$42,000/year) is a fraction of a US full-time hire's all-in cost of $115,000-$210,000/year — with no recruiting time, no training ramp, and no gap if someone leaves. The math only flips once there's enough work to occupy a full-time hire completely.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I know if a Power BI consulting price is reasonable?</summary>
+          <p>Three checks: does the quote ask about your current data model and sources before pricing anything (if not, expect surprises); does it include a change-order clause for scope shifts; and are you working with a named person you can actually talk to, rather than a rotating, unnamed pool.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I get a Power BI project done for under $4,000?</summary>
+          <p>Sometimes, for a single dashboard built on a data source that's already clean. Almost never once a new integration, multiple dashboards, or any governance setup is involved. If a quote for "a full Power BI project" comes in under $4,000, it's worth asking exactly what's assumed to already be in place.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What does Power BI implementation cost beyond the consulting fee?</summary>
+          <p>Power BI Pro runs $14/user/month and is often bundled into Microsoft 365 plans many companies already have. Premium capacity starts around $5,000/month for larger deployments needing dedicated capacity. Implementation work on top — modeling, security setup, governance — typically adds $15,000-$60,000 depending on scope, separate from ongoing licensing.</p>
+        </details>
+      </div>
+
+      <p>The honest short version: there's no single right answer to "how much does power bi consulting cost" because the right number depends entirely on which model fits what you're actually trying to get done — hourly for small fixes, fixed-fee for a defined build, a retainer for an ongoing function, and a full-time hire only once there's enough work to justify one person full-time.</p>
+    </div>
+
+    <div class="article-cta">
+      <h3>Not sure which pricing model fits your situation?</h3>
+      <p>Book a call and we'll tell you honestly which engagement model makes sense — even if that answer is "you don't need a consultant yet."</p>
+      <a href="../services.html#booking" class="btn btn-primary">Book a Strategy Call</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="flogo">Tycoon Clap</div>
+      <p style="max-width:260px; color:var(--ink-soft); font-size:0.9rem;">Technology Growth Partner</p>
+    </div>
+    <div class="fcol">
+      <h4>Site</h4>
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <a href="mailto:nathalie@tycoonclap.com">nathalie@tycoonclap.com</a>
+      <a href="https://www.instagram.com/tycoonclap/" target="_blank">Follow us</a>
+    </div>
+    <div class="fcol">
+      <h4>Resources</h4>
+      <a href="../blog.html">Blog</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="fbottom">&copy; 2026 Tycoon Clap. All rights reserved.</div>
+</footer>
+
+<div class="social-float">
+  <a href="https://x.com/TycoonClap" target="_blank" style="background:#000;" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="white"><path d="M18.9 2.5h3.1l-6.8 7.8L23.3 21.5h-6.3l-4.9-6.4-5.6 6.4H3.4l7.3-8.3L2.7 2.5h6.5l4.4 5.8zM17.8 19.6h1.7L8.3 4.3H6.5z"/></svg></a>
+  <a href="https://www.instagram.com/tycoonclap/" target="_blank" style="background:#E1306C;" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></a>
+  <a href="https://www.linkedin.com/company/tycoon-clap/" target="_blank" style="background:#0A66C2;" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="white"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4z"/></svg></a>
+  <a href="https://www.youtube.com/@TycoonClap" target="_blank" style="background:#FF0000;" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="white"><path d="M9 7l8 5-8 5z"/></svg></a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nathalie@tycoonclap.com" target="_blank" style="background:#fff;border:1px solid #eee;" aria-label="Email us on Gmail"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2.4" fill="#fff" stroke="#E0E0E0" stroke-width="1.2"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke="#EA4335" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../script.js"></script>
+<script src="../gsap-animations.js"></script>
+</body>
+</html>
