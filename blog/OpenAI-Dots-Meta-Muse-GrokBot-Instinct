@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAI Dots vs Meta Muse vs Grok Bot vs Instinct (2026)</title>
+<meta name="description" content="Four personal AI agents launched in 7 weeks. We compare OpenAI Dots, Meta Muse, Grok Bot and Instinct on price, access, privacy and automation power.">
+<link rel="canonical" href="https://tycoonclap.com/blog/openai-dots-vs-meta-muse-vs-grok-bot-vs-instinct">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Personal AI Agents Compared: OpenAI Dots vs Meta Muse vs Grok Bot vs Instinct">
+<meta property="og:description" content="Four personal AI agents launched in 7 weeks. Here is how they compare.">
+<meta property="og:url" content="https://tycoonclap.com/blog/openai-dots-vs-meta-muse-vs-grok-bot-vs-instinct">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Personal AI Agents Compared: OpenAI Dots vs Meta Muse vs Grok Bot vs Instinct","datePublished":"2026-10-01","author":{"@type":"Organization","name":"Tycoon Clap"},"publisher":{"@type":"Organization","name":"Tycoon Clap","url":"https://tycoonclap.com"},"mainEntityOfPage":"https://tycoonclap.com/blog/openai-dots-vs-meta-muse-vs-grok-bot-vs-instinct"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is an AI agent?","acceptedAnswer":{"@type":"Answer","text":"An AI system that pursues goals on its own, using tools and apps to take actions instead of only answering questions."}},
+{"@type":"Question","name":"What is agentic AI?","acceptedAnswer":{"@type":"Answer","text":"AI built to act autonomously: plan, decide and execute multi-step tasks with limited supervision."}},
+{"@type":"Question","name":"Is Grok Bot the same as Grok?","acceptedAnswer":{"@type":"Answer","text":"No. Grok is the chatbot. Grok Bot is a separate agent product with its own cloud computer."}},
+{"@type":"Question","name":"Are OpenAI Dots free?","acceptedAnswer":{"@type":"Answer","text":"Not standalone. Your first dot is included with ChatGPT Pro or Business Premium."}},
+{"@type":"Question","name":"Are personal AI agents safe?","acceptedAnswer":{"@type":"Answer","text":"They can be, with tight permissions and low-stakes starting tasks. Treat each one like a new employee with access to your accounts."}}
+]}
+</script>
+
+<style>
+/* ===== TYCOON CLAP BRAND TOKENS: swap these values with your site's real ones ===== */
+:root{
+  --tc-bg:#ffffff;
+  --tc-surface:#f5f6fa;
+  --tc-ink:#14161f;
+  --tc-muted:#5b6070;
+  --tc-line:#dfe2ec;
+  --tc-accent:#3b4cff;
+  --tc-accent-ink:#ffffff;
+  --tc-font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --tc-radius:10px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--tc-bg:#0f1117;--tc-surface:#181b25;--tc-ink:#eceef6;--tc-muted:#a0a6b8;--tc-line:#2a2e3d;--tc-accent:#7b88ff;--tc-accent-ink:#0f1117}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tc-bg);color:var(--tc-ink);font-family:var(--tc-font);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--tc-accent)}
+:focus-visible{outline:3px solid var(--tc-accent);outline-offset:2px}
+
+/* header (placeholder: replace with your site header) */
+.site-header{border-bottom:1px solid var(--tc-line);position:sticky;top:0;background:var(--tc-bg);z-index:10}
+.site-header .in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:800;font-size:1.2rem;letter-spacing:-.02em;color:var(--tc-ink);text-decoration:none}
+.logo span{color:var(--tc-accent)}
+.site-header nav{display:flex;gap:22px;flex-wrap:wrap}
+.site-header nav a{color:var(--tc-muted);text-decoration:none;font-size:.95rem;font-weight:500}
+.site-header nav a:hover,.site-header nav a[aria-current]{color:var(--tc-ink)}
+
+/* hero */
+.hero{max-width:1080px;margin:0 auto;padding:64px 20px 36px}
+.crumb{font-size:.9rem;color:var(--tc-muted);margin:0 0 18px}
+.crumb a{color:var(--tc-muted)}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.03em;margin:0 0 20px;max-width:18em}
+.meta{color:var(--tc-muted);font-size:.95rem;margin:0}
+.hook{max-width:720px;margin:0 auto;padding:0 20px}
+.hook .big{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;line-height:1.2;letter-spacing:-.02em;margin:28px 0 18px}
+.hook p.punch{margin:0 0 4px;font-weight:600}
+
+/* article */
+article{max-width:720px;margin:0 auto;padding:12px 20px 40px}
+h2{font-size:1.7rem;line-height:1.25;letter-spacing:-.02em;margin:2.4em 0 .6em}
+h3{font-size:1.15rem;margin:1.6em 0 .3em}
+p{margin:0 0 1.1em}
+ul,ol{padding-left:1.3em;margin:0 0 1.2em}
+li{margin-bottom:.4em}
+.answer{border-left:4px solid var(--tc-accent);background:var(--tc-surface);padding:16px 20px;border-radius:0 var(--tc-radius) var(--tc-radius) 0;margin:1.2em 0}
+.verdict{border-left:3px solid var(--tc-line);padding-left:16px;color:var(--tc-muted);margin-top:1em}
+.verdict strong{color:var(--tc-ink)}
+
+/* comparison table */
+.table-wrap{max-width:1080px;margin:0 auto;padding:0 20px;overflow-x:auto}
+table{width:100%;min-width:760px;border-collapse:collapse;font-size:.95rem;line-height:1.45}
+caption{text-align:left;font-weight:700;padding:0 0 10px;font-size:1.05rem}
+th,td{padding:12px 14px;border-bottom:1px solid var(--tc-line);text-align:left;vertical-align:top}
+thead th{background:var(--tc-accent);color:var(--tc-accent-ink)}
+tbody th{background:var(--tc-surface);font-weight:700;width:12%}
+.cta{background:var(--tc-surface);border:1px solid var(--tc-line);border-radius:var(--tc-radius);padding:24px;margin:2em 0}
+.cta p{margin:0 0 14px}
+.btn{display:inline-block;background:var(--tc-accent);color:var(--tc-accent-ink);padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none}
+.btn:hover{filter:brightness(1.1)}
+
+footer{border-top:1px solid var(--tc-line);color:var(--tc-muted);font-size:.9rem;text-align:center;padding:28px 20px}
+@media (max-width:640px){body{font-size:17px}.hero{padding-top:40px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="in">
+    <a class="logo" href="/">Tycoon<span>Clap</span></a>
+    <nav aria-label="Main">
+      <a href="/">Home</a><a href="/services.html">Services</a><a href="/work.html">Work</a><a href="/blog" aria-current="page">Blog</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<header class="hero">
+  <p class="crumb"><a href="/blog">Blog</a> / AI Agents</p>
+  <h1>Personal AI Agents Compared: OpenAI Dots vs Meta Muse vs Grok Bot vs Instinct</h1>
+  <p class="meta">By Tycoon Clap · October 1, 2026 · 7 min read</p>
+</header>
+
+<div class="hook">
+  <p class="big">4 personal AI agents launched in 7 weeks.</p>
+  <p class="punch">OpenAI Dots. Meta Muse. Grok Bot. Instinct.</p>
+</div>
+
+<article>
+<p>Everyone's calling it the year of AI agents. But most people still use AI like a search box. Ask. Read. Copy. Paste.</p>
+<p><strong>Personal agents flip that.</strong> They get their own computer in the cloud. They sign into your apps. They keep working after you close the tab.</p>
+<p>This is a side-by-side look at all four: what each does, what it costs, and where it can hurt you.</p>
+
+<h2 id="what-is-an-ai-agent">What is an AI agent? (Agentic AI definition)</h2>
+<div class="answer"><strong>An AI agent is an AI system that pursues a goal on its own. It plans steps, uses tools and apps, and takes actions for you, instead of only replying to prompts.</strong></div>
+<p>That is the working agentic AI definition. "Agentic AI" is the broader label for systems that act with autonomy rather than wait for the next instruction.</p>
+<p>An AI chat bot answers. An agent does the job.</p>
+
+<h2 id="chatbot-vs-agent">AI chat bot vs. AI agent: what changed</h2>
+<p>A classic AI chat bot lives in a tab. You type, it replies, and it forgets the job when you leave. A personal agent has three things a chatbot doesn't:</p>
+<ul>
+  <li><strong>Its own workspace.</strong> A cloud computer and browser it can operate.</li>
+  <li><strong>Your logins.</strong> Access to email, calendar, Slack, payments and more.</li>
+  <li><strong>Persistence.</strong> It keeps working while you're offline.</li>
+</ul>
+<p>That combination is why <strong>AI automation</strong> suddenly feels different. You're not automating a step. You're delegating a responsibility.</p>
+</article>
+
+<section class="table-wrap" aria-labelledby="glance">
+<table>
+  <caption id="glance">The 4 agents at a glance</caption>
+  <thead><tr><th scope="col"></th><th scope="col">OpenAI Dots</th><th scope="col">Meta Muse</th><th scope="col">Grok Bot</th><th scope="col">Instinct</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Maker</th><td>OpenAI</td><td>Meta</td><td>xAI (SpaceXAI)</td><td>Spear Street Technology</td></tr>
+    <tr><th scope="row">Launched</th><td>Sept 29, 2026</td><td>Sept 8, 2026</td><td>Aug 11, 2026 (beta)</td><td>Summer 2026, invite-only</td></tr>
+    <tr><th scope="row">How you use it</th><td>ChatGPT desktop, browser, Codex</td><td>App, web, WhatsApp</td><td>Desktop app, iOS</td><td>Text, call, WhatsApp</td></tr>
+    <tr><th scope="row">Pricing</th><td>Included with ChatGPT Pro / Business Premium</td><td>Free, $20, $100 tiers</td><td>Bundled in SuperGrok and Cursor plans</td><td>Not disclosed</td></tr>
+    <tr><th scope="row">Best for</th><td>Work and developers</td><td>Everyday life admin</td><td>Teams and builders</td><td>Hands-off errands</td></tr>
+    <tr><th scope="row">Main catch</th><td>Brand new</td><td>Data trust</td><td>Still beta</td><td>Broad access, invite-only</td></tr>
+  </tbody>
+</table>
+</section>
+
+<article>
+<h2 id="openai-dots">OpenAI Dots</h2>
+<p>OpenAI announced Dots at DevDay on September 29. Each one is powered by GPT-6 Astra and positioned as an always-on agent. People also search for it as "Open AI Dots," but the name is just Dots.</p>
+<p>Each dot works on its own cloud computer that you can open to inspect its work, and it can reach more than 4,000 apps through OpenAI's plugin ecosystem. Linking your personal computer is optional and starts switched off. You set rules for what a dot can do automatically and what needs your approval.</p>
+<p>Your first dot comes with a Pro or Business Premium plan at no extra cost. OpenAI is also working with Microsoft to connect Dots to Agent 365 security controls.</p>
+<p class="verdict"><strong>Verdict:</strong> the strongest fit if you already live in ChatGPT, especially for developers and work tasks.</p>
+
+<h2 id="meta-muse">Meta Muse</h2>
+<p>Meta launched Muse for adults 18 and over, aimed at schedules, shopping and turning long-term goals into action plans. For now it's only in the U.S. You can reach it through a dedicated app or through WhatsApp.</p>
+<p>It runs on a dedicated virtual machine in Meta's cloud, with a built-in browser you can watch. Meta says it can send emails, book travel, fill out forms and make purchases through Stripe's Link. There's a free tier plus $20 and $100 monthly plans.</p>
+<p>On privacy, Meta's AI chief says the agent never sees your actual passwords or payment details. But by default, queries to Meta's models can be used by the company, with an option to turn that off.</p>
+<p class="verdict"><strong>Verdict:</strong> the easiest on-ramp for everyday life admin. The open question is whether you trust Meta with the data.</p>
+
+<h2 id="grok-bot">Grok Bot</h2>
+<p>xAI launched Grok Bot in beta on August 11, 2026. Each bot gets its own cloud computer and signs into the apps you already use. It's a separate product from the Grok chatbot you know from X.</p>
+<p>What sets it apart is the team model. You can put several bots in a group chat, and they can message each other and pass work along. When there's no plugin, it falls back to a browser, and you step in to type credentials when a login stops it.</p>
+<p>Since August 26, it's included with SuperGrok plans and several Cursor plans. Pricing has shifted since launch, so check xAI's page before you buy.</p>
+<p class="verdict"><strong>Verdict:</strong> best for builders and small teams who want specialist agents working together. It is still labeled beta.</p>
+
+<h2 id="instinct">Instinct</h2>
+<p>Instinct is the odd one out. It's an invite-only assistant you text or call, with no dashboard to learn. It does the work by controlling a persistent cloud desktop with full browser and app access.</p>
+<p>It is also the hype and risk story. Instinct announced a $1 billion Series C, and a feature called the Trusted Person Network lets one person's agent coordinate with another's. Invites have been resold on eBay.</p>
+<p>The catch is access. It asks for email, messages, screen, audio and location at once, and its terms authorize it to enter binding agreements on your behalf.</p>
+<p class="verdict"><strong>Verdict:</strong> the most "it just does it" experience, with the most trust required.</p>
+
+<h2 id="which-to-pick">Side by side: which should you pick?</h2>
+<ul>
+  <li><strong>Already pay for ChatGPT Pro?</strong> Start with Dots.</li>
+  <li><strong>Want life admin on WhatsApp, and you're in the U.S.?</strong> Try Muse.</li>
+  <li><strong>Want a team of specialist agents?</strong> Look at Grok Bot.</li>
+  <li><strong>Want to text a problem and forget it?</strong> Join the Instinct waitlist, and read the terms first.</li>
+</ul>
+
+<h2 id="risks">The part nobody puts in the launch video</h2>
+<p>These are AI systems with keys to your life. Four things to check before you connect anything:</p>
+<ol>
+  <li><strong>Permissions.</strong> What can it do without asking? Set approval rules first.</li>
+  <li><strong>Data use.</strong> Is your data used for model training by default?</li>
+  <li><strong>Money.</strong> Can it spend, and is there a cap?</li>
+  <li><strong>Mistakes.</strong> OpenAI itself says dots can still make mistakes. Start with low-stakes work.</li>
+</ol>
+
+<h2 id="business">What this means for businesses</h2>
+<p>Employees will bring these agents to work whether IT approves them or not. Grok Bot, for one, reaches people through consumer subscriptions rather than a security review.</p>
+<p>The agent is the easy part. What decides whether AI automation pays off is clean data, defined workflows and clear permissions. At Tycoon Clap we build the data pipelines and automation layers these agents depend on. An agent plugged into messy systems just makes mistakes faster.</p>
+<div class="cta">
+  <p><strong>Want agents that run on clean data, not guesswork?</strong> Tell us what you want automated and we'll map it.</p>
+  <a class="btn" href="/contact.html">Talk to Tycoon Clap</a>
+</div>
+
+<h2 id="faq">FAQ</h2>
+<h3>What is an AI agent?</h3>
+<p>An AI system that pursues goals on its own, using tools and apps to take actions instead of only answering questions.</p>
+<h3>What is agentic AI?</h3>
+<p>AI built to act autonomously: plan, decide and execute multi-step tasks with limited supervision.</p>
+<h3>Is Grok Bot the same as Grok?</h3>
+<p>No. Grok is the chatbot. Grok Bot is a separate agent product with its own cloud computer.</p>
+<h3>Are OpenAI Dots free?</h3>
+<p>Not standalone. Your first dot is included with ChatGPT Pro or Business Premium.</p>
+<h3>Are personal AI agents safe?</h3>
+<p>They can be, with tight permissions and low-stakes starting tasks. Treat each one like a new employee with access to your accounts.</p>
+</article>
+</main>
+
+<footer>© 2026 Tycoon Clap · <a href="/">tycoonclap.com</a></footer>
+</body>
+</html>
