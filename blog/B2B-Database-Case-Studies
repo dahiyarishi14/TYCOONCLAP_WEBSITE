@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -346,7 +346,10 @@ footer { background: var(--ink); color: rgba(255,255,255,.55); font-size: .84rem
 
       <h2 id="sec1">Why B2B Database Case Studies Matter</h2>
       <p>Every sales team believes it has a messaging problem. Most actually have a data problem. When your outreach reaches the wrong people, or reaches the right people at addresses that bounce, even brilliant copy produces nothing. A strong <strong>B2B database</strong> fixes the first link in the chain: <em>who</em> you talk to.</p>
-      <p>The case studies below look at how companies used a <strong>B2B contact database</strong> to build pipeline in the US market. Some are public and well documented. Others are illustrative scenarios built from patterns we see repeatedly when we run outbound for clients. Each one ends with the lesson you can reuse.</p>
+      <p>The case studies below look at how real companies used a <strong>B2B contact database</strong> to build pipeline: Salesforce, Adobe Workfront, OneStudyTeam (Reify Health) and Ascent Risk Management Group. Each one ends with a lesson you can reuse.</p>
+      <div class="callout">
+        <p>A note on sources: the Workfront, OneStudyTeam and Ascent results come from case studies published by ZoomInfo, a B2B database provider, and were developed with those customers. Treat them as vendor-reported results, not independent audits.</p>
+      </div>
 
       <h2 id="sec2">What Is a B2B Database (and What It Isn't)</h2>
       <p>If you're asking <strong>what is a B2B database</strong>, here's the short version: it's a structured collection of company and contact records that sales and marketing teams use to find decision makers. A good record includes the person's name, job title, verified work email, phone number, company size, industry, location and often the technologies the company uses.</p>
@@ -361,23 +364,25 @@ footer { background: var(--ink); color: rgba(255,255,255,.55); font-size: .84rem
       <div class="pull">"List quality isn't a sales task. It's the foundation every other sales task stands on."</div>
       <p><strong>The lesson:</strong> give data its own owner. Whether that's a person or a tool, someone must be accountable for the accuracy of the lists your team works from.</p>
 
-      <h2 id="sec4">Case Study 2: A US SaaS Company and the Verified Email Switch</h2>
-      <p><em>Illustrative scenario, based on patterns we see in client work. Swap in your own figures before publishing.</em></p>
-      <p>Picture a mid-market US SaaS company selling HR software. Its team bought a cheap, one-time list of "HR leaders" and launched a cold email campaign. Bounce rates were high, domain reputation dropped, and replies dried up. The team assumed their offer was weak.</p>
-      <p>The real issue was the list. After switching to a <strong>B2B email database</strong> from a reputable <strong>B2B database provider</strong> that verifies addresses in real time, then warming new sending domains, the same copy started landing in primary inboxes. The team also narrowed its targeting to companies with 200–1,000 employees in the US, instead of every HR title in the country.</p>
-      <p><strong>The lesson:</strong> before you rewrite your email, audit your list. Deliverability and targeting problems look exactly like copywriting problems from the outside. Cheaper lists often cost more once you count burned domains.</p>
+      <h2 id="sec4">Case Study 2: Adobe Workfront and Calling the Right Contacts</h2>
+      <p>Workfront, the work management software company now part of Adobe, had a familiar sales problem: its reps were losing time calling the wrong contacts. The team moved to ZoomInfo's <strong>B2B contact database</strong> and used its Chrome extension, which works alongside LinkedIn, to support account-based selling.</p>
+      <p>According to the published case study, the team more than doubled its sales activity and grew pipeline by over <strong>90% per year</strong>. Workfront also reported that ZoomInfo outperformed the other vendors it tested by a wide margin, and that missing phone numbers in its own database got filled in along the way.</p>
+      <p><strong>The lesson:</strong> run a head-to-head test. Workfront ran an extensive contact analysis across vendors before choosing. Testing providers on your own target accounts is the single best way to compare any <strong>B2B database company</strong>.</p>
 
-      <h2 id="sec5">Case Study 3: A Staffing Firm and Segmented Database Marketing</h2>
-      <p><em>Illustrative scenario.</em></p>
-      <p>Consider a US staffing firm that needed to win new hiring clients in healthcare and logistics. Instead of one broad campaign, the team used a <strong>B2B contact database</strong> to build separate segments: hospital HR directors, regional logistics operations managers, and fast-growing companies with open roles.</p>
-      <p>This is <strong>database marketing B2B</strong> in practice. Each segment got its own message, its own offer and its own follow-up sequence. Healthcare prospects heard about compliance and credential checks. Logistics prospects heard about speed and seasonal surges. Replies went up because each message sounded like it was written for the reader, which it was.</p>
-      <p><strong>The lesson:</strong> the value of a database isn't size, it's filtering. The ability to slice by title, industry, headcount and location is what makes personalization possible at scale.</p>
+      <h2 id="sec5">Case Study 3: OneStudyTeam and the Bounce Rate Problem</h2>
+      <p>OneStudyTeam, part of Reify Health, sells clinical trial software. When the pandemic cancelled trade shows and conferences, a major source of leads disappeared. At the same time, the team was fighting data inefficiencies, higher bounce rates and a growing risk to its sender reputation.</p>
+      <p>The company switched to ZoomInfo in 2021, using data enrichment and the Chrome extension to clean up event lists, find the right contacts and add missing details like cell phone numbers. ZoomInfo reports that the result was a <strong>38% increase in pipeline growth</strong>, with the database becoming a single source of truth for sales and marketing.</p>
+      <p><strong>The lesson:</strong> a verified <strong>B2B email database</strong> protects the asset you can't easily rebuild, your sender reputation. Bounces hurt deliverability for every campaign that follows, so data quality is a deliverability decision as much as a sales one.</p>
 
-      <h2 id="sec6">Case Study 4: A Fintech Startup and Account-Based Outreach</h2>
-      <p><em>Illustrative scenario.</em></p>
-      <p>Imagine an early-stage fintech selling payment tooling to US mid-market retailers. With a small team and a long sales cycle, it couldn't afford to chase hundreds of weak leads. Using a <strong>B2B database platform</strong>, it built a tight list of 150 target accounts, then mapped three to five buying-committee contacts at each: finance, operations, and IT.</p>
-      <p>Outreach ran across email, LinkedIn and targeted ads to the same accounts, so each prospect saw the brand in multiple places. Sales conversations started inside accounts rather than with isolated individuals, which shortened the path to a real buying group.</p>
-      <p><strong>The lesson:</strong> a B2B database doesn't only feed cold email. Used well, it powers account-based marketing, ad audiences and multi-threaded sales across the whole buying committee.</p>
+      <h2 id="sec6">Case Study 4: Ascent Risk Management Group and the Five-Person Sales Team</h2>
+      <p>Ascent Risk Management Group, a workplace liability firm, ran its prospecting on trade shows and industry lists with a lean team of five salespeople. When in-person events stopped, it lacked a reliable outbound stack and a trusted source of data, and its pipeline was at risk of drying up.</p>
+      <p>The firm used ZoomInfo's data together with its sales engagement tool to find target accounts, automate outreach and track performance in one place. As reported, the team averaged <strong>173% of revenue goal</strong>, booked about 6.2 meetings per week, and grew pipeline by <strong>175%</strong>.</p>
+      <p><strong>The lesson:</strong> small teams benefit most from a good <strong>B2B database platform</strong>. When you can't add headcount, accurate data plus automated outreach multiplies what each rep can do. This is <strong>database marketing B2B</strong> at its simplest: right accounts, right contacts, consistent follow-up.</p>
+
+      <h2 id="sec6b">More Proof: Zoom and AK Ops</h2>
+      <p>Two more published examples show how far the same idea stretches. Zoom used a <strong>B2B database</strong> to identify key decision makers and track company updates as it pushed into new products and international markets. ZoomInfo's write-up says Zoom reached 90% sales adoption of the tool and grew revenue by 300%, though that figure reflects the whole go-to-market effort, not data alone.</p>
+      <p>AK Ops, a fractional sales and marketing firm, took a different angle. Its clients' CRM data was outdated, so the firm insisted on a robust database before anything else. Within six months, the case study reports a 300% increase in booked meetings and a 600% lift in qualified deals across its clients, and one client closed over $3M in revenue sourced from the platform.</p>
+      <p><strong>The lesson:</strong> fix the data before you fix the funnel. Outdated CRM records quietly cap every campaign you run on top of them.</p>
 
       <h2 id="sec7">What the Winners Had in Common</h2>
       <div class="table-wrap">
@@ -455,9 +460,10 @@ footer { background: var(--ink); color: rgba(255,255,255,.55); font-size: .84rem
           <li><a href="#sec1">Why case studies matter</a></li>
           <li><a href="#sec2">What is a B2B database</a></li>
           <li><a href="#sec3">Case 1: Salesforce</a></li>
-          <li><a href="#sec4">Case 2: SaaS email switch</a></li>
-          <li><a href="#sec5">Case 3: Staffing firm</a></li>
-          <li><a href="#sec6">Case 4: Fintech ABM</a></li>
+          <li><a href="#sec4">Case 2: Adobe Workfront</a></li>
+          <li><a href="#sec5">Case 3: OneStudyTeam</a></li>
+          <li><a href="#sec6">Case 4: Ascent Risk Mgmt</a></li>
+          <li><a href="#sec6b">More proof: Zoom, AK Ops</a></li>
           <li><a href="#sec7">What winners share</a></li>
           <li><a href="#sec8">Choosing a provider</a></li>
           <li><a href="#sec9">Common mistakes</a></li>
