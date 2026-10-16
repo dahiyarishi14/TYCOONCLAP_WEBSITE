@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -253,6 +255,18 @@
   .catalog-empty{ text-align:center; padding:50px 20px; color:var(--ink-soft,#5C6B66); display:none; }
   .load-more-wrap{ text-align:center; margin-top:32px; }
   .load-more-wrap button{ padding:12px 28px; }
+
+  /* ===== Free lead magnet popup ===== */
+  .lead-modal{ position:fixed; inset:0; background:rgba(31,43,40,0.55); display:none; align-items:center; justify-content:center; padding:20px; z-index:2000; backdrop-filter:blur(3px); }
+  .lead-modal.open{ display:flex; }
+  .lead-modal-box{ position:relative; background:var(--card,#fff); border:1px solid var(--line,rgba(31,43,40,0.1)); border-top:4px solid #4C9C8B; border-radius:18px; padding:34px 30px 26px; max-width:440px; width:100%; box-shadow:0 24px 60px -20px rgba(31,43,40,0.45); }
+  .lead-modal-box h3{ font-family:var(--display,'Plus Jakarta Sans',sans-serif); font-weight:800; font-size:1.3rem; margin:6px 0 8px; color:var(--ink,#1F2B28); }
+  .lead-modal-box p{ color:var(--ink-soft,#5C6B66); font-size:0.9rem; margin-bottom:16px; }
+  .lead-modal-close{ position:absolute; top:10px; right:14px; background:none; border:0; font-size:1.6rem; line-height:1; cursor:pointer; color:var(--ink-dim,#8B9793); }
+  .lead-modal-box input[type="email"]{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--line,rgba(31,43,40,0.15)); font-size:0.95rem; font-family:inherit; margin-bottom:12px; }
+  .lead-modal-box .btn{ width:100%; text-align:center; }
+  .lead-modal-box p.lead-modal-note{ font-size:0.78rem; color:var(--ink-dim,#8B9793); margin:12px 0 0; text-align:center; }
+  .lead-modal-box p.lead-modal-note.err{ color:#C7402F; }
 </style>
 </head>
 <body>
@@ -311,6 +325,12 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
           All 50 US States Covered
         </div>
+      </div>
+
+      <!-- Free sample button (opens email popup) -->
+      <div class="hero-actions fade-in-up" style="margin-top:22px; display:flex; align-items:center; flex-wrap:wrap; gap:14px;">
+        <button type="button" class="btn btn-secondary" id="freeSampleBtn">&#11015; Free: Download 100 Travel Agency Leads (XLSX)</button>
+        <span style="font-size:0.82rem; color:var(--ink-dim,#8B9793);">Phone numbers + emails &middot; Enter your email to download</span>
       </div>
     </div>
   </div>
@@ -582,6 +602,26 @@
   </div>
 </div>
 
+<!-- ============ FREE LEADS EMAIL POPUP ============ -->
+<div class="lead-modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
+  <div class="lead-modal-box">
+    <button type="button" class="lead-modal-close" id="leadModalClose" aria-label="Close">&times;</button>
+    <span class="eyebrow">Free sample</span>
+    <h3 id="leadModalTitle">Get 100 free travel agency leads</h3>
+    <p>Enter your email and your download starts automatically. The file includes phone numbers and emails. The emails are legacy data, so verify them before any bulk send.</p>
+    <form id="leadForm">
+      <input type="hidden" name="access_key" value="7a29027e-dfab-4233-9f12-6483da861897">
+      <input type="hidden" name="subject" value="Free 100 Travel Agency Leads Download">
+      <input type="hidden" name="from_name" value="Tycoon Clap Leads Page">
+      <input type="hidden" name="source" value="leads.html - free travel_leads_100.xlsx">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="email" name="email" id="leadEmail" placeholder="you@company.com" required>
+      <button type="submit" class="btn btn-primary" id="leadSubmit">Download free leads</button>
+    </form>
+    <p class="lead-modal-note" id="leadNote">Your download starts as soon as you submit.</p>
+  </div>
+</div>
+
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
@@ -682,6 +722,61 @@
   loadMoreBtn.addEventListener('click', function() { shown += PAGE_SIZE; render(); });
 
   render();
+})();
+</script>
+
+<!-- ============ FREE LEADS POPUP + EMAIL CAPTURE ============ -->
+<script>
+(function(){
+  var FILE = 'travel_leads_100.xlsx';
+  var DEFAULT_NOTE = 'Your download starts as soon as you submit.';
+  var modal = document.getElementById('leadModal');
+  var openBtn = document.getElementById('freeSampleBtn');
+  var closeBtn = document.getElementById('leadModalClose');
+  var form = document.getElementById('leadForm');
+  var emailEl = document.getElementById('leadEmail');
+  var submitBtn = document.getElementById('leadSubmit');
+  var note = document.getElementById('leadNote');
+
+  function openModal(){ modal.classList.add('open'); setTimeout(function(){ emailEl.focus(); }, 50); }
+  function closeModal(){ modal.classList.remove('open'); }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  function startDownload(){
+    var a = document.createElement('a');
+    a.href = FILE; a.download = FILE;
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(form.botcheck.checked) return;
+    submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+    fetch('https://api.web3forms.com/submit', { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if(!d.success) throw new Error('failed');
+        note.classList.remove('err');
+        note.textContent = 'Thanks! Your download is starting…';
+        submitBtn.textContent = 'Downloaded ✓';
+        startDownload();
+        form.reset();
+        setTimeout(function(){
+          closeModal();
+          submitBtn.disabled = false; submitBtn.textContent = 'Download free leads';
+          note.textContent = DEFAULT_NOTE;
+        }, 2500);
+      })
+      .catch(function(){
+        note.classList.add('err');
+        note.textContent = 'Something went wrong. Please try again.';
+        submitBtn.disabled = false; submitBtn.textContent = 'Download free leads';
+      });
+  });
 })();
 </script>
 </body>
