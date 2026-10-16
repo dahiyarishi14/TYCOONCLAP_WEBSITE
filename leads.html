@@ -267,6 +267,30 @@
   .lead-modal-box .btn{ width:100%; text-align:center; }
   .lead-modal-box p.lead-modal-note{ font-size:0.78rem; color:var(--ink-dim,#8B9793); margin:12px 0 0; text-align:center; }
   .lead-modal-box p.lead-modal-note.err{ color:#C7402F; }
+
+  /* ===== Free sample button: red, bigger ===== */
+#freeSampleBtn{
+  background:#E9584C !important;
+  color:#fff !important;
+  border:2px solid #E9584C !important;
+  font-size:1.4rem !important;
+  font-weight:700 !important;
+  padding:20px 38px !important;
+  border-radius:999px !important;
+  box-shadow:0 14px 30px -12px rgba(233,88,76,0.65);
+  cursor:pointer;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+#freeSampleBtn:hover{
+  background:#C7402F !important;
+  border-color:#C7402F !important;
+  transform:translateY(-3px);
+  box-shadow:0 18px 36px -12px rgba(199,64,47,0.7);
+}
+@media (max-width:560px){
+  #freeSampleBtn{ font-size:1.1rem !important; padding:16px 26px !important; }
+}
+  
 </style>
 </head>
 <body>
