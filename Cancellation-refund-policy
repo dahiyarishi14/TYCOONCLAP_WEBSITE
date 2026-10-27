@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26EDJT1F3X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-26EDJT1F3X');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xy7mjqlpls");
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tycoon Clap's Cancellation & Refund Policy — how to cancel a service, when refunds apply, and how long they take, including lead-list purchases.">
+<title>Cancellation &amp; Refund Policy — Tycoon Clap</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="logo-icon.png">
+<link rel="apple-touch-icon" href="logo-icon.png">
+<style>
+  .legal-wrap{ max-width:820px; }
+  .legal-wrap h2{ font-family:var(--display); font-weight:800; font-size:1.4rem; color:var(--ink); margin:44px 0 14px; scroll-margin-top:90px; }
+  .legal-wrap h2:first-of-type{ margin-top:0; }
+  .legal-wrap h3{ font-family:var(--display); font-weight:700; font-size:1.05rem; color:var(--ink); margin:26px 0 10px; }
+  .legal-wrap p{ color:var(--ink-soft); font-size:0.98rem; margin-bottom:14px; }
+  .legal-wrap ul{ color:var(--ink-soft); font-size:0.98rem; margin:0 0 14px 22px; }
+  .legal-wrap li{ margin-bottom:8px; }
+  .legal-wrap a{ color:var(--teal-dark); text-decoration:underline; }
+  .legal-updated{ color:var(--ink-dim); font-size:0.86rem; margin-bottom:28px; }
+  .legal-note{ background:var(--bg-alt); border-left:3px solid var(--mustard); border-radius:8px; padding:16px 20px; font-size:0.92rem; color:var(--ink-soft); margin:18px 0; }
+  table.data-table{ width:100%; border-collapse:collapse; margin:14px 0 22px; font-size:0.9rem; }
+  table.data-table th, table.data-table td{ border:1px solid var(--line); padding:10px 12px; text-align:left; color:var(--ink-soft); vertical-align:top; }
+  table.data-table th{ background:var(--bg-alt); color:var(--ink); font-family:var(--display); font-weight:700; font-size:0.85rem; }
+
+  /* Quick summary cards */
+  .key-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:0 0 30px; }
+  .key-card{ background:var(--bg-alt); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px; }
+  .key-card .key-ico{ width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:10px; font-size:1.05rem; }
+  .key-card h4{ font-family:var(--display); font-weight:800; font-size:0.95rem; color:var(--ink); margin:0 0 4px; }
+  .key-card p{ font-size:0.86rem; color:var(--ink-soft); margin:0; line-height:1.5; }
+
+  /* On-this-page chips */
+  .toc{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 36px; padding:0; }
+  .toc a{ text-decoration:none; font-size:0.8rem; font-weight:600; color:var(--teal-dark); background:var(--bg-alt); border:1px solid var(--line); border-radius:999px; padding:6px 13px; transition:background .2s, border-color .2s; }
+  .toc a:hover{ background:#DCEFE9; border-color:var(--teal-dark); }
+
+  /* Refund process steps */
+  .steps{ list-style:none; margin:16px 0 26px !important; padding:0; counter-reset:step; display:grid; gap:12px; }
+  .steps li{ counter-increment:step; position:relative; background:var(--bg-alt); border:1px solid var(--line); border-radius:12px; padding:14px 16px 14px 58px; margin:0; font-size:0.94rem; color:var(--ink-soft); }
+  .steps li::before{ content:counter(step); position:absolute; left:16px; top:50%; transform:translateY(-50%); width:30px; height:30px; border-radius:50%; background:var(--teal-dark); color:#fff; font-family:var(--display); font-weight:800; font-size:0.9rem; display:flex; align-items:center; justify-content:center; }
+  .steps li strong{ color:var(--ink); }
+
+  /* Eligible / not eligible panels */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0 22px; }
+  .split .panel{ border-radius:14px; padding:18px 20px 8px; border:1px solid var(--line); }
+  .split .panel h4{ font-family:var(--display); font-weight:800; font-size:0.95rem; margin:0 0 10px; color:var(--ink); }
+  .split .panel ul{ margin:0 0 10px 18px; font-size:0.9rem; }
+  .panel.ok{ background:#EEF7F3; border-color:#CFE6DD; }
+  .panel.no{ background:#FDF1EF; border-color:#F5D5D0; }
+
+  /* Header illustration layout */
+  .privacy-header{ position:relative; padding:90px 0 60px; overflow:hidden; }
+  .privacy-header .wrap{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:50px; align-items:center; }
+  .privacy-header h1{ font-family:var(--display); font-weight:800; font-size:clamp(2rem,4vw,2.8rem); color:var(--ink); margin:10px 0 14px; }
+  .privacy-header p{ color:var(--ink-soft); font-size:1.02rem; max-width:440px; }
+  .privacy-illustration{ width:100%; height:auto; display:block; }
+  @media (max-width:860px){
+    .privacy-header{ padding:60px 0 40px; }
+    .privacy-header .wrap{ grid-template-columns:1fr; gap:32px; }
+    .privacy-illustration{ max-width:380px; margin:0 auto; }
+    .key-grid, .split{ grid-template-columns:1fr; }
+    table.data-table{ display:block; overflow-x:auto; }
+  }
+</style>
+</head>
+<body>
+<div class="scroll-progress"></div>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 28h20c8 0 14 6 14 14v6H26v-6c0-8 6-14 14-14z" fill="currentColor"/>
+        <rect x="42" y="34" width="16" height="10" rx="2" fill="var(--bg)"/>
+        <rect x="14" y="42" width="72" height="48" rx="16" fill="currentColor"/>
+      </svg>
+      Tycoon Clap
+    </a>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="leads.html">B2B Leads</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="privacy-header">
+  <div class="blob" style="width:280px; height:280px; background:#DCEFE9; top:-80px; right:-40px;"></div>
+  <div class="blob" style="width:180px; height:180px; background:#FDEED0; bottom:-40px; left:-30px;"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Billing &amp; Fair Practice</span>
+      <h1>Cancellation &amp; Refund Policy</h1>
+      <p>How to cancel a service, when you're eligible for a refund, and how quickly we process it.</p>
+    </div>
+
+    <!-- ============ CANCELLATION & REFUND SVG ILLUSTRATION ============ -->
+    <svg class="privacy-illustration" viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Cancellation and refund process: request, review, refund to original payment method">
+      <defs>
+        <linearGradient id="rfCoinGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#4C9C8B"/>
+          <stop offset="100%" stop-color="#24584C"/>
+        </linearGradient>
+        <linearGradient id="rfRingGrad" x1="170" y1="100" x2="310" y2="300" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#DCEFE9"/>
+          <stop offset="50%" stop-color="#357566"/>
+          <stop offset="100%" stop-color="#1B2529"/>
+        </linearGradient>
+        <linearGradient id="rfGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FCD283"/>
+          <stop offset="100%" stop-color="#D99B26"/>
+        </linearGradient>
+        <linearGradient id="rfCard" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFFFFF"/>
+          <stop offset="100%" stop-color="#F7FAF8"/>
+        </linearGradient>
+        <filter id="rfShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1F2B28" flood-opacity="0.12"/>
+        </filter>
+        <filter id="rfGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#357566" flood-opacity="0.25"/>
+        </filter>
+      </defs>
+
+      <ellipse cx="240" cy="372" rx="160" ry="14" fill="#E2EBE6" opacity="0.8"/>
+
+      <!-- Connector lines -->
+      <g stroke="rgba(53,117,102,0.14)" stroke-width="1.5" stroke-dasharray="4 4">
+        <path d="M170 140 C 190 165, 200 180, 206 190"/>
+        <path d="M310 130 C 290 160, 280 178, 274 190"/>
+        <path d="M170 285 C 190 265, 200 252, 208 240"/>
+        <path d="M315 280 C 295 262, 282 250, 272 240"/>
+      </g>
+
+      <!-- Decorative shapes -->
+      <circle cx="52" cy="76" r="18" fill="#DCEFE9" opacity="0.6"/>
+      <circle cx="434" cy="58" r="22" fill="#FDEED0" opacity="0.6"/>
+      <circle cx="432" cy="342" r="14" fill="#FCE4E1" opacity="0.6"/>
+      <rect x="34" y="226" width="24" height="24" rx="6" fill="#E4E8F2" opacity="0.5"/>
+
+      <!-- ============ CENTRAL REFUND COIN (HERO PIECE) ============ -->
+      <g filter="url(#rfGlow)">
+        <circle cx="240" cy="215" r="82" fill="url(#rfRingGrad)"/>
+        <circle cx="240" cy="215" r="72" fill="url(#rfCoinGrad)"/>
+        <circle cx="240" cy="215" r="63" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <!-- Glass highlight -->
+        <path d="M190 175 C 205 150, 235 140, 262 146 C 238 152, 214 168, 200 196 Z" fill="#FFFFFF" opacity="0.14"/>
+
+        <!-- Circular refund arrows -->
+        <path d="M205 205 A 36 36 0 0 1 266 187" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M268 175 L268 193 L250 191 Z" fill="#FFFFFF"/>
+        <path d="M275 225 A 36 36 0 0 1 214 243" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M212 255 L212 237 L230 239 Z" fill="#FFFFFF"/>
+
+        <!-- Center coin -->
+        <circle cx="240" cy="215" r="19" fill="url(#rfGold)"/>
+        <circle cx="240" cy="215" r="14" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-dasharray="2 2"/>
+        <text x="240" y="222" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="800">$</text>
+      </g>
+
+      <!-- ============ CARD 1: CANCEL (TOP LEFT) ============ -->
+      <g filter="url(#rfShadow)">
+        <rect x="28" y="108" width="142" height="58" rx="12" fill="url(#rfCard)" stroke="rgba(31,43,40,0.1)" stroke-width="1.5"/>
+        <circle cx="54" cy="137" r="15" fill="#FCE4E1"/>
+        <path d="M48 131 L60 143 M60 131 L48 143" stroke="#C7402F" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="78" y="132" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800">CANCEL</text>
+        <rect x="78" y="139" width="76" height="13" rx="4" fill="#FCE4E1"/>
+        <text x="83" y="148" fill="#C7402F" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.2" font-weight="700">Written notice</text>
+      </g>
+
+      <!-- ============ CARD 2: REVIEW (TOP RIGHT) ============ -->
+      <g filter="url(#rfShadow)">
+        <rect x="312" y="92" width="142" height="62" rx="12" fill="url(#rfCard)" stroke="rgba(31,43,40,0.1)" stroke-width="1.5"/>
+        <circle cx="338" cy="123" r="14" fill="#FDEED0"/>
+        <circle cx="336" cy="121" r="6" fill="none" stroke="#B8860F" stroke-width="2"/>
+        <path d="M340.5 125.5 L345 130" stroke="#B8860F" stroke-width="2.2" stroke-linecap="round"/>
+        <text x="360" y="117" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800">REVIEW</text>
+        <text x="360" y="129" fill="#748782" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600">3–5 business days</text>
+        <rect x="360" y="135" width="62" height="11" rx="3.5" fill="#E4E8F2"/>
+        <text x="365" y="143" fill="#2E3A55" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" font-weight="700">Fair assessment</text>
+      </g>
+
+      <!-- ============ CARD 3: ORIGINAL METHOD (BOTTOM LEFT) ============ -->
+      <g filter="url(#rfShadow)">
+        <rect x="32" y="252" width="138" height="70" rx="12" fill="url(#rfCard)" stroke="rgba(31,43,40,0.1)" stroke-width="1.5"/>
+        <!-- Card icon -->
+        <rect x="45" y="268" width="30" height="21" rx="4" fill="#2E3A55"/>
+        <rect x="45" y="273" width="30" height="5" fill="#4C9C8B"/>
+        <rect x="49" y="283" width="10" height="3" rx="1.5" fill="#FFFFFF" opacity="0.8"/>
+        <text x="85" y="276" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800">PAYBACK</text>
+        <text x="85" y="288" fill="#748782" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600">Original method</text>
+        <rect x="85" y="295" width="70" height="13" rx="4" fill="#DCEFE9"/>
+        <text x="90" y="304" fill="#24584C" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="700">PayPal · Stripe</text>
+      </g>
+
+      <!-- ============ CARD 4: STATUS (BOTTOM RIGHT) ============ -->
+      <g filter="url(#rfShadow)">
+        <rect x="316" y="248" width="132" height="70" rx="12" fill="url(#rfCard)" stroke="rgba(31,43,40,0.1)" stroke-width="1.5"/>
+        <circle cx="342" cy="278" r="15" fill="#DCEFE9"/>
+        <path d="M335 278 L340 283 L349 272" stroke="#24584C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="366" y="274" fill="#1F2B28" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800">REFUNDED</text>
+        <text x="366" y="286" fill="#748782" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600">5–10 days</text>
+        <rect x="366" y="293" width="64" height="13" rx="4" fill="#FDEED0"/>
+        <text x="371" y="302" fill="#B8860F" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="700">Email confirmed</text>
+      </g>
+
+      <!-- Bottom pill -->
+      <g filter="drop-shadow(0 6px 14px rgba(31,43,40,0.1))">
+        <rect x="170" y="338" width="140" height="26" rx="13" fill="#2E3A55"/>
+        <circle cx="184" cy="351" r="4.5" fill="#4C9C8B"/>
+        <text x="195" y="355" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700">No-hassle process</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap legal-wrap">
+    <p class="legal-updated">Last updated: October 27, 2026</p>
+
+    <div class="key-grid">
+      <div class="key-card">
+        <div class="key-ico" style="background:#FCE4E1;">✉️</div>
+        <h4>Cancel by email</h4>
+        <p>Send written notice to nathalie@tycoonclap.com. Retainers need 15 days' notice.</p>
+      </div>
+      <div class="key-card">
+        <div class="key-ico" style="background:#FDEED0;">⏱️</div>
+        <h4>Reviewed in 3–5 days</h4>
+        <p>Every refund request is reviewed fairly and answered by email within 5 business days.</p>
+      </div>
+      <div class="key-card">
+        <div class="key-ico" style="background:#DCEFE9;">💸</div>
+        <h4>Paid back the same way</h4>
+        <p>Approved refunds go to your original payment method, usually within 5–10 business days.</p>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="On this page">
+      <a href="#overview">Overview</a>
+      <a href="#how-to-cancel">How to cancel</a>
+      <a href="#by-service">By service</a>
+      <a href="#eligibility">Refund eligibility</a>
+      <a href="#leads">Lead lists</a>
+      <a href="#non-refundable">Non-refundable costs</a>
+      <a href="#process">Refund process</a>
+      <a href="#disputes">Disputes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <h2 id="overview">1. Overview</h2>
+    <p>This Cancellation &amp; Refund Policy explains how you can cancel a Tycoon Clap service and when you may be entitled to a refund. It applies to our Growth Marketing, Software Engineering, and Data &amp; AI services, as well as B2B lead lists purchased from our Leads page. It should be read together with our <a href="terms-of-service.html">Terms of Service</a>.</p>
+    <p>Our aim is simple: if we haven't delivered what we agreed, we'll make it right. If you've received the work you paid for, we may keep the fees for that work. If your proposal or signed agreement contains different cancellation or refund terms, those terms apply to that engagement.</p>
+
+    <h2 id="how-to-cancel">2. How to cancel</h2>
+    <p>To cancel a service, email <a href="mailto:nathalie@tycoonclap.com">nathalie@tycoonclap.com</a> with the subject line <strong>"Cancellation Request"</strong> and include:</p>
+    <ul>
+      <li>Your name, company, and the email used for the engagement or purchase</li>
+      <li>The service or order you want to cancel (and the invoice or order number, if you have it)</li>
+      <li>The date you want the cancellation to take effect</li>
+      <li>Optionally, a short note on why — we use feedback to improve</li>
+    </ul>
+    <p>We will confirm receipt by email within 2 business days. Notice periods are counted from the date we receive your written request. Cancelling by phone, chat, or social media is not sufficient, but we will always point you to the right channel.</p>
+
+    <h2 id="by-service">3. Cancellation terms by service</h2>
+    <table class="data-table">
+      <tr><th>Service</th><th>How to cancel</th><th>What happens to fees</th></tr>
+      <tr>
+        <td><strong>Growth Marketing</strong><br>(monthly retainers)</td>
+        <td>15 days' written notice. Work continues through the notice period.</td>
+        <td>The current billing period is not refunded once work has started. Fees for the notice period remain payable. No refund for months already delivered.</td>
+      </tr>
+      <tr>
+        <td><strong>Software Engineering</strong><br>(fixed-price projects)</td>
+        <td>Written notice at any time. Work stops on receipt, or on a handover date we agree.</td>
+        <td>You pay for milestones completed and work in progress up to the cancellation date. Unstarted milestones paid in advance are refunded, less any non-recoverable third-party costs.</td>
+      </tr>
+      <tr>
+        <td><strong>Software Engineering</strong><br>(time &amp; materials)</td>
+        <td>7 days' written notice.</td>
+        <td>You pay for hours worked up to the end of the notice period. Unused prepaid hours are refunded.</td>
+      </tr>
+      <tr>
+        <td><strong>Data &amp; AI</strong><br>(projects and retainers)</td>
+        <td>Projects: written notice at any time. Retainers: 15 days' written notice.</td>
+        <td>Projects follow the milestone approach above. Retainers follow the Growth Marketing approach above.</td>
+      </tr>
+      <tr>
+        <td><strong>Strategy calls &amp; audits</strong></td>
+        <td>Reschedule or cancel at least 24 hours before the scheduled time.</td>
+        <td>Full refund for prepaid sessions cancelled in time. No refund for no-shows or sessions already delivered.</td>
+      </tr>
+      <tr>
+        <td><strong>B2B Lead Lists</strong></td>
+        <td>Digital product — see <a href="#leads">Section 5</a>.</td>
+        <td>Not refundable after delivery, except as described in Section 5.</td>
+      </tr>
+    </table>
+
+    <h2 id="eligibility">4. When you are eligible for a refund</h2>
+    <div class="split">
+      <div class="panel ok">
+        <h4>✓ Refunds we will make</h4>
+        <ul>
+          <li>You were charged more than once for the same invoice or order</li>
+          <li>You paid in advance for work or a session that we did not start or deliver</li>
+          <li>We cancelled the engagement and you prepaid for work not yet performed</li>
+          <li>We materially failed to deliver the agreed scope after you gave us written notice and a reasonable chance (normally 10 business days) to fix it</li>
+          <li>A lead-list file was never delivered, is corrupted, or is materially different from its description (see Section 5)</li>
+        </ul>
+      </div>
+      <div class="panel no">
+        <h4>✕ Refunds we cannot make</h4>
+        <ul>
+          <li>Work already delivered and accepted, or fees for the period in which work was performed</li>
+          <li>Change of mind, change of business plans, or budget changes after work has started</li>
+          <li>Business results that did not meet expectations (for example fewer leads or lower ROAS), since outcomes are not guaranteed</li>
+          <li>Delays or issues caused by missing access, content, or approvals from your side</li>
+          <li>Issues caused by third-party platforms, such as ad-account suspensions or policy changes</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="leads">5. B2B lead lists</h2>
+    <p>Lead lists are digital products delivered electronically after payment, and the data is available to you immediately on delivery. For that reason:</p>
+    <ul>
+      <li><strong>No refunds after delivery</strong> for change of mind, or for data you have already downloaded and used.</li>
+      <li><strong>Non-delivery or corrupted file:</strong> if you did not receive your file, or it cannot be opened, tell us within 7 days of purchase. We will re-send it or, if we cannot, refund you in full.</li>
+      <li><strong>Materially different from description:</strong> if the list is substantially different from what was described on the Leads page (for example the wrong industry, geography, or job titles), contact us within 7 days with details. We will replace it with a corrected list or issue a refund.</li>
+      <li><strong>Data accuracy:</strong> business contact data naturally goes out of date. A normal rate of bounced emails or changed roles does not by itself qualify for a refund. We may, at our discretion, offer a partial replacement for clearly inaccurate records reported promptly.</li>
+      <li><strong>Misuse:</strong> no refunds will be given where the list has been shared, resold, or used in breach of our Terms of Service.</li>
+    </ul>
+
+    <h2 id="non-refundable">6. Non-refundable costs</h2>
+    <p>The following are not refundable, as they are paid to or committed with third parties:</p>
+    <ul>
+      <li><strong>Advertising spend</strong> you paid directly to platforms such as Google or Meta. Please manage budgets and billing in your own ad account.</li>
+      <li>Third-party licences, tools, domains, hosting, stock assets, and app-store fees purchased for your project.</li>
+      <li>Payment-processor fees and bank or currency-conversion charges, where these cannot be recovered from the processor.</li>
+    </ul>
+
+    <h2 id="process">7. How refunds are processed</h2>
+    <ol class="steps">
+      <li><strong>Send your request.</strong> Email <a href="mailto:nathalie@tycoonclap.com">nathalie@tycoonclap.com</a> with the subject "Refund Request," your order or invoice number, and the reason.</li>
+      <li><strong>We review it.</strong> We will acknowledge your request within 2 business days and give you a decision within 5 business days. We may ask for details or supporting screenshots.</li>
+      <li><strong>Decision and amount.</strong> If approved, we will tell you the refund amount, including any deductions for work already completed or non-recoverable costs.</li>
+      <li><strong>Refund issued.</strong> We refund to your original payment method (PayPal, Stripe, or bank transfer). Most refunds reach you within 5–10 business days, depending on your bank or provider.</li>
+    </ol>
+    <p>Refunds are made in the original currency of payment. Exchange-rate differences between payment and refund are outside our control. Where a refund is for part of an order only, we will set out the calculation in our email.</p>
+
+    <h2 id="our-cancellation">8. If we cancel or pause a service</h2>
+    <p>We may cancel or pause a service if you breach our Terms, an invoice remains unpaid after notice, we cannot get the access or information we need to continue, or continuing would break the law or a platform's rules. If we cancel for reasons other than your breach, we will refund any prepaid fees for work not yet performed.</p>
+
+    <h2 id="disputes">9. Chargebacks and disputes</h2>
+    <p>Please contact us before raising a payment dispute or chargeback with your bank, card issuer, PayPal, or Stripe. Most issues can be resolved faster directly. If a chargeback is filed for a service that was delivered, we may provide evidence of the work and communications to the payment provider and may suspend further work until the matter is resolved.</p>
+
+    <h2 id="taxes">10. Taxes and fees on refunds</h2>
+    <p>Where tax was charged on an invoice, the tax portion of a refund will be adjusted in line with the refunded amount and applicable law. We may issue a credit note for refunded invoices.</p>
+
+    <div class="legal-note">This policy is provided as a general template for a service business and is not a substitute for legal advice. Notice periods, timelines, and refund conditions should match what you actually offer, and may need to be reviewed by a qualified attorney for the jurisdictions you serve. Consumers in some regions have mandatory statutory rights that this policy does not limit.</div>
+
+    <h2 id="changes">11. Changes to this policy</h2>
+    <p>We may update this policy from time to time. The "Last updated" date at the top shows the latest revision. The version in force when you placed your order or signed your proposal applies to that order or engagement.</p>
+
+    <h2 id="contact">12. Contact us</h2>
+    <p>For any questions about cancellations or refunds, or to submit a request, contact us at:</p>
+    <p><a href="mailto:nathalie@tycoonclap.com">nathalie@tycoonclap.com</a></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta-band">
+    <h2>Need to cancel or request a refund?</h2>
+    <p>Email us and we'll respond within 2 business days — no runaround.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn btn-primary">Contact us</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="flogo">Tycoon Clap</div>
+      <p style="max-width:260px; color:var(--ink-soft); font-size:0.9rem;">Technology Growth Partner</p>
+    </div>
+    <div class="fcol">
+      <h4>Site</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="leads.html">B2B Leads</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <a href="mailto:nathalie@tycoonclap.com">nathalie@tycoonclap.com</a>
+      <a href="https://www.instagram.com/tycoonclap/" target="_blank">Follow us</a>
+    </div>
+    <div class="fcol">
+      <h4>Resources</h4>
+      <a href="blog.html">Blog</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="cancellation-refund-policy.html">Cancellation &amp; Refund Policy</a>
+    </div>
+  </div>
+  <div class="fbottom">&copy; 2026 Tycoon Clap. All rights reserved.</div>
+</footer>
+
+<div class="social-float">
+  <a href="https://x.com/TycoonClap" target="_blank" style="background:#000;" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="white"><path d="M18.9 2.5h3.1l-6.8 7.8L23.3 21.5h-6.3l-4.9-6.4-5.6 6.4H3.4l7.3-8.3L2.7 2.5h6.5l4.4 5.8zM17.8 19.6h1.7L8.3 4.3H6.5z"/></svg></a>
+  <a href="https://www.instagram.com/tycoonclap/" target="_blank" style="background:#E1306C;" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></a>
+  <a href="https://www.linkedin.com/company/tycoon-clap/" target="_blank" style="background:#0A66C2;" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="white"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4z"/></svg></a>
+  <a href="https://www.youtube.com/@TycoonClap" target="_blank" style="background:#FF0000;" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="white"><path d="M9 7l8 5-8 5z"/></svg></a>
+   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nathalie@tycoonclap.com" target="_blank" style="background:#fff;border:1px solid #eee;" aria-label="Email us on Gmail"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2.4" fill="#fff" stroke="#E0E0E0" stroke-width="1.2"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke="#EA4335" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+<script src="gsap-animations.js"></script>
+</body>
+</html>
