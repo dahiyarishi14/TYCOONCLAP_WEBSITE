@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Analytics for Ecommerce: 10 KPIs to Track</title>
+<meta name="description" content="The 10 ecommerce KPIs every online store should track, with formulas, worked examples, a dashboard layout and a weekly review routine for 2026.">
+<link rel="canonical" href="https://tycoonclap.com/blog/business-analytics-for-ecommerce">
+<link rel="alternate" hreflang="en-us" href="https://tycoonclap.com/blog/business-analytics-for-ecommerce">
+<link rel="alternate" hreflang="en-ca" href="https://tycoonclap.com/blog/business-analytics-for-ecommerce">
+<link rel="alternate" hreflang="x-default" href="https://tycoonclap.com/blog/business-analytics-for-ecommerce">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Business Analytics for Ecommerce: 10 KPIs to Track and How to Act on Them (2026)">
+<meta property="og:description" content="Ten ecommerce KPIs with formulas, examples and a simple dashboard plan.">
+<meta property="og:url" content="https://tycoonclap.com/blog/business-analytics-for-ecommerce">
+<meta property="og:image" content="https://tycoonclap.com/images/blog/business-analytics-for-ecommerce.webp">
+<meta property="og:site_name" content="Tycoon Clap">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Business Analytics for Ecommerce: 10 KPIs to Track and How to Act on Them (2026)",
+      "description": "The ten ecommerce KPIs every online store should track, with formulas, worked examples, a dashboard layout and a weekly review routine for US and Canadian stores.",
+      "image": "https://tycoonclap.com/images/blog/business-analytics-for-ecommerce.webp",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "author": { "@type": "Organization", "name": "Tycoon Clap", "url": "https://tycoonclap.com" },
+      "publisher": { "@type": "Organization", "name": "Tycoon Clap", "url": "https://tycoonclap.com" },
+      "mainEntityOfPage": "https://tycoonclap.com/blog/business-analytics-for-ecommerce"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the most important ecommerce KPIs?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The most important ones are conversion rate, average order value, customer acquisition cost, return on ad spend, customer lifetime value, repeat purchase rate and gross margin. Together they show whether you are attracting buyers, whether each sale is profitable and whether customers come back." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good ecommerce conversion rate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It varies widely by industry, price point and traffic source, so compare your store with its own history first. Many stores see conversion rates in the low single digits. A steady upward trend matters more than hitting a particular number." }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I review ecommerce analytics?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Check headline numbers such as revenue, orders and ad spend daily or weekly, and review deeper metrics such as customer lifetime value, repeat rate and margin monthly. A short weekly review with the same dashboard each time works best." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which tool is best for ecommerce analytics?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start with the analytics built into your store platform and Google Analytics 4. When you need to combine store, advertising and finance data in one view, a BI tool such as Power BI is a strong next step." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.7;color:#1f2430;margin:0;background:#fff}
+  main{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+  h1{font-size:2rem;line-height:1.25;margin:0 0 12px}
+  h2{font-size:1.45rem;margin:40px 0 12px}
+  h3{font-size:1.15rem;margin:24px 0 8px}
+  .meta{color:#667085;font-size:.9rem;margin-bottom:24px}
+  .summary{background:#f4f7ff;border-left:4px solid #3b5bdb;padding:16px 20px;border-radius:6px;margin:24px 0}
+  table{border-collapse:collapse;width:100%;margin:20px 0;font-size:.95rem}
+  th,td{border:1px solid #d9dde7;padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:#f4f7ff}
+  .cta{background:#3b5bdb;color:#fff;padding:24px;border-radius:10px;margin:40px 0;text-align:center}
+  .cta a{display:inline-block;background:#fff;color:#3b5bdb;padding:12px 24px;border-radius:6px;font-weight:600;text-decoration:none;margin-top:8px}
+  nav.toc{background:#fafbfc;border:1px solid #e4e7ec;padding:16px 20px;border-radius:6px}
+  nav.toc ol{margin:8px 0 0;padding-left:20px}
+</style>
+</head>
+<body>
+<main>
+<article>
+
+<nav aria-label="Breadcrumb" class="meta"><a href="/">Home</a> › <a href="/blog">Blog</a> › Business Analytics for Ecommerce</nav>
+
+<h1>Business Analytics for Ecommerce: 10 KPIs to Track and How to Act on Them (2026)</h1>
+<p class="meta">By Tycoon Clap · Published October 20, 2026 · 11 min read</p>
+
+<div class="summary">
+<strong>Quick answer:</strong> The 10 ecommerce KPIs worth tracking are revenue and orders, conversion rate, average order value, cart abandonment rate, customer acquisition cost, return on ad spend, customer lifetime value, repeat purchase rate, gross margin and return rate. Track them on one dashboard, review them weekly, and always ask what decision each number should change.
+</div>
+
+<nav class="toc" aria-label="Table of contents">
+<strong>In this guide</strong>
+<ol>
+<li><a href="#why">Why ecommerce analytics is different</a></li>
+<li><a href="#table">The 10 KPIs at a glance</a></li>
+<li><a href="#kpis">The 10 KPIs explained</a></li>
+<li><a href="#dashboard">How to lay out the dashboard</a></li>
+<li><a href="#routine">A 30-minute weekly review routine</a></li>
+<li><a href="#tools">Tools to use</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+
+<p>An online store produces more data than almost any other kind of small business. Every visit, click, cart, discount code and return leaves a trail. The problem is rarely a shortage of numbers. It is knowing which few numbers matter, how they connect, and what to do when one moves.</p>
+
+<p>Many store owners watch revenue and little else. Revenue is the headline, but it hides the story. A store can grow revenue while losing money on every order, because ad costs rose, margins shrank or returns piled up. Business analytics for ecommerce is about connecting the dots: where customers come from, what they buy, what it costs to win them, and whether they come back.</p>
+
+<p>This guide covers the 10 KPIs that give you that complete picture. For each one you will get the formula, a worked example, and the action it should trigger. Prices and examples are in US dollars, and everything applies equally to stores selling in the US and Canada.</p>
+
+<h2 id="why">Why ecommerce analytics is different</h2>
+<p>Three things make ecommerce measurement special. First, you can see the whole journey, from the ad click to the checkout, so you can measure every step. Second, margins are often thin, and small percentage changes in conversion, returns or ad cost decide whether you make money. Third, acquiring customers is expensive, so what happens after the first order, meaning repeat purchases, often matters more than the first sale.</p>
+
+<p>That is why the strongest store dashboards combine three groups of numbers: <strong>sales</strong> (what is selling), <strong>marketing</strong> (what it costs to get customers) and <strong>customers</strong> (whether they stay). If you only watch one group, you will misread the others. We cover the marketing side in depth in <a href="/blog/the-real-cost-of-not-tracking-your-marketing-funnel">the real cost of not tracking your marketing funnel</a>.</p>
+
+<h2 id="table">The 10 KPIs at a glance</h2>
+<table>
+<thead>
+<tr><th>#</th><th>KPI</th><th>Formula</th><th>It tells you</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Revenue and orders</td><td>Total sales and number of orders</td><td>Overall size and trend</td></tr>
+<tr><td>2</td><td>Conversion rate</td><td>Orders ÷ sessions × 100</td><td>How well visits turn into sales</td></tr>
+<tr><td>3</td><td>Average order value (AOV)</td><td>Revenue ÷ orders</td><td>How much each order is worth</td></tr>
+<tr><td>4</td><td>Cart abandonment rate</td><td>1 − (purchases ÷ carts created)</td><td>Where checkout loses buyers</td></tr>
+<tr><td>5</td><td>Customer acquisition cost (CAC)</td><td>Acquisition spend ÷ new customers</td><td>What a new customer costs</td></tr>
+<tr><td>6</td><td>Return on ad spend (ROAS)</td><td>Ad revenue ÷ ad spend</td><td>How hard ad money is working</td></tr>
+<tr><td>7</td><td>Customer lifetime value (CLV)</td><td>Gross profit per order × orders per customer</td><td>What a customer is worth over time</td></tr>
+<tr><td>8</td><td>Repeat purchase rate</td><td>Customers with 2+ orders ÷ all customers</td><td>Whether customers come back</td></tr>
+<tr><td>9</td><td>Gross margin</td><td>(Revenue − cost of goods) ÷ revenue</td><td>How much you keep per sale</td></tr>
+<tr><td>10</td><td>Return rate</td><td>Returned orders ÷ total orders</td><td>Product and expectation problems</td></tr>
+</tbody>
+</table>
+<p>To keep the examples consistent, we will follow one imaginary store through all ten KPIs: <strong>20,000 website sessions, 400 orders and $32,000 in revenue in a month</strong>.</p>
+
+<h2 id="kpis">The 10 KPIs explained</h2>
+
+<h3>1. Revenue and orders</h3>
+<p>These are your starting numbers: total sales and the count of orders, tracked by day, week and month. Our example store made $32,000 from 400 orders. Look at the trend, not just the total, and compare with the same period last year to account for seasonality. A drop in orders with stable revenue means fewer but bigger orders, and the reverse means more small orders. Either pattern should lead you to ask why.</p>
+
+<h3>2. Conversion rate</h3>
+<p><strong>Formula:</strong> orders ÷ sessions × 100. With 400 orders from 20,000 sessions, the conversion rate is 2.0%. Rates vary widely by industry, price and traffic source, so compare your store with its own history first. Always break conversion down by device, since mobile and desktop often differ greatly, and by traffic source, because email visitors usually convert far better than cold social traffic. A fall in conversion with steady traffic points to a problem on the site: speed, a broken page, a price change or a checkout issue.</p>
+
+<h3>3. Average order value (AOV)</h3>
+<p><strong>Formula:</strong> revenue ÷ orders. Our store: $32,000 ÷ 400 = $80. Raising AOV is one of the cheapest ways to grow profit, because you pay no extra to acquire the customer. Common tactics include bundles, free shipping thresholds set slightly above your current AOV, and relevant add-ons at checkout. Watch conversion when you test, because a threshold set too high can reduce orders.</p>
+
+<h3>4. Cart abandonment rate</h3>
+<p><strong>Formula:</strong> 1 − (completed purchases ÷ carts created). If our store had 1,250 carts and 400 purchases, 68% of carts were abandoned. Some abandonment is normal, since shoppers use carts to compare prices or save items. The useful question is where people leave: at shipping costs, forced account creation, limited payment options or a slow page. Surprise shipping and tax costs at the last step are a classic cause, so show them early. An abandoned-cart email sequence recovers some of those sales.</p>
+
+<h3>5. Customer acquisition cost (CAC)</h3>
+<p><strong>Formula:</strong> total acquisition spend ÷ new customers. Suppose the store spent $6,000 on ads and won 200 new customers: CAC is $30. Include everything that goes into winning customers, such as ad spend, agency fees and creative costs, not just the ad platform bill. Track CAC by channel, because the blended number can hide a channel that is far too expensive. CAC only means something when compared with how much a customer is worth, which brings us to CLV.</p>
+
+<h3>6. Return on ad spend (ROAS)</h3>
+<p><strong>Formula:</strong> revenue from ads ÷ ad spend. If the $6,000 of ads generated $15,000 in sales, ROAS is 2.5. Here is the part many owners miss: <strong>ROAS is revenue, not profit.</strong> Your break-even ROAS is 1 ÷ gross margin. With a 40% margin, break-even is 2.5, so this store is exactly breaking even on the first order before any other costs. A ROAS of 4 looks great, but only if your margin supports it. Always judge ROAS together with margin. For how this goes wrong, see <a href="/blog/why-spray-and-pray-ads-are-killing-your-roi">why spray-and-pray ads kill your ROI</a>.</p>
+
+<h3>7. Customer lifetime value (CLV)</h3>
+<p><strong>Simple formula:</strong> gross profit per order × expected orders per customer. Our store has an $80 AOV and a 40% margin, so each order earns $32 in gross profit. If customers place three orders on average, CLV is $96. Compared with a CAC of $30, that is a ratio of about 3.2 to 1. A commonly used rule of thumb is that CLV should be around three times CAC, though the right ratio depends on your cash position and growth goals. If CLV is lower than CAC, you lose money on each customer over time, no matter how good the revenue looks.</p>
+
+<h3>8. Repeat purchase rate</h3>
+<p><strong>Formula:</strong> customers with two or more orders ÷ all customers. If 270 of 1,000 customers have ordered more than once, the repeat rate is 27%. This is the number that turns an average store into a profitable one, because repeat customers cost almost nothing to win. To improve it, focus on the second order: a follow-up email, a replenishment reminder, a loyalty offer or a useful recommendation. Cohort tracking, which groups customers by the month they first bought, shows whether newer customers come back more or less than older ones.</p>
+
+<h3>9. Gross margin</h3>
+<p><strong>Formula:</strong> (revenue − cost of goods sold) ÷ revenue. Our store makes 40%. Measure margin by product and category, not just overall, because your best-selling item may be your least profitable one. Discounts, shipping subsidies and payment fees all eat into margin, so include them where you can. Margin tells you how much you can afford to spend on ads, which is why it appears in both the ROAS and CLV calculations above.</p>
+
+<h3>10. Return rate</h3>
+<p><strong>Formula:</strong> returned orders ÷ total orders. If 36 of 400 orders come back, the return rate is 9%. Returns cost you the shipping, the handling and sometimes the product itself. Look for products or sizes with unusually high return rates, since they often reveal misleading photos, poor descriptions or quality problems. Fixing a product page is often the cheapest way to improve profit.</p>
+
+<h2 id="dashboard">How to lay out the dashboard</h2>
+<p>A good ecommerce dashboard answers three questions from top to bottom: How are we doing? Where is it coming from? What should we fix?</p>
+<ul>
+<li><strong>Top row (headline numbers):</strong> revenue, orders, conversion rate, AOV, each with change versus last period.</li>
+<li><strong>Middle row (marketing):</strong> ad spend, ROAS and CAC by channel, with a trend line.</li>
+<li><strong>Bottom row (customers and profit):</strong> repeat purchase rate, CLV, gross margin by category and return rate by product.</li>
+<li><strong>Filters:</strong> date range, country or state, device and traffic source.</li>
+</ul>
+<p>Keep it to one page. If a number does not change a decision, remove it. For a step-by-step build, read our guide to <a href="/blog/how-to-build-a-business-dashboard-in-power-bi">building a business dashboard in Power BI</a>.</p>
+
+<h2 id="routine">A 30-minute weekly review routine</h2>
+<ol>
+<li><strong>Minutes 0 to 5: scan the headlines.</strong> Compare revenue, orders and conversion with last week and last year. Note anything unusual.</li>
+<li><strong>Minutes 5 to 12: check marketing efficiency.</strong> Review ROAS and CAC by channel. Pause or reduce the worst performer and note the best.</li>
+<li><strong>Minutes 12 to 20: look at the funnel.</strong> Check cart abandonment and conversion by device. If mobile lags, test the mobile checkout.</li>
+<li><strong>Minutes 20 to 25: check profit.</strong> Look at margin by category and return rate by product. Flag any item that sells well but earns little.</li>
+<li><strong>Minutes 25 to 30: decide.</strong> Write down the top three actions for next week, with an owner for each.</li>
+</ol>
+<p>The final step is the important one. Analytics without decisions is just reading numbers, a point we make in <a href="/blog/dashboards-are-not-strategy">Dashboards Are Not Strategy</a>.</p>
+
+<h2 id="tools">Tools to use</h2>
+<p>Start with what you already have: the analytics inside your store platform and Google Analytics 4 for traffic and conversion. These cover most of the first five KPIs. The harder numbers, such as CAC, CLV, margin and return rate, need data from several places: your store, your ad accounts and your accounting or cost data. When you reach that point, a BI tool such as Power BI can pull everything into a single view. If you are still choosing, see <a href="/blog/power-bi-vs-tableau-for-small-business">Power BI vs Tableau for small business</a>. Once your history is clean, you can also forecast demand and churn, as described in <a href="/blog/predictive-analytics-for-small-business">predictive analytics for small business</a>.</p>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Tracking revenue only.</strong> Revenue can rise while profit falls. Pair it with margin and CAC.</li>
+<li><strong>Judging ROAS without margin.</strong> A ROAS that looks strong can still lose money on thin margins.</li>
+<li><strong>Using blended numbers only.</strong> Break every metric down by channel, device and product to find the real problem.</li>
+<li><strong>Ignoring repeat customers.</strong> Stores that depend on constant new-customer ads are fragile. Build the second order.</li>
+<li><strong>Inconsistent tracking.</strong> Missing tracking tags or mismatched attribution windows make channel numbers unreliable. Audit your tracking regularly.</li>
+<li><strong>Too many metrics.</strong> Ten KPIs are enough. More numbers usually mean less action.</li>
+</ul>
+
+<div class="cta">
+<h2 style="margin-top:0;color:#fff">Want one dashboard for your whole store?</h2>
+<p>Tycoon Clap builds ecommerce dashboards that bring together your store, ad accounts and costs, so you can see real profit by channel. Get a free review of your current reporting.</p>
+<a href="https://tycoonclap.com/leads">Get your free ecommerce analytics review</a>
+</div>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<h3>What are the most important ecommerce KPIs?</h3>
+<p>The most important ones are conversion rate, average order value, customer acquisition cost, return on ad spend, customer lifetime value, repeat purchase rate and gross margin. Together they show whether you are attracting buyers, whether each sale is profitable and whether customers come back.</p>
+
+<h3>What is a good ecommerce conversion rate?</h3>
+<p>It varies widely by industry, price point and traffic source, so compare your store with its own history first. Many stores see conversion rates in the low single digits. A steady upward trend matters more than hitting a particular number.</p>
+
+<h3>How often should I review ecommerce analytics?</h3>
+<p>Check headline numbers such as revenue, orders and ad spend daily or weekly, and review deeper metrics such as customer lifetime value, repeat rate and margin monthly. A short weekly review with the same dashboard each time works best.</p>
+
+<h3>Which tool is best for ecommerce analytics?</h3>
+<p>Start with the analytics built into your store platform and Google Analytics 4. When you need to combine store, advertising and finance data in one view, a BI tool such as Power BI is a strong next step.</p>
+
+<h2>Next steps</h2>
+<p>Learn more about our <a href="/blog/data-analytics-services-for-small-businesses-in-the-usa">data analytics services for small businesses</a>, or <a href="https://tycoonclap.com/leads">talk to our team</a> about an ecommerce dashboard.</p>
+
+</article>
+</main>
+</body>
+</html>
