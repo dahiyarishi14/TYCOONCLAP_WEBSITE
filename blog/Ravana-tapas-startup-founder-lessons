@@ -72,7 +72,12 @@ html[data-theme="dark"] .cat-company{ background:rgba(243,185,77,.18); color:#F3
 
 /* ===== FEATURED ILLUSTRATION ===== */
 .article-hero-art{ background:var(--bg-alt); border:1px solid var(--line); border-radius:24px; padding:32px; display:flex; align-items:center; justify-content:center; margin-bottom:46px; }
-.article-hero-art svg{ width:100%; max-width:360px; height:auto; }
+ .article-hero-art svg{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  display:block;
+}
 
 /* ===== CONTENT TYPOGRAPHY ===== */
 .article-content{ font-size:1.05rem; line-height:1.85; color:var(--ink); }
@@ -228,8 +233,170 @@ html[data-theme="dark"] .qa-box p{ color:var(--ink); }
       <div><div class="article-author">Megan</div><div class="article-role">Growth Lead, Tycoon Clap</div></div>
       <div class="article-time">9 min read</div>
     </div>
+<div class="article-hero-art">
 
-    <div class="article-hero-art"><svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="28" y="20" width="184" height="120" rx="14" fill="#E4E8F2"/><path d="M120 34c10 16 22 26 22 44a22 22 0 0 1-44 0c0-18 12-28 22-44z" fill="#E9584C"/><path d="M120 62c5 8 11 12 11 21a11 11 0 0 1-22 0c0-9 6-13 11-21z" fill="#F3B94D"/><path d="M60 128h120" stroke="#2E3A55" stroke-width="5" stroke-linecap="round"/><path d="M76 128v-22l18-10 14 10v22M132 128v-30h30v30" stroke="#357566" stroke-width="4" stroke-linejoin="round"/></svg></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" role="img" aria-label="The Modern Entrepreneurial Tapas – Ravana and a modern founder">
+<defs>
+  <linearGradient id="cape" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ed603b"/>
+    <stop offset="1" stop-color="#c94428"/>
+  </linearGradient>
+  <linearGradient id="mount" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d9bba0"/>
+    <stop offset="1" stop-color="#f2dfc7"/>
+  </linearGradient>
+  <g id="head" fill="#292725">
+    <path d="M-39 8 L-35 -30 L-22 -49 L0 -58 L22 -49 L35 -30 L39 8 L28 35 L0 47 L-28 35Z"/>
+    <path d="M-35 -29 L-24 -53 L0 -83 L24 -53 L35 -29 L15 -39 L0 -52 L-15 -39Z" fill="#292725"/>
+    <path d="M-24 -53 L0 -83 L24 -53 L0 -61Z" fill="#bd8740"/>
+    <path d="M-7 -63 L0 -76 L7 -63 L0 -53Z" fill="#e5a64d"/>
+    <path d="M-20 -5 Q-10 -11 -3 -5 M3 -5 Q10 -11 20 -5"
+          fill="none" stroke="#d8b99b" stroke-width="2.5"/>
+    <path d="M-8 13 Q0 19 8 13" fill="none" stroke="#d8b99b" stroke-width="2"/>
+    <path d="M-13 17 Q0 32 13 17 Q0 42 -13 17" fill="#292725"/>
+    <path d="M-10 29 Q0 34 10 29" fill="none" stroke="#bd8740" stroke-width="2"/>
+  </g>
+</defs>
+
+<!-- Background -->
+<rect width="1600" height="900" fill="#f8f2e8"/>
+
+<!-- Sun -->
+<circle cx="1170" cy="210" r="175" fill="#ed7044"/>
+
+<!-- Clouds -->
+<g fill="#efd9bd">
+  <path d="M790 215 Q820 175 860 205 Q885 165 925 207 L960 215Z"/>
+  <path d="M1440 500 Q1470 460 1505 492 Q1535 453 1570 495 L1600 500Z"/>
+  <path d="M750 570 Q790 525 830 560 Q870 510 915 555 L960 570Z"/>
+</g>
+
+<!-- Distant landscape -->
+<path d="M400 900 Q580 790 710 780 Q840 710 980 770 Q1150 690 1290 770 Q1440 720 1600 790 L1600 900Z"
+fill="#ead5bd"/>
+
+<!-- Ravana body -->
+<path d="M920 880
+Q900 660 960 490
+Q990 395 1080 350
+Q1170 320 1260 365
+Q1370 420 1420 570
+L1600 760 L1600 900Z"
+fill="#292725"/>
+
+<!-- Ravana's ten heads -->
+<g>
+  <use href="#head" transform="translate(905 330) scale(.80)"/>
+  <use href="#head" transform="translate(970 285) scale(.88)"/>
+  <use href="#head" transform="translate(1040 255) scale(.95)"/>
+  <use href="#head" transform="translate(1110 235) scale(1.02)"/>
+  <use href="#head" transform="translate(1185 210) scale(1.17)"/>
+  <use href="#head" transform="translate(1260 235) scale(1.02)"/>
+  <use href="#head" transform="translate(1330 255) scale(.95)"/>
+  <use href="#head" transform="translate(1400 285) scale(.88)"/>
+  <use href="#head" transform="translate(1465 330) scale(.80)"/>
+</g>
+
+<!-- Cape -->
+<path d="M1240 360
+Q1340 405 1390 495
+Q1440 590 1600 700
+L1600 785
+Q1460 725 1360 640
+Q1290 555 1200 440Z"
+fill="url(#cape)"/>
+
+<path d="M1230 390 Q1300 500 1380 570 Q1470 665 1600 725"
+fill="none" stroke="#f28b61" stroke-width="3" opacity=".5"/>
+
+<!-- Mountain -->
+<path d="M0 900 L450 840 L680 780 L800 800 L930 750
+L1050 785 L1160 755 L1280 800 L1400 760 L1600 835 L1600 900Z"
+fill="#292725"/>
+
+<path d="M680 780 L800 800 L745 835 L840 815 L930 750 L875 820Z"
+fill="#3c3732"/>
+
+<!-- Entrepreneur -->
+<g transform="translate(1120 535)">
+
+  <!-- Head -->
+  <path d="M-21 0 Q-23 -28 0 -32 Q24 -29 21 0 L17 22 L-17 22Z"
+        fill="#d4a17c"/>
+
+  <!-- Hair -->
+  <path d="M-20 -6 Q-19 -36 7 -33 Q23 -28 21 -8 L13 -19 L-12 -17Z"
+        fill="#252321"/>
+
+  <!-- Neck -->
+  <rect x="-9" y="17" width="18" height="22" fill="#d4a17c"/>
+
+  <!-- Shirt -->
+  <path d="M-12 32 L0 48 L12 32 L25 50 L20 155 L-20 155 L-25 50Z"
+        fill="#f6efe4"/>
+
+  <!-- Suit -->
+  <path d="M-20 32 L-48 45 L-65 125 L-47 147 L-33 105
+           L-35 220 L35 220 L33 105 L47 147 L65 125
+           L48 45 L20 32 L0 48Z"
+        fill="#292725"/>
+
+  <!-- Lapels -->
+  <path d="M-20 34 L0 48 L-13 90 L-34 55Z" fill="#403b36"/>
+  <path d="M20 34 L0 48 L13 90 L34 55Z" fill="#403b36"/>
+
+  <!-- Arms -->
+  <path d="M-48 50 L-66 145 L-48 155 L-31 92Z" fill="#292725"/>
+  <path d="M48 50 L66 145 L48 155 L31 92Z" fill="#292725"/>
+
+  <!-- Trousers -->
+  <path d="M-35 205 L-32 305 L-8 305 L0 215 L8 305 L32 305 L35 205Z"
+        fill="#292725"/>
+
+  <!-- Shoes -->
+  <path d="M-32 300 L-7 300 L-7 310 L-48 310 Q-47 302 -32 300Z"
+        fill="#292725"/>
+  <path d="M8 300 L32 300 Q46 304 48 310 L8 310Z"
+        fill="#292725"/>
+
+  <!-- Briefcase -->
+  <rect x="60" y="125" width="42" height="52" rx="3" fill="#292725"/>
+  <path d="M70 125 L70 115 Q81 103 92 115 L92 125"
+        fill="none" stroke="#292725" stroke-width="5"/>
+</g>
+
+<!-- Main typography -->
+<g font-family="Arial, Helvetica, sans-serif" fill="#171715">
+  <text x="70" y="275" font-size="102" font-weight="700"
+        letter-spacing="-4">The Modern</text>
+
+  <rect x="55" y="310" width="745" height="100" fill="#ffbd39"/>
+  <text x="70" y="390" font-size="90" font-weight="700"
+        letter-spacing="-3">Entrepreneurial</text>
+
+  <text x="70" y="495" font-size="102" font-weight="700"
+        letter-spacing="-4">Tapas:</text>
+
+  <!-- Divider -->
+  <rect x="72" y="535" width="140" height="7" fill="#e75c37"/>
+
+  <!-- Subtitle -->
+  <text x="72" y="605" font-size="39" font-weight="400">
+    What Founders Can Learn from
+  </text>
+  <text x="72" y="665" font-size="39">
+    the <tspan fill="#e75c37" font-weight="700">Obsession, Sacrifice,</tspan> and
+  </text>
+  <text x="72" y="725" font-size="39">
+    Blind Spots of <tspan fill="#e75c37" font-weight="700">Ravana</tspan>
+  </text>
+</g>
+
+</svg>
+
+</div>
+
 
     <div class="article-grid">
       <article class="article-content" id="articleContent">
